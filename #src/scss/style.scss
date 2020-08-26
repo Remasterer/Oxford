@@ -1,0 +1,26 @@
+@import 'core/module';
+@import 'components/module';
+@import 'views/module';
+@import 'libs/module';
+
+
+body{
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.07em;
+    color:$def-black;
+    @extend %monst-alter-norm;
+}
+
+
+.container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1950px;
+    padding: 0 15px;
+    &--med{
+        width: 100%;
+        max-width: 1668px;
+        padding: 0 15px;
+    }
+}

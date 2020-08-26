@@ -1,0 +1,65 @@
+h1,h2,h3,h4{
+        @extend %monst-alter-norm;
+}
+h1{
+    color:#fff;
+    font-size:3rem;
+}
+h2{
+    font-size: 4.5rem;
+    
+}
+h3{
+    font-size:2.5rem;
+}
+h4{
+    font-size:1.5rem;
+}
+
+.e--red{
+    color: $def-red;
+}
+.e--blue{
+    color:  $def-blue;
+}
+.e--light-red{
+    color: $light-red;
+}
+.e--light-blue{
+    color: $light-blue;
+}
+
+.button{
+    border-radius: 30px;
+    padding: 0.75rem  3rem ;
+    &.e--white{
+        background:#fff;
+        color: $def-red;
+    }
+    &.e--red{
+        color:#fff;
+        background:$def-red;
+    }
+    &.e--blue{
+        color:$def-red;
+        background:transparent;
+        border:1px solid $def-red;
+    }
+    &.e--light-red{
+        color:$def-red;
+        background:transparent;
+        border:1px solid $def-red;
+    }
+    &.e--light-blue{
+        color:$def-blue;
+        background:transparent;
+        border:1px solid $def-blue;
+    }
+}
+.sub-title{
+    font-size: 2.5rem;
+}
+.sub-description{
+    color:$def-black;
+    font-size:2em;
+}

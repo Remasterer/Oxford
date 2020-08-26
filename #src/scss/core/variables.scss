@@ -1,0 +1,30 @@
+// Fonts
+
+%monst-reg{
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+%merri-norm{
+    font-family: 'Merriweather';
+    font-weight: normal;
+}
+%monst-alter-norm{
+    font-family: 'Montserrat Alternates';
+    font-weight: 600;
+}
+%avenir-norm{
+    font-family: 'Avenir Next';
+    font-weight: 500;
+}
+
+// Colors
+
+$def-red:#CD142B;
+$light-red: rgba(205, 20, 43, 0.3);
+
+$def-blue:#00237C;
+$light-blue:rgba(0, 35, 124, 0.3);
+
+$def-white: #FFFFFF;
+
+$def-black:#000000;
