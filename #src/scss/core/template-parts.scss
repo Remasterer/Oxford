@@ -1,3 +1,7 @@
+body {
+    @extend %merri-norm;
+}
+
 h1,h2,h3,h4{
         @extend %monst-alter-norm;
 }
@@ -29,9 +33,27 @@ h4{
     color: $light-blue;
 }
 
+.titles {
+    text-align: center;
+    h2 {
+      color: $light-blue;
+      margin-bottom: 1rem;
+    }
+
+    .e--line {
+
+    }
+}
+
 .button{
     border-radius: 30px;
     padding: 0.75rem  3rem ;
+    cursor: pointer;
+    transition: .3s all;
+    &:focus {
+        outline: none;
+    }
+
     &.e--white{
         background:#fff;
         color: $def-red;
@@ -39,6 +61,11 @@ h4{
     &.e--red{
         color:#fff;
         background:$def-red;
+
+        &:hover,
+        &:focus {
+            background-color: $def-red-hover;
+        }
     }
     &.e--blue{
         color:$def-red;
@@ -61,5 +88,54 @@ h4{
 }
 .sub-description{
     color:$def-black;
-    font-size:2em;
+    font-size: 1.5rem;
+    @extend %monst-alter-light;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.half {
+    &-sections {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &-section {
+        max-width: 50%;
+        &.e--left {
+            margin-right: 2rem;
+        }
+        &.e--right {
+            margin-left: 2rem;
+        }
+    }
+
+    @include mq('tablet-wide') {
+        &-sections {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        &-section {
+            max-width: 100%;
+            &.e--left {
+                margin-right: 0;
+                margin-top: 2rem;
+            }
+            &.e--right {
+                margin-left: 0;
+            }
+        }
+
+    }
 }

@@ -1,0 +1,52 @@
+.our-plus {
+    padding: 50px 0;
+    background-color: $color-seashell;
+    color: $def-blue;
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        flex-basis: 33.3%;
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        &-img {
+            max-width: 150px;
+            margin-bottom: 1.5rem;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &-title {
+            margin-bottom: 2rem;
+        }
+
+        &-desc {
+            @extend %monst-alter-light;
+        }
+        
+    }
+
+    @include mq('tablet-wide') {
+        &__items {
+            justify-content: center;
+        }
+        
+        &__item {
+            flex-basis: 50%;
+        }
+    }
+
+    @include mq('tablet-small') {
+        &__item {
+            flex-basis: 100%;
+        }
+    }
+}
