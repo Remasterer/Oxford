@@ -1,0 +1,35 @@
+.cta {
+    padding: 80px 0;
+    background-color: $color-whisper;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__content {
+        flex-basis: 60%;
+    }
+
+    p {
+        color: $def-blue;
+        font-size: 2.25rem;
+        @extend %monst-alter-light;
+        line-height: 1.5;
+        span {
+            @extend %monst-alter-bold;
+            display: block;
+        }
+    }
+
+    &__img {
+        flex-basis: 40%;
+        max-width: 320px;
+
+    }
+
+    button {
+        margin-top: 3rem;
+    }
+}
