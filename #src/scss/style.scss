@@ -9,18 +9,13 @@ body{
     line-height: 20px;
     letter-spacing: 0.07em;
     color:$def-black;
-    @extend %monst-alter-norm;
+    @extend %merri-norm;
 }
 
 
 .container{
     margin: 0 auto;
     width: 100%;
-    max-width: 1950px;
-    padding: 0 15px;
-    &--med{
-        width: 100%;
-        max-width: 1668px;
-        padding: 0 15px;
-    }
+    max-width: 1292px;
+    padding: 0 1rem;
 }
