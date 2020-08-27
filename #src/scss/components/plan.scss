@@ -1,0 +1,58 @@
+.plan {
+    color: $def-red;
+    margin-bottom: 3rem;
+
+
+    .half-section__img {
+        max-width: 350px;
+        margin: auto;
+    }
+    
+    &__title {
+        margin-bottom: 2rem;
+        color: $def-blue;
+    }
+
+    &__for {
+        font-size: 18px;
+        @extend %avenir-norm;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        color: #000;
+    }
+
+    &__buttons {
+        margin-top: 2rem;
+        .button{
+            margin-top: 1rem;
+            &:first-child {
+                margin-right: 20px;
+            }  
+        } 
+    }
+
+
+    &:nth-child(odd) {
+        flex-direction: row-reverse;
+        color: $def-blue;
+        
+        .half-section.e--left {
+            margin-left: 2rem;
+            margin-right: 0;
+        }
+
+        .half-section.e--right {
+            margin-right: 2rem;
+            margin-left: 0;
+        }
+    }
+
+    @include mq('tablet') {
+        &:nth-child(odd) {
+            flex-direction: column-reverse;
+        }
+    }
+    
+}

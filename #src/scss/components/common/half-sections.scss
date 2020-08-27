@@ -5,7 +5,7 @@
     }
 
     &-section {
-        max-width: 50%;
+        width: 50%;
         &.e--left {
             margin-right: 2rem;
         }
@@ -14,14 +14,14 @@
         }
     }
 
-    @include mq('tablet-wide') {
+    @include mq('tablet') {
         &-sections {
             flex-direction: column-reverse;
             align-items: center;
         }
 
         &-section {
-            max-width: 100%;
+            width: 100%;
             &.e--left {
                 margin-right: 0;
                 margin-top: 2rem;

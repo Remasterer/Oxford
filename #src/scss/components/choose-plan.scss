@@ -1,3 +1,35 @@
 .choose-plan {
     padding: 100px 0;
+
+    &__titles {
+        margin-bottom: 100px;
+        
+        line-height: 1.2;
+        text-align: center;
+        h2 {
+            color: $light-red;
+            letter-spacing: 3px;
+            max-width: 630px;
+            margin: auto;
+        }
+
+        p {
+            position: relative;
+            bottom: 12rem;
+
+            &.e--line {
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 150px;
+                    height: 6px;
+                    background-color: $def-red;
+                    margin-right: 4rem;
+                    position: absolute;
+                    left: -70px;
+                    top:calc(50% - 3px)
+                }
+            }
+        }
+    }
 }
