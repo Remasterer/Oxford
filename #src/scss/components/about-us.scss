@@ -1,5 +1,14 @@
 .about-us {
+    padding: 100px 0;
     &__titles {
         margin-bottom: 1rem;
+    }
+
+    &__check-list {
+        margin-top: 2rem;
+    }
+
+    &__button {
+        margin-top: 50px;
     }
 }

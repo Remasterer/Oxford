@@ -48,6 +48,12 @@ h4{
 .button{
     border-radius: 30px;
     padding: 0.75rem  3rem ;
+    cursor: pointer;
+    transition: .3s all;
+    &:focus {
+        outline: none;
+    }
+
     &.e--white{
         background:#fff;
         color: $def-red;
@@ -55,6 +61,11 @@ h4{
     &.e--red{
         color:#fff;
         background:$def-red;
+
+        &:hover,
+        &:focus {
+            background-color: $def-red-hover;
+        }
     }
     &.e--blue{
         color:$def-red;
@@ -88,18 +99,43 @@ a {
     }
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 .half {
     &-sections {
         display: flex;
+        align-items: flex-start;
     }
 
     &-section {
         max-width: 50%;
         &.e--left {
-            margin-right: 4rem;
+            margin-right: 2rem;
         }
         &.e--right {
-            margin-left: 4rem;
+            margin-left: 2rem;
         }
+    }
+
+    @include mq('tablet-wide') {
+        &-sections {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        &-section {
+            max-width: 100%;
+            &.e--left {
+                margin-right: 0;
+                margin-top: 2rem;
+            }
+            &.e--right {
+                margin-left: 0;
+            }
+        }
+
     }
 }
