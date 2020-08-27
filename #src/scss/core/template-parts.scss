@@ -57,6 +57,20 @@ h5{
         outline: none;
     }
 
+    &.e--transparent {
+        &-red {
+            background-color: transparent;
+            border: 2px solid $def-red;
+            color: $def-red;
+        }
+
+        &-blue {
+            background-color: transparent;
+            border: 2px solid $def-blue;
+            color: $def-blue;
+        }
+    }
+
     &.e--white{
         background:#fff;
         color: $def-red;
@@ -71,9 +85,8 @@ h5{
         }
     }
     &.e--blue{
-        color:$def-red;
-        background:transparent;
-        border:1px solid $def-red;
+        color: #fff;
+        background: $def-blue;
     }
     &.e--light-red{
         color:$def-red;
