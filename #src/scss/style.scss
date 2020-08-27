@@ -9,7 +9,7 @@ body{
     line-height: 20px;
     letter-spacing: 0.07em;
     color:$def-black;
-    @extend %monst-alter-norm;
+    @extend %merri-norm;
 }
 
 
@@ -23,4 +23,9 @@ body{
         max-width: 1668px;
         padding: 0 15px;
     }
+}
+
+p {
+    font-size: 18px;
+    line-height: 23px;
 }

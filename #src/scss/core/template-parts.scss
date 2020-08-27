@@ -1,3 +1,7 @@
+body {
+    @extend %merri-norm;
+}
+
 h1,h2,h3,h4{
         @extend %monst-alter-norm;
 }
@@ -27,6 +31,18 @@ h4{
 }
 .e--light-blue{
     color: $light-blue;
+}
+
+.titles {
+    text-align: center;
+    h2 {
+      color: $light-blue;
+      margin-bottom: 1rem;
+    }
+
+    .e--line {
+
+    }
 }
 
 .button{
@@ -61,5 +77,29 @@ h4{
 }
 .sub-description{
     color:$def-black;
-    font-size:2em;
+    font-size: 1.5rem;
+    @extend %monst-alter-light;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.half {
+    &-sections {
+        display: flex;
+    }
+
+    &-section {
+        max-width: 50%;
+        &.e--left {
+            margin-right: 4rem;
+        }
+        &.e--right {
+            margin-left: 4rem;
+        }
+    }
 }

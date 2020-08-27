@@ -12,6 +12,11 @@
     font-family: 'Montserrat Alternates';
     font-weight: 600;
 }
+
+%monst-alter-light{
+    font-family: 'Montserrat Alternates';
+    font-weight: 500;
+}
 %avenir-norm{
     font-family: 'Avenir Next';
     font-weight: 500;
@@ -27,4 +32,4 @@ $light-blue:rgba(0, 35, 124, 0.3);
 
 $def-white: #FFFFFF;
 
-$def-black:#000000;
+$def-black:#030303;
