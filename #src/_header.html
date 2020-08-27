@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Document</title>
 </head>
+
 <body>
-    
-<header class="header">
+
+    <header class="header">
         <div class="header__top">
             <div class="container">
                 <div class="header__top__inner">
-
-            <a href="#" class="header__test-link">
-                Узнай свой уровень английского
-            </a>
-
-            <a class="custom-logo-link header__brand">
-                <img src="img/Base/logo.svg" alt="" class="custom-logo">
-            </a>
-            <div class="header__actions">
-                <button>
-                    <img src="img/Home-page/search-icon.svg" alt="">
-                </button>
-                <button>
-                    RU
-                </button>
-                <a href="tel:+380978473539" class="button e--white">+380978473539</a>
+                    <div class="header__left">
+                        <label class="menu__btn" for="menu__toggle">
+                            <span></span>
+                        </label>
+                        <a href="#" class="header__test-link">
+                            Узнай свой <br> уровень английского
+                        </a>
+                    </div>
+                    
+                    <a class="custom-logo-link header__brand">
+                        <img src="img/Base/logo.svg" alt="" class="custom-logo">
+                    </a>
+                    <div class="header__actions">
+                        <div class="header__functional" data-da="header__bottom__inner,2,640">
+                            <button>
+                                <img src="img/Home-page/search-icon.svg" alt="">
+                            </button>
+                            <button>
+                                RU
+                            </button>
+                        </div>
+                        <a href="tel:+380978473539" class="header__call button e--white"><i class="fas fa-phone-alt"></i><span>+380978473539</span></a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+        <input id="menu__toggle" type="checkbox">
         <div class="header__bottom">
-            <div class="container">
+            <div class="container e-tb-pd-0">
                 <div class="header__bottom__inner">
-
-                    <input id="menu__toggle" type="checkbox" />
-                   
-                    <label class="menu__btn" for="menu__toggle">
-                      <span></span>
-                    </label>
-
-                    <input id="menu__toggle" type="checkbox">
-
                     <nav id="site-navigation" class="main-navigation">
                         <ul class="menu nav-menu">
-                            <li><a href="#">О нас</a></li>
+                            <li class="current-menu-item"><a href="#">О нас</a></li>
                             <li><a href="#">Английский</a></li>
                             <li><a href="#">Развития ребенка</a></li>
                             <li><a href="#">ЗНО</a></li>
@@ -62,8 +62,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    </div>
+        </div>
+        </div>
 
 
-</header>
+    </header>

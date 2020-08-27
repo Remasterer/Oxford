@@ -3,7 +3,7 @@ body {
 }
 
 h1,h2,h3,h4{
-        @extend %monst-alter-norm;
+        @extend %monst-alter-bold;
 }
 h1{
     color:#fff;
@@ -19,7 +19,9 @@ h3{
 h4{
     font-size:1.5rem;
 }
-
+h5{
+    font-size:1.25rem;
+}
 .e--red{
     color: $def-red;
 }
@@ -48,6 +50,7 @@ h4{
 .button{
     border-radius: 30px;
     padding: 0.75rem  3rem ;
+    @extend %avenir-bold;
     cursor: pointer;
     transition: .3s all;
     &:focus {

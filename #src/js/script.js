@@ -1,1 +1,1 @@
-console.log($(location).attr('href'));
+@@include('dynamic-adaptive.js');

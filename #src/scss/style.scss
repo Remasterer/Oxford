@@ -18,6 +18,11 @@ body{
     width: 100%;
     max-width: 1292px;
     padding: 0 1rem;
+    @include mq('tablet-small'){
+        &.e-tb-pd-0{
+            padding:0;
+        }
+    }
 }
 
 p {
