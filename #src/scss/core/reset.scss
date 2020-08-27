@@ -50,4 +50,13 @@ a{
 button{
 	background:transparent;
 	border:none;
+	color: inherit;
+}
+html,
+body {
+	height: 100%;
+}
+main {
+	position: relative;
+	min-height: 100%;
 }

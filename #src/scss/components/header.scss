@@ -1,27 +1,39 @@
-
-
 //Header
 .header {
     color:$def-white;
-    background:$def-blue;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     @extend %monst-semi;
-    // .header__top
-
     &__top {
         display: flex;
         align-items: center;
-        height: 171px;
-        background: url('../../img/Home-page/header-back.svg') center center no-repeat;
+        height: 85px;
         background-size: cover;
         z-index: 10000;
+        background:$def-red;
         position: relative;
         &__inner{
             display: flex;
             justify-content: space-between;
             align-items: center;
+            z-index: 1;
+            
+            &::after{
+                left: 50%;
+                transform: translateX(-50%);
+                @include pseudo;
+                background: url('../../img/Home-page/header-fugure.svg') no-repeat  ;
+                height: 127px;
+                width: 263px;
+                top: -3px;
+                z-index: -1;
+            }
         }
     }
-
+    //header actions 
+    &__actions{
+        display: flex;
+        align-items: center;
+    }
     // .header__test-link
 
     &__test-link {
@@ -30,27 +42,140 @@
     // .header__brand
 
     &__brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top:12px;
+        
     }
-
+    // header functional
+    &__functional{
+        margin-right:1.25rem;
+    }
     // .header__bottom
 
     &__bottom {
-        overflow: hidden;
+        background:$def-blue;
         .main-navigation{
             font-size:13px;
             ul{
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-between  ;
             }
-        
             li{
+                &.current-menu-item{
+                    position: relative;
+                    @extend %monst-semi;
+                    &::after{
+                        @include pseudo;
+                        bottom: -1px;
+                        left: 0;
+                        width: 100%;
+                        background:$def-red;
+                        height:4px;
+                    }
+                }
             }
-            li + li{
-                
+            a{
+                display: block;
             }
         }
-        padding-bottom: 40px;
+        &__inner{
+            padding-top: 15px;
+        }
     }
+    &__left{
+        display: flex;
+        align-items: center;
+    }
+
+    // Header Call
+    &__call{
+        i{
+            display: none;
+        }
+    }
+    @include mq('desktop','min'){
+        .menu__btn{
+            display: none;
+        }
+        .main-navigation ul a{
+            padding:2rem 0;
+        }
+    }
+    @include mq('desktop'){
+        &.sticky{
+            &__bottom{
+                position: absolute;
+                transform: translateY(-100%);
+            }
+        }
+        &__bottom{
+            position: absolute;
+            transform: translateY(-100%);
+            transition: all .3s ease 0s ;
+            width: 100%;
+            &__inner {
+                padding-top: 38px;
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                a{
+                    padding:1rem;
+                }
+            }
+        }
+        .header__test-link {
+            margin-left: 1rem;
+            font-size:14px;
+
+        }
+        &__functional{
+            margin-right:.5rem;
+        }
+    }
+    @include mq('tablet-wide'){
+        .header__test-link {
+            display: none;
+        }
+        &__call{
+            padding: .5rem 1.5rem;
+        }
+        
+    }
+    @include mq('tablet-small'){
+        &__call {
+            padding: .5rem 1rem;
+        }
+        &__call{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size:0px;
+            span{
+                display: none;
+            }
+            i{
+                color:$def-red;
+                font-size:20px;
+                display: block;
+            }
+        }
+        &__functional{
+           display: flex;
+           justify-content: space-around;
+           padding:20px 0;
+        }
+        &__top__inner::after{
+            top: -18px;
+        }
+        &__bottom__inner {
+            padding-top: 20px;
+        }
+    }
+
 }
 
 
@@ -65,17 +190,16 @@
 // Menu 
 #menu__toggle {
   opacity: 0;
+  display: none;
 }
 .menu__btn {
   display: flex; 
   align-items: center;
-  position: fixed;
-  top: 20px;
-  left: 20px;
   width: 26px;
   height: 26px;
   cursor: pointer;
   z-index: 1;
+  position: relative;
 }
 /* добавляем "гамбургер" */
 .menu__btn > span,
@@ -106,7 +230,6 @@
     top: 0;
     transform: rotate(90deg);
   }
-  #menu__toggle:checked ~ .menu__box {
-    visibility: visible;
-    left: 0;
+  #menu__toggle:checked ~ .header__bottom{
+    transform: translateY(0%)
   }
