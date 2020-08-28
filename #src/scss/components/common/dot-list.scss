@@ -1,0 +1,27 @@
+.dot-list {
+    font-size: 18px;
+    @extend %avenir-bold;
+    color: $def-blue;
+    &.e--red {
+        color: $def-red;
+        li::before {
+            background-color: $def-red;
+        }
+    }
+    li {
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $def-blue;
+            margin-right: .5rem;
+        }
+    }
+}
