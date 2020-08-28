@@ -6,19 +6,21 @@
 
 body{
     font-size: 16px;
-    line-height: 20px;
+    
     letter-spacing: 0.07em;
     color:$def-black;
     @extend %merri-norm;
 }
 
-
+main{
+    margin-top: 188px;
+}
 .container{
     margin: 0 auto;
     width: 100%;
     max-width: 1292px;
     padding: 0 1rem;
-    @include mq('tablet-small'){
+    @include mq('tablet'){
         &.e-tb-pd-0{
             padding:0;
         }
@@ -27,4 +29,5 @@ body{
 
 p {
     font-size: 18px;
+    line-height: 20px;
 }
