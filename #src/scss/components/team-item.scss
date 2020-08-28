@@ -1,0 +1,53 @@
+.team-item {
+    background: #FFFFFF;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 1.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__img {
+        max-width: 220px;
+        border-radius: 50%;
+        border:  9px solid $def-blue;
+        overflow: hidden;
+        margin: auto;
+
+        &-outline {
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            max-width: 220px;
+            border: 5px solid $def-red;
+        }
+        img {
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+
+    
+    &__name {
+        max-width: 250px;
+        margin: auto;
+        text-align: center;
+        margin-top: 1.5rem;
+        line-height: 1.2;
+    }
+
+    &__pos {
+        color: $def-blue;
+        @extend %monst-alter-light;
+        margin-top: .5rem;
+    }
+
+    &__desc {
+        margin-top: 1rem;
+        span {
+            @extend %monst-semi;
+        }
+    }
+}
