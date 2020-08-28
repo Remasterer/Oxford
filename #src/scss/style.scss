@@ -28,4 +28,8 @@ body{
 p {
     font-size: 18px;
     line-height: 20px;
+
+    @include mq('tablet') {
+        font-size: 1rem;
+    }
 }

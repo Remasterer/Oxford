@@ -25,6 +25,14 @@ h1{
 h2{
     font-size: 4.5rem;
     text-align: center;
+
+    @include mq('tablet-wide') {
+        font-size: 3.5rem;
+    }
+
+    @include mq('phone-wide') {
+        font-size: 2.25rem;
+    }
 }
 h3{
     font-size:2.5rem;
@@ -62,7 +70,7 @@ h5{
 
 .titles {
     text-align: center;
-    padding-bottom: 4rem;
+    margin-bottom: 4rem;
     h2 {
       color: $light-blue;
       margin-bottom: 1rem;
@@ -125,6 +133,7 @@ h5{
 .sub-title{
     font-size: 2rem;
     @extend %monst-alter-light;
+    line-height: 1.3;
     &.e--line {
         position: relative;
         &::before {
@@ -143,6 +152,19 @@ h5{
         &::before {
             background-color: $def-blue;
         }
+    }
+
+    @include mq('tablet-wide') {
+        font-size: 1.5rem;
+        &.e--line {
+            position: static; 
+            &::before {
+                display: none;
+            }
+        }
+    }
+    @include mq('phone-wide') {
+        font-size: 1.25rem;
     }
 }
 .sub-description{
@@ -165,4 +187,7 @@ img {
 
 .section{
     padding-top: 75px;
+}
+.overflow-hidden {
+    overflow: hidden;
 }

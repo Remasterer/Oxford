@@ -16,8 +16,14 @@
         p {
             position: relative;
             bottom: 12rem;
+        }
+    }
 
-            
+    @include mq('tablet-wide') {
+        &__titles {
+            p {
+                position: static;
+            }
         }
     }
 }

@@ -41,7 +41,10 @@ h2,
 h3,
 h4,
 .footer,
-.cta p span {
+.cta p span,
+.our-contacts__location,
+.our-contacts__phones,
+.our-contacts__email {
   font-family: 'Montserrat Alternates';
   font-weight: 600;
 }
@@ -276,7 +279,7 @@ h5 {
 
 .titles {
   text-align: center;
-  padding-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 
 .titles h2 {
@@ -343,6 +346,7 @@ h5 {
 
 .sub-title {
   font-size: 2rem;
+  line-height: 1.3;
 }
 
 .sub-title.e--line {
@@ -385,6 +389,10 @@ img {
 
 .section {
   padding-top: 75px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .header {
@@ -1083,7 +1091,6 @@ img {
 
 .our-team__titles p {
   text-align: center;
-  position: relative;
   bottom: 5rem;
 }
 
@@ -1340,6 +1347,85 @@ img {
   text-align: center;
   margin: auto;
   margin-top: 1rem;
+}
+
+.our-contacts {
+  padding: 80px 0;
+}
+
+.our-contacts__location {
+  text-align: center;
+}
+
+.our-contacts__location i {
+  font-size: 2.5rem;
+  margin-right: 2rem;
+  color: #CD142B;
+}
+
+.our-contacts__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.our-contacts__video {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  margin-right: 1rem;
+}
+
+.our-contacts__map {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  margin-left: 1rem;
+}
+
+.our-contacts__phones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.our-contacts__phones i {
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: #CD142B;
+  -webkit-transform: rotate(-35deg);
+      -ms-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+}
+
+.our-contacts__phones span {
+  display: block;
+}
+
+.our-contacts__phones span:first-child {
+  margin-bottom: .5rem;
+}
+
+.our-contacts__email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3rem;
+}
+
+.our-contacts__email i {
+  font-size: 2.5rem;
+  margin-right: 2rem;
+  color: #CD142B;
 }
 
 .check-list {
@@ -1911,8 +1997,24 @@ p {
     line-height: 39px;
   }
 
+  h2 {
+    font-size: 3.5rem;
+  }
+
   h4 {
     line-height: 31px;
+  }
+
+  .sub-title {
+    font-size: 1.5rem;
+  }
+
+  .sub-title.e--line {
+    position: static;
+  }
+
+  .sub-title.e--line::before {
+    display: none;
   }
 
   .header .header__test-link {
@@ -1945,6 +2047,10 @@ p {
         flex-basis: 50%;
   }
 
+  .choose-plan__titles p {
+    position: static;
+  }
+
   .our-team__slider {
     padding: 0 60px;
   }
@@ -1952,6 +2058,16 @@ p {
   .our-team .slick-slide {
     margin-right: .5rem;
     margin-left: .5rem;
+  }
+
+  .our-contacts__video {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+
+  .our-contacts__map {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
 
   .post__title {
@@ -1989,6 +2105,42 @@ p {
     margin-left: 1rem;
   }
 
+  .our-contacts__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .our-contacts__video {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+    margin-right: 0;
+    margin-top: 2rem;
+  }
+
+  .our-contacts__map {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+    margin-left: 0;
+  }
+
+  .our-contacts__email {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .our-contacts__email i {
+    margin-right: 0;
+    margin-bottom: .5rem;
+  }
+
+  .our-contacts__email p {
+    font-size: 14px;
+  }
+
   .half-sections {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -2018,6 +2170,10 @@ p {
 
   .container.e-tb-pd-0 {
     padding: 0;
+  }
+
+  p {
+    font-size: 1rem;
   }
 }
 
@@ -2096,6 +2252,10 @@ p {
     font-size: 1.2rem;
   }
 
+  h2 {
+    font-size: 2.25rem;
+  }
+
   h4 {
     font-size: 1rem;
     line-height: 21px;
@@ -2103,6 +2263,10 @@ p {
 
   h5 {
     font-size: .8rem;
+  }
+
+  .sub-title {
+    font-size: 1.25rem;
   }
 
   .footer__sub-title {
