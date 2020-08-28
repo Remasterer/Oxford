@@ -17,19 +17,7 @@
             position: relative;
             bottom: 12rem;
 
-            &.e--line {
-                &::before {
-                    content: '';
-                    display: inline-block;
-                    width: 150px;
-                    height: 6px;
-                    background-color: $def-red;
-                    margin-right: 4rem;
-                    position: absolute;
-                    left: -70px;
-                    top:calc(50% - 3px)
-                }
-            }
+            
         }
     }
 }

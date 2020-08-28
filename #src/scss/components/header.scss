@@ -109,6 +109,7 @@
         }
     }
     @include mq('desktop'){
+        border-bottom: unset;
         &.sticky{
             &__bottom{
                 position: absolute;

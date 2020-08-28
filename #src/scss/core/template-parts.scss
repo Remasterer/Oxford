@@ -6,8 +6,21 @@ h1,h2,h3,h4{
         @extend %monst-alter-bold;
 }
 h1{
+    @extend %monst-alter-light;
     color:#fff;
+    line-height: 59px;
     font-size:3rem;
+    @include mq('tablet-wide'){
+        font-size:2rem;
+        line-height: 39px;
+    }
+    @include mq('phablet'){
+        font-size:1.5rem;
+        line-height: 29px;
+    }
+    @include mq('phone-wide'){
+        font-size:1.2rem;
+    }
 }
 h2{
     font-size: 4.5rem;
@@ -48,10 +61,7 @@ h5{
       color: $light-blue;
       margin-bottom: 1rem;
     }
-
-    .e--line {
-
-    }
+    
 }
 
 .button{
@@ -109,6 +119,25 @@ h5{
 .sub-title{
     font-size: 2rem;
     @extend %monst-alter-light;
+    &.e--line {
+        position: relative;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 150px;
+            height: 6px;
+            background-color: $def-red;
+            margin-right: 4rem;
+            position: absolute;
+            left: -70px;
+            top:calc(50% - 3px)
+        }   
+    }
+    &.e--line-blue{
+        &::before {
+            background-color: $def-blue;
+        }
+    }
 }
 .sub-description{
     color:$def-black;
