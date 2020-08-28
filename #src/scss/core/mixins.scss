@@ -55,7 +55,7 @@ $breakpoints: (
     @if map_has_key($breakpoints, $width) {
         $width: map_get($breakpoints, $width);
         @if $type == min {
-            $width: $width - 1px;
+            $width: $width + 1px;
         }
         @media only screen and (#{$type}-width: $width) {
             @content;
