@@ -1,0 +1,133 @@
+.blog {
+
+    // .blog__inner
+
+    &__inner {
+    }
+
+    // .blog__content
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 147px 21px ;
+        padding-top: 70px;
+    }
+    @include mq('tablet'){
+        &__content {
+            grid-template-columns: 1fr 1fr ;
+        }
+    }
+    @include mq('phablet'){
+        &__content {
+            grid-template-columns: 1fr  ;
+        }
+    }
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    // .post__image
+
+    &__image {
+        object-fit: cover;
+    }
+
+    // .post__date
+
+    &__date {
+        margin:18px 0;
+    }
+
+    // .post__title
+
+    &__title {
+        margin-bottom: 30px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    // .post__text
+
+    &__text {
+        display: none;
+    }
+
+    // .post__button
+
+    &__button {
+    }
+
+    &__image-box{
+        width: 100%;
+        max-height: 310px;
+    }
+    @include mq('phablet','min'){
+        &:first-of-type{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            grid-column: span 3;
+            .post__info{
+                display: flex;
+                flex-direction: column;
+                padding-left: 50px;
+            }
+            .post__text {
+                display: block;
+                font-size: 13px;
+                line-height: 19px;
+                letter-spacing: 0.2px;
+                max-width: 485px;
+            }
+            .post__date {
+                order: 3;
+                margin:30px 0;
+            }
+            .post__button {
+                width: fit-content;
+                order: 4;
+            }
+            .post__image-box{
+                width: 55%;
+                max-height: unset;
+                min-width: 513px;
+            }
+            .post__title {
+                overflow: unset;
+                text-overflow: unset;
+                display: -webkit-box;
+                -webkit-line-clamp: unset;
+                -webkit-box-orient: unset;
+            }
+            @include mq('tablet-wide'){
+                flex-direction: column;
+                .post__info{
+                    margin-top: 2rem;
+                    padding-left: 0px;
+                }
+            }
+            @include mq('tablet'){
+                grid-column: span 2;
+             }
+        }
+    }
+    @include mq('phone-wide','min'){
+        
+    }
+    @include mq('tablet-wide'){
+        &__title {
+            font-size: 20px;
+        }
+    }
+    @include mq('phablet'){
+        &__image-box{
+            max-height: unset;
+        }
+    }
+}

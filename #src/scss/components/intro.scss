@@ -1,5 +1,8 @@
 .intro{
+    margin-top: 178px;
     overflow: hidden;
+    background: url('../../img/Blog-page/back.png') bottom center no-repeat;
+    background-size: cover;
     position: relative;
     &.e--home-page{
         display: flex;
@@ -10,13 +13,23 @@
         height: 100vh;
         text-align: center;
         flex-direction: column;
+        margin-top: 0;
         h1{
             max-width: 1060px;
             margin-bottom: 35px;
+            margin: 0 auto;
+        }
+        &__content{
+            padding-top: 0;
         }
     }
-    &__content{
+    .container{
         z-index: 1;
+        position: relative;
+    }
+    &__content{
+        padding-top: 59px;
+        color: #fff;
     }
     &::before{
         z-index: 0;
@@ -30,11 +43,13 @@
         background: rgba(0, 0, 0, 0.5);
     }
     .arr-dwn{
+        z-index: 1;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
         bottom: -1px;
-        display: block;
+        display: flex;
+        justify-content: center;
         width: 400px;
         height: 63px;
         background: url('../../img/Home-page/arr-down-back.svg') top center no-repeat;
@@ -44,6 +59,18 @@
             max-width: 38px;
         }
 
+    }
+    .breadcrumbs{
+        margin-bottom: 85px;
+    }
+    &__description{
+        margin-top: 27px;
+        font-size: 30px;
+        line-height: 37px;
+        letter-spacing: 0.07em;
+        color: #B5B5B5;
+        @extend %monst-alter-regular;
+        padding-bottom: 201px;
     }
     
 }
