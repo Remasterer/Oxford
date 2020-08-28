@@ -32,4 +32,15 @@
     button {
         margin-top: 3rem;
     }
+
+    @include mq('tablet'){
+        &__wrapper {
+            flex-direction: column-reverse;
+        }
+
+        &__content,
+        &__img {
+            flex-basis: 100%;
+        }
+    }
 }
