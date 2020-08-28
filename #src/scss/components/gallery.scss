@@ -1,0 +1,112 @@
+.gallery {
+
+    // .gallery__inner
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    // .gallery__titles
+
+    &__titles {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 57px;
+        h2{
+            margin-bottom: 15px;
+        }
+        .sub-title{
+            margin:0 auto;
+            max-width: 620px;
+            line-height: 29px;
+        }
+        &.e--line{
+            position: relative;
+            &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 50px;
+                left: 0px;
+                width: 212px;
+                background: $def-blue;
+                height: 6px;
+                border-radius: 3px;
+            }
+
+        }
+    }
+
+    // .gallery__actions
+
+    &__actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: fit-content;
+        grid-gap: 21px 51px;
+        margin-bottom: 32px;
+    }
+
+    // .gallery__content
+
+    &__content {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-rows: 196.5px 196.5px;
+        grid-template-columns: 577px 186px 457px;
+    }
+    &__hashtags{
+        display: flex;
+        color:$def-blue;
+        margin-bottom: 47px;
+        .hashtag + .hashtag{
+            margin-left: 50px;
+        }
+    }
+    &__image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__item{
+        &.e--small{
+            grid-column: 2;
+        }
+        &.e--big{
+            grid-row: span 2;
+        }
+        &.first{
+            grid-row: 1;
+        }
+        &.second{
+            grid-row: 2;
+        }
+    }
+}
+.titles {
+}
+.e--light-blue {
+}
+.sub-title {
+}
+.e--line {
+}
+.e--line-blue {
+}
+.button {
+}
+.hashtags {
+}
+
+.grid-item {
+    float: left;
+    width: 80px;
+    height: 60px;
+    border: 2px solid hsla(0, 0%, 0%, 0.5);
+  }
+  
+  .grid-item--width2 { width: 160px; }
+  .grid-item--height2 { height: 140px; }
