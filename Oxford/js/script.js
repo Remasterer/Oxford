@@ -176,7 +176,7 @@ $('.our-team__slider').slick({
   slidesToShow: 2,
   slidesToScroll: 2,
   responsive: [{
-    breakpoint: 680,
+    breakpoint: 768,
     settings: {
       slidesToShow: 1,
       slidesToScroll: 1
@@ -200,4 +200,41 @@ $('.testimonials__slider').slick({
       slidesToShow: 1
     }
   }]
+});
+$('.camp-slider__slider').slick({
+  dots: false,
+  slidesToShow: 3,
+  arrows: true,
+  responsive: [{
+    breakpoint: 768,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 2
+    }
+  }, {
+    breakpoint: 480,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  }]
+});
+;
+$(document).ready(function () {
+  var $tabs = $('.js-tabs'),
+      $bar = $('.js-tabs__bar', $tabs),
+      $tab = $('a', $bar),
+      $content = $('.js-tabs__content', $tabs),
+      $activeClass = 'active';
+  $tab.each(function () {
+    var $this = $(this);
+    $this.on('click', function (e) {
+      e.preventDefault();
+      $tab.removeClass($activeClass);
+      $this.addClass($activeClass);
+      var href = $this.attr('href');
+      $content.removeClass($activeClass);
+      $tabs.find(href).addClass($activeClass);
+    });
+  });
 });

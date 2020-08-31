@@ -1,0 +1,123 @@
+.britan-tab {
+    &__section  {
+        padding: 2rem 0;
+        display: flex;
+        margin: 0 -1rem;
+
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        &.e--bg-1 {
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                height: 700px;
+                width: calc((1280px/2));
+                right: 0;
+                bottom: 0;
+                background: url(../img/camp/banner.svg) 15rem bottom no-repeat;
+                background-size: 80%;
+            }
+        }   
+
+        &.e--bg-2 {
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                height: 700px;
+                width: calc((1280px/2));
+                left: 0;
+                bottom: 0;
+                background: url(../img/camp/London.svg) left bottom no-repeat;
+                background-size: 60%;
+            }
+        }  
+    }
+
+    .check-list {
+        ul {
+            width: 60%;
+            margin-right: 1rem;
+            padding: 0 1rem;
+            li {
+                margin-bottom: 72px;
+                &:last-child {
+                    margin-bottom: 0;
+                    
+                }
+            }
+        }
+
+    }
+
+    &__img {
+        width: 40%;
+    }
+
+    @include mq('tablet-wide') {
+        &__section {
+            &.e--bg-1 {
+             &:after {
+                content: '';
+                position: absolute;
+                height: 700px;
+                width: calc((1280px/2));
+                right: 0;
+                bottom: 0;
+                background: url(../img/camp/banner.svg) 22rem 0 no-repeat;
+                background-size: 60%;
+             }   
+            }
+
+            &.e--bg-2 {
+                &:after {
+                    background: url(../img/camp/London.svg) left center no-repeat;
+                    background-size: 50%;
+                }
+            }
+        }
+    }
+
+    @include mq('tablet') {
+        &__section {
+            &.e--bg-1 {
+                &:after {
+                    background: url(../img/camp/banner.svg) center no-repeat;
+                    background-size: 70%;
+                    opacity: .2;
+                    width: 100%;
+                }
+
+            }
+            &.e--bg-2 {
+                &:after {
+                    background: url(../img/camp/London.svg) center no-repeat;
+                    background-size: 70%;
+                    opacity: .2;
+                    width: 100%;
+                }
+
+            }
+               
+               
+
+            
+        }
+
+        &__img {
+            width: 0%;
+        }
+
+        .check-list ul {
+            width: 100%;
+        }
+    }
+
+    @include mq('phone-wide') {
+        .check-list ul li {
+            margin-bottom: 2rem;
+        }
+    }
+}
