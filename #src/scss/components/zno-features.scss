@@ -7,7 +7,7 @@
             height: 200px;
             width:  420px;
             right: 0;
-            top: 16rem;
+            top: 20rem;
             background: url(../img/zno/professor.svg) right top /contain no-repeat;
         }
     }
@@ -26,7 +26,7 @@
                  position: absolute;
                  left: .5rem;
              }
-             margin-bottom: 6rem;
+             margin-bottom: 4rem;
              &:last-child {
                  margin-bottom: 0;
              }
@@ -61,7 +61,7 @@
  @include mq('tablet-wide') {
     &.e--bg-1 {
         &:after {
-            top: 24rem
+            top: 23rem
         }
     }
  }
@@ -69,7 +69,7 @@
  @include mq('tablet') {
     &.e--bg-1 {
         &:after {
-            opacity: .3;
+            opacity: .2;
         }
     }
 

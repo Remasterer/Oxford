@@ -17,7 +17,7 @@ let path = {
     js: source_folder + "/js/script.js",
     libsJs: source_folder + "/js/libs/**/*.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
-    fonts: source_folder + "/fonts/*.ttf",
+    fonts: source_folder + "/fonts/*.{ttf,otf,woff,woff2}",
   },
   watch: {
     html: source_folder + "/**/*.html",
@@ -25,6 +25,7 @@ let path = {
     js: source_folder + "/js/*.js",
     libsJs: source_folder + "/js/libs/**/*.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+    fonts: source_folder + "/fonts/*.{ttf,otf,woff,woff2}",
   },
   clean: "./" + project_folder + "/",
 };
@@ -207,7 +208,7 @@ function clean() {
   return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel( js, libsJs, html , css , fonts , images) ,fontsStyle);
+let build = gulp.series(clean, gulp.parallel( fonts , js, libsJs, html , css  , images));
 
 let watch = gulp.parallel(build, wacthFiles, browserSync);
 

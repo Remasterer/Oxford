@@ -1,0 +1,111 @@
+
+.juniors {
+
+		&__inner {
+		}
+
+		&__content {
+            display: flex;
+            align-items: flex-end;
+		}
+
+		&__list {
+            margin-top: 35px;
+        }
+        &__actions {
+            margin-top: 52px;
+        }
+        &__info {
+		}
+
+        &__advantages{
+            margin-top: 30px;
+        }
+        .preview-junior{
+            color: $def-white;
+            background:$def-blue;
+            @extend %avenir-bold;
+            font-size: 40px;
+            border-radius: 141px;
+            position: relative;
+            margin-bottom: 45px;
+            padding: 85px 85px 33px 82px;
+            word-break: break-word;
+            min-width: 800px;
+            margin-right: -27rem;
+            &__image-box{
+                position: absolute;
+                top: -184px;
+                left: -12px;
+            }
+            &__image{
+                  object-fit: cover;
+            }
+            &::after{
+                @include pseudo;
+                background: url('../../img/Center-page/arrow-blue.svg') center center no-repeat;
+                background-size: contain;
+                height: 100%;
+                width: 100%;
+
+                top: 0px;
+                left: -469px;
+            }
+        }
+}
+
+.teachers-help {
+    padding-top: 145px;
+    padding-bottom: 505px;
+    background:url('../../img/Center-page/section-1-back.png')  no-repeat;
+    background-size: cover;
+    background-position: 0px 0px;
+    background-size: 85%;
+}
+.teachers {
+        
+		// .teachers__inner
+
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+		}
+
+		// .teachers__image-box
+
+		&__image-box {
+            min-width: 400px;
+            img{
+                object-fit: cover;
+            }
+		}
+
+		// .teachers__advantages
+
+		&__advantages {
+		}
+
+		// .teachers__actions
+
+		&__actions {
+        }
+        &__info{
+            margin-top: 100px;
+            padding-left: 27px;
+        }
+}
+
+.info-section{
+    padding-bottom: 5.5rem;
+    &__inner{
+        display: flex;
+        align-items: center;
+        min-width: 398px;
+    }
+    &__info{
+        padding-right: 100px;
+    }
+    &__preview{
+        min-width: 398px;
+    }
+}

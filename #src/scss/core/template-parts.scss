@@ -207,6 +207,9 @@ img {
     position: relative;
     align-items: flex-end;
     font-family: 'Montserrat Alternates';
+    h3{
+        max-width: 600px;
+    }
     p{
         margin-top: 2rem;
         font-size: 1.5rem;
@@ -214,6 +217,7 @@ img {
         color: $def-black;
         order: 3;
         width: 100%;
+        line-height: 32px;
     }
     &::after{
         order: 2;
@@ -227,9 +231,18 @@ img {
         border-radius: 3px;
         margin-left: 3rem;
     }
+   
+    &.e--blue{
+        color:$def-blue;
+        &::after{
+            background: $def-red;
+        }
+    }
 }
 
-
+.sub-text{
+    margin-top: 1rem;
+}
 
 .advantages {
     margin-top: 30px;
@@ -256,5 +269,68 @@ img {
         font-weight: bold;
         margin-top: 1rem;
     }
+    &.e--red{
+        color: $def-red;
+    }
+    &__actions{
+        margin-top: 40px;
+    }
+    &.e--2row{
+        .advantages__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+    }
 }
 
+.info {
+
+    // .info__title
+
+    &__title {
+        margin-top: 22px;
+        margin-bottom: 1rem;
+    }
+
+    // .info__sub-title
+
+    &__sub-title {
+    }
+
+    // .info__list
+
+    &__list {
+        padding:30px 0;
+    }
+
+    // .info__text
+
+    &__text {
+        line-height: 23px;
+    }
+    &__button{
+        margin-top: 42px;
+    }
+}
+.info-list {
+
+    // .info-list__item
+
+    &__item {
+        position: relative;
+        padding-left: 44px;
+        &::after{
+            @include pseudo;
+            top: 0;
+            left: 0;
+            background:$def-red;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+    }
+    &__item + &__item{
+        margin-top: 32px;
+    }
+}
