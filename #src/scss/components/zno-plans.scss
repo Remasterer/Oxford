@@ -1,0 +1,20 @@
+.zno-plans {
+    padding-top: 3rem;
+    padding-bottom: 180px;
+    background-image: url(../img/zno/abstraction.svg);
+    background-position: bottom;
+    background-size: cover;
+
+    &__plans {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__plan {
+        padding: 3rem;
+        color: $def-red;
+        p {
+            color: #000;
+        }
+    }
+}

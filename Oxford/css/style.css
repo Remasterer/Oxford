@@ -46,7 +46,8 @@ h5,
 .our-contacts__location,
 .our-contacts__phones,
 .our-contacts__email,
-.camp__banner p {
+.camp__banner p,
+.info-banner p {
   font-family: 'Montserrat Alternates';
   font-weight: 600;
 }
@@ -1798,6 +1799,102 @@ img {
   width: 90%;
 }
 
+.zno {
+  padding: 80px 0;
+}
+
+.zno-features.e--bg-1 {
+  position: relative;
+}
+
+.zno-features.e--bg-1:after {
+  content: '';
+  position: absolute;
+  height: 200px;
+  width: 420px;
+  right: 0;
+  top: 16rem;
+  background: url(../img/zno/professor.svg) right top/contain no-repeat;
+}
+
+.zno-features__title {
+  margin-bottom: 3rem;
+}
+
+.zno-features .check-list ul {
+  margin-left: 0rem;
+  padding-left: 3rem;
+  position: relative;
+  font-size: 1.5rem;
+}
+
+.zno-features .check-list ul li {
+  margin-bottom: 6rem;
+}
+
+.zno-features .check-list ul li::before {
+  position: absolute;
+  left: .5rem;
+}
+
+.zno-features .check-list ul li:last-child {
+  margin-bottom: 0;
+}
+
+.zno-features .check-list ul li:nth-child(2) {
+  max-width: 60%;
+}
+
+.zno-features__students {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+.zno-features__students-img {
+  width: 40%;
+  max-width: 200px;
+  margin-right: 2rem;
+}
+
+.zno-features__students-list li {
+  margin-bottom: 4rem;
+}
+
+.zno-plans {
+  padding-top: 3rem;
+  padding-bottom: 180px;
+  background-image: url(../img/zno/abstraction.svg);
+  background-position: bottom;
+  background-size: cover;
+}
+
+.zno-plans__plans {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.zno-plans__plan {
+  padding: 3rem;
+  color: #CD142B;
+}
+
+.zno-plans__plan p {
+  color: #000;
+}
+
 .check-list {
   font-size: 18px;
 }
@@ -1880,6 +1977,22 @@ img {
   border-radius: 50%;
   background-color: #00237C;
   margin-right: .5rem;
+}
+
+.info-banner {
+  padding: 100px 0;
+  background-image: url("../../img/Courses/2-schoolboy/logo-oxford.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.info-banner p {
+  font-size: 30px;
+  line-height: 1.3;
+  text-align: center;
+  max-width: 1260px;
+  margin: auto;
+  color: #00237C;
 }
 
 .js-tabs__content {
@@ -2682,6 +2795,14 @@ p {
     margin-right: 2rem;
   }
 
+  .zno-features.e--bg-1:after {
+    top: 24rem;
+  }
+
+  .info-banner p {
+    font-size: 1.5rem;
+  }
+
   .post__title {
     font-size: 20px;
   }
@@ -2887,6 +3008,30 @@ p {
 
   .brovar-tab__feature.e--3 .brovar-tab__feature-text {
     width: 100%;
+  }
+
+  .zno-features.e--bg-1:after {
+    opacity: .3;
+  }
+
+  .zno-features .check-list ul li {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .zno-features .check-list ul li:nth-child(2) {
+    max-width: 100%;
+  }
+
+  .zno-features__students {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .zno-features__students-img {
+    margin-top: 2rem;
   }
 
   .half-sections {
@@ -3132,6 +3277,14 @@ p {
 
   .brovar-tab__feature-img {
     max-width: 150px;
+  }
+
+  .zno-features .check-list ul li {
+    font-size: 1rem;
+  }
+
+  .info-banner p {
+    font-size: 1.25rem;
   }
 }
 
