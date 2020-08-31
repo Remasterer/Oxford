@@ -72,5 +72,7 @@
         @extend %monst-alter-regular;
         padding-bottom: 201px;
     }
-    
+    @include mq('desktop'){
+        margin-top: 85px;
+    }
 }
