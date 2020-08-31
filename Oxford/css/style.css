@@ -292,6 +292,14 @@ h5 {
   margin-bottom: 1rem;
 }
 
+.titles h2.e--light-red {
+  color: rgba(205, 20, 43, 0.3);
+}
+
+.titles h2.e--light-blue {
+  color: rgba(0, 35, 124, 0.3);
+}
+
 .button {
   border-radius: 30px;
   padding: 0.75rem  3rem;
@@ -399,6 +407,67 @@ img {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.title-w-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: #CD142B;
+  position: relative;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-family: 'Montserrat Alternates';
+}
+
+.title-w-line p {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #030303;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  width: 100%;
+}
+
+.title-w-line::after {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  content: '';
+  display: block;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 130px;
+  background: #00237C;
+  border-radius: 3px;
+  margin-left: 3rem;
+}
+
+.advantages {
+  margin-top: 30px;
+  font-family: 'Montserrat Alternates';
+  color: #00237C;
+  font-size: 20px;
+  line-height: 180%;
+}
+
+.advantages span {
+  font-weight: bold;
+}
+
+.advantages img {
+  max-width: 18px;
+}
+
+.advantages__text {
+  font-weight: bold;
+  margin-top: 1rem;
 }
 
 .header {

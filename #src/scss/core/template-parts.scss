@@ -4,6 +4,7 @@ body {
 
 h1,h2,h3,h4,h5{
         @extend %monst-alter-bold;
+        
 }
 h1{
     @extend %monst-alter-light;
@@ -74,6 +75,12 @@ h5{
     h2 {
       color: $light-blue;
       margin-bottom: 1rem;
+        &.e--light-red{
+            color: $light-red;
+        }
+        &.e--light-blue{
+            color: $light-blue;
+        }
     }
     
 }
@@ -192,3 +199,62 @@ img {
 .overflow-hidden {
     overflow: hidden;
 }
+
+.title-w-line{
+    display: flex;
+    flex-wrap: wrap;
+    color: $def-red;
+    position: relative;
+    align-items: flex-end;
+    font-family: 'Montserrat Alternates';
+    p{
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $def-black;
+        order: 3;
+        width: 100%;
+    }
+    &::after{
+        order: 2;
+        content: '';
+        display: block;
+        top: 0;
+        left: 0;
+        height: 6px;
+        width: 130px;
+        background: $def-blue;
+        border-radius: 3px;
+        margin-left: 3rem;
+    }
+}
+
+
+
+.advantages {
+    margin-top: 30px;
+    font-family: 'Montserrat Alternates';
+    color: $def-blue;
+    font-size: 20px;
+    line-height: 180%;
+    // .advantages__list
+
+    &__list {
+    }
+
+    // .advantages__item
+
+    &__item {
+    }
+    span{
+        font-weight: bold;
+    }
+    img{
+        max-width: 18px;
+    }
+    &__text{
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+}
+
