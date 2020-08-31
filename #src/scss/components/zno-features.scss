@@ -1,0 +1,102 @@
+.zno-features {
+    &.e--bg-1 {
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            height: 200px;
+            width:  420px;
+            right: 0;
+            top: 20rem;
+            background: url(../img/zno/professor.svg) right top /contain no-repeat;
+        }
+    }
+ &__title {
+     margin-bottom: 3rem;
+ }   
+
+ .check-list {
+     ul {
+         margin-left: 0rem;
+         padding-left: 3rem;
+         position: relative;
+         font-size: 1.5rem;
+         li {
+             &::before {
+                 position: absolute;
+                 left: .5rem;
+             }
+             margin-bottom: 4rem;
+             &:last-child {
+                 margin-bottom: 0;
+             }
+
+             &:nth-child(2) {
+                 max-width: 60%;
+             }
+         }
+     }
+ }
+
+ &__students {
+     display: flex;
+     justify-content: space-between;
+     font-size: 1.5rem;
+     align-items: center;
+     margin-top: 2rem;
+
+     &-img {
+         width: 40%;
+         max-width: 200px;
+         margin-right: 2rem;
+     }
+
+     &-list {
+         li {
+             margin-bottom: 4rem;
+         }
+     }
+ }
+
+ @include mq('tablet-wide') {
+    &.e--bg-1 {
+        &:after {
+            top: 23rem
+        }
+    }
+ }
+
+ @include mq('tablet') {
+    &.e--bg-1 {
+        &:after {
+            opacity: .2;
+        }
+    }
+
+    .check-list ul{
+        li {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            &:nth-child(2) {
+                max-width: 100%;
+            }
+        }
+    }
+    
+    &__students {
+        flex-direction: column-reverse;
+
+        &-img {
+            margin-top: 2rem;
+        }
+    }
+  }
+
+  @include mq('phone-wide') {
+    .check-list ul {
+        li {
+            font-size: 1rem;
+        }
+    }
+  }
+}

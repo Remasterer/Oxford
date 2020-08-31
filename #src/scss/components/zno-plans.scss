@@ -1,0 +1,56 @@
+.zno-plans {
+    padding-top: 3rem;
+    padding-bottom: 180px;
+    background-image: url(../img/zno/abstraction.svg);
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    &__plans {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__plan {
+        padding: 3rem;
+        color: $def-red;
+        &.e--blue {
+            color: $def-blue;
+        }
+        p {
+            color: #000;
+        }
+
+    }
+
+    &__title {
+        margin-bottom: 2rem;
+    }
+
+    button {
+        margin-top: 1.5rem;
+    }
+
+    @include mq('desktop') {
+        &__plan {
+            padding: 1rem;
+        }
+    }
+
+    @include mq('tablet') {
+        padding-bottom: 100px;
+        &__plans {
+            flex-direction: column;
+        }
+    }
+
+    @include mq('phone-wide') {
+        padding-bottom: 80px;
+        &__plan {
+            padding: 2rem 0;
+        }
+
+        &__title {
+            font-size: 1.25rem;
+        }
+    }
+}
