@@ -39,9 +39,14 @@ h3{
     
 }
 h4{
+    line-height: 41px;
     font-size:1.5rem;
+    @include mq('tablet-wide'){
+        line-height: 31px;
+    }
     @include mq('phone-wide'){
         font-size:1rem; 
+        line-height: 21px;
     }
 }
 h5{
@@ -180,6 +185,10 @@ img {
     height: auto;
 }
 
+.section{
+    overflow: hidden;
+    padding-top: 75px;
+}
 .overflow-hidden {
     overflow: hidden;
 }
