@@ -1,0 +1,168 @@
+.camp {
+    padding: 80px 0;
+
+    h2 {
+        color: $light-red;
+    }
+
+    &__tabs {
+        display: flex;
+        flex-direction: column  ;
+
+        &-bar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+            a {
+                display: inline-block;
+                padding: .75rem 3rem;
+                border-radius: 30px;
+                @extend %monst-alter-light;
+                transition: .3s all;
+                color: $def-red;
+    
+                &:first-child {
+                    margin-right: 1rem;
+                }
+    
+                &:hover {
+                    background-color: $def-red;
+                    color: #fff;
+                }
+            }
+
+        }
+    }
+
+    &__banner {
+        padding: 100px 0;
+        background-image: url('../../img/Courses/2-schoolboy/logo-oxford.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        p {
+            font-size: 30px;
+            @extend %monst-alter-bold;
+            line-height: 1.3;
+            text-align: center;
+            max-width: 1024px;
+            margin: auto;
+            color: $def-blue;
+        }
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 40px;
+        color: $def-red;
+        margin-bottom: 4rem;
+    }
+
+    ul {
+        font-size: 1.5rem;
+        @extend %monst-alter-light;
+        max-width: 60%;
+        li {
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        i {
+            color: $def-blue;
+        }
+        span {
+            @extend %monst-alter-regular;
+            margin: 0 20px;
+            color: $def-blue;
+        }
+    }
+
+    h4.camp__list-title {
+        font-size: 40px ;
+        margin-bottom: 4rem;
+    }
+
+    &-slider{
+        &__section {
+            padding: 60px 0;
+        } 
+
+        &__slider {
+            margin-top: 4rem;
+
+            .slick {
+                &-list {
+                    margin: 0 -1rem;
+                }
+
+                &-arrow {
+                    height: 42px;
+                    width: 42px;
+                    background-color: $def-red;
+                    border-radius: 50%;
+                    top: 120%;
+                    transition: .3s all;
+
+                    &:hover,
+                    &:focus {
+                        background-color: $def-red-hover;
+                    }
+                }
+
+                &-prev {
+                    left: 50%;
+                    transform: translateX(-45px);
+                    &::before {
+                        font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f104";
+                    }
+                }
+
+                &-next {
+                    right: 50%;
+                    transform: translateX(45px);
+                    &::before {
+                        font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f105";
+                    }
+                }
+            }
+        }
+
+        &__img {
+            margin: 0 1rem;
+        }
+    } 
+
+    @include mq('tablet') {
+        ul {
+            max-width: 100%;
+        }
+    }
+
+    @include mq('phone-wide') {
+        h3 {
+            font-size: 1.75rem;
+        }
+
+        h4.camp__list-title {
+            font-size: 1.5rem;
+            margin-bottom: 0;
+        }
+        
+        &__banner {
+            p {
+                font-size: 1.25rem;
+            }
+        }
+
+        &__tabs-bar {
+            a {
+                padding: .5rem 1rem;
+            }
+        }
+
+        ul {
+            font-size: 1rem;
+        }
+    }
+}

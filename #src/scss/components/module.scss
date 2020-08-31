@@ -12,8 +12,14 @@
 @import 'testimonials';
 @import 'testimonial-item';
 @import 'our-contacts';
+@import 'camp';
+@import 'britan-tab';
+@import 'brovar-tab';
 
 // Common styles
 @import 'common/check-list';
 @import 'common/half-sections';
 @import 'common/dot-list';
+
+// JS
+@import 'js/js-tabs'
