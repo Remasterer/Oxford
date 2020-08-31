@@ -78,7 +78,8 @@ h1,
 }
 
 .button,
-.dot-list {
+.dot-list,
+.juniors .preview-junior {
   font-family: 'Avenir-Bold';
   font-weight: 600;
 }
@@ -423,6 +424,10 @@ img {
   font-family: 'Montserrat Alternates';
 }
 
+.title-w-line h3 {
+  max-width: 600px;
+}
+
 .title-w-line p {
   margin-top: 2rem;
   font-size: 1.5rem;
@@ -432,6 +437,7 @@ img {
       -ms-flex-order: 3;
           order: 3;
   width: 100%;
+  line-height: 32px;
 }
 
 .title-w-line::after {
@@ -447,6 +453,18 @@ img {
   background: #00237C;
   border-radius: 3px;
   margin-left: 3rem;
+}
+
+.title-w-line.e--blue {
+  color: #00237C;
+}
+
+.title-w-line.e--blue::after {
+  background: #CD142B;
+}
+
+.sub-text {
+  margin-top: 1rem;
 }
 
 .advantages {
@@ -468,6 +486,57 @@ img {
 .advantages__text {
   font-weight: bold;
   margin-top: 1rem;
+}
+
+.advantages.e--red {
+  color: #CD142B;
+}
+
+.advantages__actions {
+  margin-top: 40px;
+}
+
+.advantages.e--2row .advantages__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.info__title {
+  margin-top: 22px;
+  margin-bottom: 1rem;
+}
+
+.info__list {
+  padding: 30px 0;
+}
+
+.info__text {
+  line-height: 23px;
+}
+
+.info__button {
+  margin-top: 42px;
+}
+
+.info-list__item {
+  position: relative;
+  padding-left: 44px;
+}
+
+.info-list__item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #CD142B;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.info-list__item + .info-list__item {
+  margin-top: 32px;
 }
 
 .header {
@@ -2124,6 +2193,117 @@ img {
 
 .office + .office {
   margin-top: 10rem;
+}
+
+.juniors__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.juniors__list {
+  margin-top: 35px;
+}
+
+.juniors__actions {
+  margin-top: 52px;
+}
+
+.juniors__advantages {
+  margin-top: 30px;
+}
+
+.juniors .preview-junior {
+  color: #FFFFFF;
+  background: #00237C;
+  font-size: 40px;
+  border-radius: 141px;
+  position: relative;
+  margin-bottom: 45px;
+  padding: 85px 85px 33px 82px;
+  word-break: break-word;
+  min-width: 800px;
+  margin-right: -27rem;
+}
+
+.juniors .preview-junior__image-box {
+  position: absolute;
+  top: -184px;
+  left: -12px;
+}
+
+.juniors .preview-junior__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.juniors .preview-junior::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: url("../../img/Center-page/arrow-blue.svg") center center no-repeat;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: -469px;
+}
+
+.teachers-help {
+  padding-top: 145px;
+  padding-bottom: 505px;
+  background: url("../../img/Center-page/section-1-back.png") no-repeat;
+  background-size: cover;
+  background-position: 0px 0px;
+  background-size: 85%;
+}
+
+.teachers__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.teachers__image-box {
+  min-width: 400px;
+}
+
+.teachers__image-box img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.teachers__info {
+  margin-top: 100px;
+  padding-left: 27px;
+}
+
+.info-section {
+  padding-bottom: 5.5rem;
+}
+
+.info-section__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 398px;
+}
+
+.info-section__info {
+  padding-right: 100px;
+}
+
+.info-section__preview {
+  min-width: 398px;
 }
 
 /* Slider */
