@@ -1,0 +1,96 @@
+.section {
+}
+.container {
+}
+.titles {
+}
+.e--light-red {
+}
+.sub-description {
+}
+.entry-content {
+    padding-bottom: 53px;
+        h3{
+            max-width: 725px;
+            margin-bottom: 21px;
+        }
+        p{
+            max-width: 960px;
+        }
+		// .entry-content__inner
+
+		&__inner {
+            display: flex;
+            padding-bottom: 2rem;
+            .entry-content__info{
+                width: 57%;
+                padding-right: 1rem;
+            }
+            @include mq('desktop'){
+                align-items: center;
+            }
+		}
+
+		// .entry-content__image-box
+
+		&__image-box {
+            width: 40%;
+            position: relative;
+            img{
+                object-fit: cover;
+            }
+        }
+        @include mq('tablet-wide'){
+              .entry-content__info{
+                width: 100%;
+            }
+            &__image-box {
+                width: 70%;
+                align-self: center;
+                padding: 4rem 0;
+            }
+            h3{
+                font-size:1.8rem;
+            }
+            p{
+                font-size: 16px;
+            }
+            .entry-content__inner {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+        @include mq('tablet'){
+            &__image-box {
+                width: 90%;
+            }
+        }
+}
+.sub-image__container{
+    position: absolute;
+    bottom: -277px;
+    right: -68px;
+    max-width: 317px;
+    @include mq('desktop'){
+        position: absolute;
+        bottom: -139px;
+        right: 0;
+        max-width: 200px;
+    }
+    @include mq('tablet'){
+        .sub-image {
+            display: none;
+        }
+    }
+}
+.sub-image {
+    object-fit: cover;
+}
+.entry-footer {
+        padding-bottom: 76px;
+		// .entry-footer__date
+
+		&__date {
+		}
+}
+
