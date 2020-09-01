@@ -36,7 +36,7 @@
                 @include pseudo;
                 bottom: -175px;
                 right: -577px;
-                background: url('../../img/Office-page/arrow-red.svg') center center no-repeat;
+                background: url('img/Office-page/arrow-red.svg') center center no-repeat;
                 width: 100%;
                 height: 100%;
             }
@@ -118,7 +118,7 @@
                 @include pseudo;
                 bottom: -180px;
                 left: -560px;
-                background: url('../../img/Office-page/arrow-red.svg') center center no-repeat;
+                background: url('img/Office-page/arrow-red.svg') center center no-repeat;
                 width: 100%;
                 height: 100%;
                 -webkit-transform: scaleX(-1);
@@ -146,7 +146,7 @@
     // Last Block 
     &:last-of-type {
         justify-content: space-between;
-        background: url('../../img/Office-page/back-2.png') 35% 80% no-repeat;
+        background: url('img/Office-page/back-2.png') 35% 80% no-repeat;
         background-size: 8%;
         flex-direction: row-reverse;
         color: $def-blue;
@@ -169,7 +169,7 @@
                     @include pseudo;
                     bottom: 100px;
                     left: -597px;
-                    background: url('../../img/Office-page/arrow-blue.svg') center center no-repeat;
+                    background: url('img/Office-page/arrow-blue.svg') center center no-repeat;
                     width: 100%;
                     height: 100%;
                 }

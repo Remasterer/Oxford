@@ -37,7 +37,9 @@ h2{
 }
 h3{
     font-size:2.5rem;
-    
+    @include mq('tablet-wide'){
+        font-size:2.1rem;    
+    }
 }
 h4{
     line-height: 41px;
@@ -140,6 +142,10 @@ h5{
         background:transparent;
         border:1px solid $def-blue;
     }
+    &.e--white-blue{
+        color:$def-blue;
+        background:$def-white;
+    }
 }
 .sub-title{
     font-size: 2rem;
@@ -205,15 +211,14 @@ img {
 }
 
 .title-w-line{
+
     display: flex;
     flex-wrap: wrap;
     color: $def-red;
     position: relative;
     align-items: flex-end;
     font-family: 'Montserrat Alternates';
-    h3{
         max-width: 600px;
-    }
     p{
         margin-top: 2rem;
         font-size: 1.5rem;
@@ -224,22 +229,48 @@ img {
         line-height: 32px;
     }
     &::after{
-        order: 2;
+        position: absolute;
+        top: 38px;
+        right: 0;
         content: '';
         display: block;
-        top: 0;
-        left: 0;
         height: 6px;
         width: 130px;
         background: $def-blue;
         border-radius: 3px;
-        margin-left: 3rem;
     }
    
     &.e--blue{
         color:$def-blue;
         &::after{
             background: $def-red;
+        }
+    }
+    &.e--wide{
+        width: 100%;
+            max-width: unset;
+            h3{
+                max-width: 1000px;
+            }
+    }
+    @include mq('tablet-wide'){
+        &::after{
+            position: relative;
+            width: 80%;
+            margin-bottom: 20px;
+        }
+    }
+    @include mq('desktop'){
+        h3{
+            font-size: 32px;
+        }
+    }
+    @include mq('tablet-wide'){
+        h3{
+            font-size: 26px;
+        }
+        p{
+            font-size: 1.1rem;
         }
     }
 }
@@ -254,9 +285,16 @@ img {
     color: $def-blue;
     font-size: 20px;
     line-height: 180%;
+    &__group{
+        display: flex;
+        .advantages + .advantages{
+            margin-left: 100px;
+        }
+    }
     // .advantages__list
 
     &__list {
+        
     }
 
     &__title {
@@ -266,6 +304,7 @@ img {
     // .advantages__item
 
     &__item {
+        
     }
     span{
         font-weight: bold;
@@ -280,9 +319,6 @@ img {
     &.e--red{
         color: $def-red;
     }
-    &__actions{
-        margin-top: 40px;
-    }
     &.e--2row{
         .advantages__list {
             display: grid;
@@ -295,7 +331,9 @@ img {
 .info {
 
     // .info__title
-
+    &.e--w-img{
+        display: flex;
+    }
     &__title {
         margin-top: 22px;
         margin-bottom: 1rem;
@@ -304,12 +342,15 @@ img {
     // .info__sub-title
 
     &__sub-title {
+        font-size: 22px;
+        @extend %monst-alter-bold;
     }
 
     // .info__list
 
     &__list {
         padding:30px 0;
+        line-height: 23px;
     }
 
     // .info__text
@@ -340,5 +381,89 @@ img {
     }
     &__item + &__item{
         margin-top: 32px;
+    }
+    &.e--checkmarks{
+        .info-list__item{
+            &::after{
+                content: '\f00c';
+                font-family: "Font Awesome 5 Free";
+                font-weight: 600;
+                top: 0;
+                left: 0;
+                color:$def-red;
+                font-size:20px;
+                background:none;
+            }
+        }
+    }
+    @include mq('tablet-wide'){
+        li{
+            font-size: 1rem;
+        }
+    }
+}
+
+
+.info-section{
+    padding-bottom: 5.5rem;
+    &.e--out{
+        position: relative;
+        .info-section__preview{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+        }
+    }
+    &__inner{
+        display: flex;
+        align-items: center;
+        min-width: 398px;
+    }
+    &__info{
+        padding-right: 100px;
+    }
+    &__preview{
+        min-width: 398px;
+    }
+    &.e--reverse{
+        .info-section__inner{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .info-section__info{
+            padding-right: 0px;
+            padding-left: 100px;
+        }
+    }
+   @include mq('phablet'){
+       .info-section__preview{
+           margin-top: 4rem;
+           display: flex;
+           justify-content: center;
+       }
+       .info-section__preview img{
+           max-width: 300px;
+       }
+        .info-section__info {
+        padding-right: 0px; 
+        padding-left: 0;
+    }
+   }
+}
+.actions{
+    display: flex;
+    margin-top: 40px;
+    button + button{
+        margin-left: 1rem;
+    }
+    @include mq('phablet'){
+        flex-direction: column;
+        .button + .button{
+            margin-top: 1rem;
+        }
+        button + button{
+            margin-left: 0rem;
+        }
     }
 }

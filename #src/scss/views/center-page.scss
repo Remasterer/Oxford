@@ -1,9 +1,6 @@
 
 .juniors {
 
-		&__inner {
-		}
-
 		&__content {
             display: flex;
             align-items: flex-end;
@@ -12,11 +9,6 @@
 		&__list {
             margin-top: 35px;
         }
-        &__actions {
-            margin-top: 52px;
-        }
-        &__info {
-		}
 
         &__advantages{
             margin-top: 30px;
@@ -43,7 +35,7 @@
             }
             &::after{
                 @include pseudo;
-                background: url('../../img/Center-page/arrow-blue.svg') center center no-repeat;
+                background: url('img/Center-page/arrow-blue.svg') center center no-repeat;
                 background-size: contain;
                 height: 100%;
                 width: 100%;
@@ -56,11 +48,10 @@
 
 .teachers-help {
     padding-top: 145px;
-    padding-bottom: 505px;
-    background:url('../../img/Center-page/section-1-back.png')  no-repeat;
+    padding-bottom: 685px;
+    background:url('img/Center-page/section-1-back.svg')  no-repeat;
     background-size: cover;
-    background-position: 0px 0px;
-    background-size: 85%;
+    background-position: center ;
 }
 .teachers {
         
@@ -95,17 +86,66 @@
         }
 }
 
-.info-section{
-    padding-bottom: 5.5rem;
-    &__inner{
-        display: flex;
-        align-items: center;
-        min-width: 398px;
+.logorytmic{
+    padding-bottom: 700px;
+    background: url('img/Center-page/section-2-back.svg') no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+}
+
+
+@include mq('tablet-wide'){
+    .juniors__content , .teachers__inner ,.info-section__inner , .info-section.e--reverse .info-section__inner{
+        flex-direction: column;
     }
-    &__info{
-        padding-right: 100px;
+    .info-section.e--out .info-section__preview img , .juniors .preview-junior {
+        opacity: .2;
     }
-    &__preview{
-        min-width: 398px;
+    .info-section.e--reverse .info-section__info  {
+        padding-left: 0;
+    }
+    .teachers-help {
+        padding-top: 75px;
+        padding-bottom: 250px;
+        background: url(img/Center-page/section-1-back.svg) no-repeat;
+        background-size: contain;
+        background-position: bottom;
+    }
+    .teachers__image-box {
+        min-width: unset;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    .logorytmic {
+    padding-bottom: 300px;
+    background: url(img/Center-page/section-2-back.svg) no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+}
+.advantages.e--2row .advantages__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+}
+@include mq('phablet'){
+    .info-section__inner{
+        min-width: unset;
+    }
+
+    .advantages__group {
+        flex-direction: column;
+    }
+    .advantages__group .advantages+.advantages{
+        margin-left: 0px;
+    }
+    .advantages.e--2row .advantages__list{
+        grid-template-columns: 1fr;
+    }
+    .info-section .info-section__preview img {
+        max-width: 200px;
+    }
+    .info-section__preview {
+        min-width: unset;
     }
 }
