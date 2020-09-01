@@ -1,0 +1,105 @@
+
+.juniors-top {
+        text-align: center;
+        color: $def-blue;
+        
+		// .juniors-top__inner
+
+		&__inner {
+            padding:200px 0 ;   
+        }
+
+		// .juniors-top__call
+
+		&__call {
+            @extend %monst-alter-bold;
+            font-size: 30px;
+            line-height: 37px;
+            letter-spacing: 0.07em;
+            color: #00237C;
+            margin-bottom: 37px;
+		}
+}
+.first-grader{
+    padding-bottom: 400px;
+    background: url(img/Page-Courses-juniors/abstr-1.svg) no-repeat;
+    background-size: contain;
+    background-position: 0px 500px;
+}
+.coin {
+    padding-bottom: 500px;
+    background: url('../../img/Page-Courses-juniors/abstr-2.svg') no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    // .coin__inner
+
+    &__inner {
+        padding: 61px 82px  32px 82px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border:6px solid #FF9B21;
+        border-radius: 50px;
+    }
+
+    // .coin__text
+
+    &__text {
+       font-family: 'Avenir-Regular';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 36px;
+        letter-spacing: 0.07em;
+        max-width: 639px;
+        padding-left: 10px;
+        span{
+            @extend %avenir-bold;
+            color: #FF9B21;
+            font-weight: bold;
+        }
+    }
+    &__image-box{
+        max-width: 200px;
+        img{
+            object-fit: cover;
+        }
+    }
+    @include mq('tablet-wide'){
+        padding-bottom: 300px;
+        &__inner {
+            flex-direction: column;
+        }
+        &__image-box{
+            padding-top: 2rem;
+        }
+        &__text {
+            font-size: 20px;
+        }
+    }
+}
+.help {
+    color: $def-white;
+    padding:122px 0 95px 0 ;
+    // .help__inner
+
+    &__inner {
+        margin: 0 auto;
+        max-width: 900px; 
+        background: $def-blue;
+    }
+
+    // .help__add-image
+    &__add-image-box{
+        max-width: 257px;
+    }
+    &__add-image {
+        object-fit: cover;
+    }
+}
+.container {
+}
+.button {
+}
+.e--white-blue {
+}
