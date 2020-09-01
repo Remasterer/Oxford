@@ -1,0 +1,27 @@
+.info-banner {
+    padding: 100px 0;
+    background-image: url('../../img/Courses/2-schoolboy/logo-oxford.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    p {
+        font-size: 30px;
+        @extend %monst-alter-bold;
+        line-height: 1.3;
+        text-align: center;
+        max-width: 1260px;
+        margin: auto;
+        color: $def-blue;
+    }
+
+    @include mq('tablet-wide') {
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    @include mq('phone-wide') {
+        p {
+            font-size: 1.25rem;
+        }
+    }
+}
