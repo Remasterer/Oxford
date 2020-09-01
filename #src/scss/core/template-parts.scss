@@ -299,6 +299,7 @@ img {
 
     &__title {
         min-height: 41px;
+        font-weight: bold;
     }
 
     // .advantages__item
@@ -361,6 +362,31 @@ img {
     &__button{
         margin-top: 42px;
     }
+
+    &__remark {
+        @extend %monst-alter-light;
+    }
+
+    &__row {
+        margin-top: 2rem !important;
+    }
+
+    &__subtitle {
+        @extend %monst-alter-light;
+        display: block;
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        color: $def-red;
+
+        @include mq('tablet-wide') {
+            margin-top: 2rem;
+            font-size: 1.25rem;
+        }
+
+        @include mq('phone-wide') {
+            font-size: 1rem;
+        }
+    }
 }
 .info-list {
 
@@ -396,6 +422,39 @@ img {
             }
         }
     }
+    
+    &.e--mw-580 {
+        max-width: 580px;
+    }
+    &.e--num {
+        font-size: 1.5rem;
+         @extend %monst-alter-light;
+         .info-list__item {
+             line-height: 1.3;
+             &:after {
+                display: none; 
+             }
+
+             span {
+                 position: absolute;
+                 left: .5rem;
+                 font-size: 3rem;
+                 @extend %merri-norm;
+                 line-height: 1;
+             }
+
+             &:nth-child(1) {
+                 span {
+                     color: $def-blue;
+                 }
+             }
+             &:nth-child(2) {
+                span {
+                    color: $def-red;
+                }
+            }
+         }
+    }
     @include mq('tablet-wide'){
         li{
             font-size: 1rem;
@@ -403,6 +462,17 @@ img {
     }
 }
 
+body {
+    counter-reset: li; 
+}
+
+.mw-70 {
+    max-width: 70%;
+
+    @include mq('tablet-wide') {
+        min-width: 100%;
+    }
+}
 
 .info-section{
     padding-bottom: 5.5rem;
@@ -422,6 +492,11 @@ img {
     }
     &__info{
         padding-right: 100px;
+        width: 100%;
+        &.e--p0 {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
     &__preview{
         min-width: 398px;
@@ -436,6 +511,8 @@ img {
             padding-left: 100px;
         }
     }
+
+    
    @include mq('phablet'){
        .info-section__preview{
            margin-top: 4rem;
@@ -466,4 +543,8 @@ img {
             margin-left: 0rem;
         }
     }
+}
+
+.mt-1 {
+    margin-top: 0 !important;
 }

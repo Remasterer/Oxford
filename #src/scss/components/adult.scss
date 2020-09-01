@@ -112,6 +112,24 @@
         }
     }
 
+    &__ielts {
+        &-inner {
+            position: relative;
+        }
+
+        &-img {
+            position: absolute;
+            right: -1rem;
+            max-width: 200px;
+            left: auto;
+            top: 16rem;
+
+            @include mq('tablet-wide') {
+                display: none !important;
+            }
+        }
+    }
+
     
 
     @include mq('desktop') {
@@ -220,10 +238,104 @@
 }
 
 .adult-stipe-1 {
-    height: 500px;
+    height: 790px;
     background-image: url('../img/adult/stripes-1.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    margin-top: -300px;
+    margin-top: -200px;
+}
+
+.adult-stipe-2 {
+    height: 890px;
+    background-image: url('../img/adult/stripes-2.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    margin-top: -400px;
+}
+
+.adult-steps {
+    padding: 20px 0;
+    h4 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+        margin-bottom: 2rem;
+    }
+
+    h5 {
+        text-transform: uppercase;
+        font-size: 30px;
+    }
+
+    &__vars {
+        display: flex;
+
+        @include mq('tablet') {
+            flex-direction: column;
+        }
+    }
+
+    &__var {
+        padding-right: 1rem;
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    &__step {
+        margin-bottom: 50px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.adult-table {
+    padding: 80px 0;
+    overflow: auto;
+    
+
+    h4 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    table {
+        max-width: 970px;
+        margin: auto;
+        @extend  %monst-alter-light; 
+        border-style: hidden;
+        border-collapse: collapse;
+        
+        
+        td {
+            padding: 1.5rem ;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+            vertical-align: middle;
+            &.name {
+                color: $def-red;
+            }
+        }
+        th {
+            border-bottom: 2px solid black;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+            @extend  %monst-alter-regular;
+            font-weight: normal;
+            padding: 1rem;
+            
+        }
+
+        tr{
+            &:nth-child(even) td {
+                background: rgba(0, 35, 124, 0.3);
+                padding: .25rem 1.5rem;
+                color: #000;
+            }
+        }
+        
+    }
 }
