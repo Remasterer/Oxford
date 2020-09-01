@@ -100,6 +100,10 @@ h5{
             background-color: transparent;
             border: 2px solid $def-red;
             color: $def-red;
+            &:hover {
+                color: #fff;
+                background-color: $def-red;
+            }
         }
 
         &-blue {
@@ -253,6 +257,10 @@ img {
     // .advantages__list
 
     &__list {
+    }
+
+    &__title {
+        min-height: 41px;
     }
 
     // .advantages__item

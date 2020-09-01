@@ -3,6 +3,7 @@
     background-image: url('../../img/Courses/2-schoolboy/logo-oxford.svg');
     background-repeat: no-repeat;
     background-position: center;
+    text-align: center;
     p {
         font-size: 30px;
         @extend %monst-alter-bold;
@@ -11,6 +12,10 @@
         max-width: 1260px;
         margin: auto;
         color: $def-blue;
+    }
+
+    button {
+        margin-top: 3rem;
     }
 
     @include mq('tablet-wide') {

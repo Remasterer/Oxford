@@ -55,7 +55,8 @@ h5,
 .footer__sub-title,
 .footer-form__input,
 .intro__description,
-.camp ul span {
+.camp ul span,
+.adult__groups-remark {
   font-family: 'Montserrat Alternates';
   font-weight: 400;
 }
@@ -68,7 +69,8 @@ h1,
 .team-item__pos,
 .testimonial-item__term,
 .camp__tabs-bar a,
-.camp ul {
+.camp ul,
+.adult__reason p {
   font-family: 'Montserrat Alternates';
   font-weight: 500;
 }
@@ -321,6 +323,11 @@ h5 {
   color: #CD142B;
 }
 
+.button.e--transparent-red:hover {
+  color: #fff;
+  background-color: #CD142B;
+}
+
 .button.e--transparent-blue {
   background-color: transparent;
   border: 2px solid #00237C;
@@ -474,6 +481,10 @@ img {
   color: #00237C;
   font-size: 20px;
   line-height: 180%;
+}
+
+.advantages__title {
+  min-height: 41px;
 }
 
 .advantages span {
@@ -1977,6 +1988,159 @@ img {
   margin-top: 1.5rem;
 }
 
+.adult {
+  padding: 100px 0;
+}
+
+.adult__reasons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  padding-bottom: 10rem;
+}
+
+.adult__reason {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin-bottom: 6rem;
+}
+
+.adult__reason:last-child {
+  margin-bottom: 0;
+}
+
+.adult__reason-imgs {
+  position: absolute;
+}
+
+.adult__reason p {
+  font-size: 20px;
+  max-width: 530px;
+  position: relative;
+  margin: auto;
+  text-align: left;
+}
+
+.adult__reason.e--1 {
+  margin-top: 5rem;
+}
+
+.adult__reason.e--1 p {
+  -webkit-transform: translate(0%, 0%);
+      -ms-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+}
+
+.adult__reason.e--1 .adult__reason-imgs {
+  right: -1rem;
+  width: 100%;
+  width: 320px;
+  top: -80px;
+}
+
+.adult__reason.e--1 .adult__reason-imgs .arrow {
+  position: absolute;
+  right: 85%;
+}
+
+.adult__reason.e--2 {
+  left: 0;
+}
+
+.adult__reason.e--2 p {
+  -webkit-transform: translate(40%, 0%);
+      -ms-transform: translate(40%, 0%);
+          transform: translate(40%, 0%);
+  position: relative;
+  top: 12rem;
+}
+
+.adult__reason.e--2 .adult__reason-imgs {
+  left: -1rem;
+  width: 100%;
+  width: 320px;
+  top: -80px;
+}
+
+.adult__reason.e--2 .adult__reason-imgs .arrow {
+  position: absolute;
+  left: 85%;
+  top: 200px;
+}
+
+.adult-reasons {
+  position: relative;
+  padding-bottom: 120px;
+}
+
+.adult__groups {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 40px 0;
+}
+
+.adult__groups-groups {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+}
+
+.adult__groups-remark {
+  margin: 2rem 0;
+  color: #00237C;
+}
+
+.adult__groups-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.adult__groups-row button {
+  margin-right: 1rem;
+}
+
+.adult__groups-half {
+  width: 40%;
+}
+
+.adult__groups-half-img {
+  max-width: 350px;
+  margin: auto;
+}
+
+.adult__groups-item {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding: 1rem 0;
+  padding-right: 1rem;
+}
+
+.adult-stipe-1 {
+  height: 500px;
+  background-image: url("../img/adult/stripes-1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  margin-top: -300px;
+}
+
 .check-list {
   font-size: 18px;
 }
@@ -2066,6 +2230,7 @@ img {
   background-image: url("../../img/Courses/2-schoolboy/logo-oxford.svg");
   background-repeat: no-repeat;
   background-position: center;
+  text-align: center;
 }
 
 .info-banner p {
@@ -2075,6 +2240,10 @@ img {
   max-width: 1260px;
   margin: auto;
   color: #00237C;
+}
+
+.info-banner button {
+  margin-top: 3rem;
 }
 
 .js-tabs__content {
@@ -2879,6 +3048,30 @@ p {
     padding: 1rem;
   }
 
+  .adult__groups-groups {
+    width: 70%;
+  }
+
+  .adult__groups-img {
+    width: 30%;
+  }
+
+  .adult__groups-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .adult__groups-row button {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .adult__groups-row button:last-child {
+    margin-bottom: 0;
+  }
+
   .office:last-of-type .office__image-wrapper {
     max-width: 550px;
   }
@@ -2994,6 +3187,23 @@ p {
 
   .zno-features.e--bg-1:after {
     top: 23rem;
+  }
+
+  .adult__reason.e--2 p {
+    -webkit-transform: translate(20%, 0%);
+        -ms-transform: translate(20%, 0%);
+            transform: translate(20%, 0%);
+  }
+
+  .adult__reason.e--1 p {
+    max-width: 450px;
+    -webkit-transform: translate(-30%, 0%);
+        -ms-transform: translate(-30%, 0%);
+            transform: translate(-30%, 0%);
+  }
+
+  .adult__reasons {
+    padding-top: 100px;
   }
 
   .info-banner p {
@@ -3240,6 +3450,56 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .adult__reasons {
+    padding-top: 120px;
+  }
+
+  .adult__reason-imgs {
+    opacity: .75;
+  }
+
+  .adult__reason-imgs .arrow {
+    display: none;
+  }
+
+  .adult__reason.e--1 p {
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+    max-width: 100%;
+  }
+
+  .adult__reason.e--1 .adult__reason-imgs {
+    top: -15rem;
+  }
+
+  .adult__reason.e--2 p {
+    -webkit-transform: translate(0, -2rem);
+        -ms-transform: translate(0, -2rem);
+            transform: translate(0, -2rem);
+    max-width: 100%;
+  }
+
+  .adult__groups {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .adult__groups-half {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .adult__groups-groups {
+    width: 100%;
+  }
+
+  .adult__groups-row {
+    margin: auto;
   }
 
   .half-sections {
@@ -3501,6 +3761,12 @@ p {
 
   .zno-plans__title {
     font-size: 1.25rem;
+  }
+
+  .adult__groups-item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding-right: 0;
   }
 
   .info-banner p {
