@@ -40,6 +40,9 @@ h3{
     @include mq('tablet-wide'){
         font-size:2.1rem;    
     }
+    @include mq('phablet'){
+        font-size:1.8rem;    
+    }
 }
 h4{
     line-height: 41px;
@@ -256,7 +259,7 @@ img {
     @include mq('tablet-wide'){
         &::after{
             position: relative;
-            width: 80%;
+            width: 40%;
             margin-bottom: 20px;
         }
     }
@@ -334,6 +337,31 @@ img {
     // .info__title
     &.e--w-img{
         display: flex;
+    }
+    &.e--2-cols {
+        display: flex;
+        padding-right: 0px;
+        .advantages__group{
+            width: 50%; 
+            flex-direction: column;
+        }
+        .advantages__group .advantages+.advantages {
+            margin-left: unset;
+        }
+        .info__list{
+            padding-right: 100px;
+            width: 50%;
+        }
+        @include mq('desktop'){
+            display: block;
+            .advantages__group{
+                width: 100%; 
+            }
+            .info__list{
+                width: 100%;
+                padding-right: 0;
+            }
+        }
     }
     &__title {
         margin-top: 22px;
@@ -456,6 +484,7 @@ img {
          }
     }
     @include mq('tablet-wide'){
+
         li{
             font-size: 1rem;
         }
@@ -476,6 +505,9 @@ body {
 
 .info-section{
     padding-bottom: 5.5rem;
+    &.e--2-cols {
+        padding-right:  0   ;
+    }
     &.e--out{
         position: relative;
         .info-section__preview{
@@ -483,6 +515,11 @@ body {
             top: 50%;
             transform: translateY(-50%);
             right: 0;
+        }
+    }
+    &.e--no-img{
+        .info-section__inner{
+            display: block;
         }
     }
     &__inner{
@@ -511,8 +548,11 @@ body {
             padding-left: 100px;
         }
     }
-
-    
+    @include mq('tablet-wide'){
+        &__info.e--w-img{
+            flex-direction: column;
+        }
+    }
    @include mq('phablet'){
        .info-section__preview{
            margin-top: 4rem;
@@ -547,4 +587,85 @@ body {
 
 .mt-1 {
     margin-top: 0 !important;
+}
+.help {
+    color: $def-white;
+    padding:122px 0 95px 0 ;
+    &__image-box{
+        min-width: 256px;
+        padding-right: 40px;
+        img{
+            object-fit: cover;
+        }
+    }
+    &__inner {
+        position: relative;
+        margin: 0 auto;
+        max-width: 900px; 
+        background: $def-blue;
+        padding:35px 100px;
+        border-radius: 150px;
+    }
+    h3{
+        margin-bottom: 1rem;
+    }
+    p{
+        @extend %monst-alter-light;
+        margin-bottom: 2rem;
+    }
+
+    // .help__add-image
+    &__add-image-box{
+        position: absolute;
+        top: -85px;
+        right: 0;
+        max-width: 257px;
+    }
+    &__add-image {
+        object-fit: cover;
+    }
+    &__info{
+        flex-direction: column;
+    }
+    @include mq('tablet'){
+        &__add-image-box{
+            max-width: 150px;
+            top: -85px;
+            right: 0;
+        }
+    }
+    @include mq('phone-wide'){
+        font-size: 16px;
+        &__inner{
+            padding: 50px 48px;
+        }
+    }
+    &.e--red{
+        
+        .help__inner {
+            background: $def-red;
+            max-width: unset;
+        }
+        .help__add-image-box{
+            top: unset;
+            position: absolute;
+            bottom: -85px;
+            right: 0;
+        }
+    }
+    &.e--w-img{
+        .help__inner {
+            display: flex;
+            max-width: unset;
+            align-items: center;
+        }
+        h3{
+            font-size: 2rem;       
+        }
+    }
+    @include mq('phablet'){
+        .help__add-image-box{
+            opacity: .2 ;
+        }
+    }
 }

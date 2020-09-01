@@ -1,0 +1,9 @@
+.speaking-club{
+    padding-bottom: 500px;
+    background: url('../../img/Page-Graduates/abstr-1.svg') no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    @include mq('tablet-wide'){
+        padding-bottom: 300px;
+    }
+}
