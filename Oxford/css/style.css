@@ -49,6 +49,7 @@ h5,
 .our-contacts__phones,
 .our-contacts__email,
 .camp__banner p,
+.adult-business ul,
 .info-banner p,
 .juniors-top__call {
   font-family: 'Montserrat Alternates';
@@ -68,13 +69,10 @@ h5,
 h1,
 .sub-title,
 .sub-description,
-<<<<<<< HEAD
 .info__remark,
 .info__subtitle,
 .info-list.e--num,
-=======
 .help p,
->>>>>>> 166821c4f6c8f45d15b7578fbdf00e7548fdb8a1
 .our-plus__item-desc,
 .cta p,
 .team-item__pos,
@@ -750,10 +748,10 @@ body {
   margin-left: 1rem;
 }
 
-<<<<<<< HEAD
 .mt-1 {
   margin-top: 0 !important;
-=======
+}
+
 .help {
   color: #FFFFFF;
   padding: 122px 0 95px 0;
@@ -829,7 +827,6 @@ body {
 
 .help.e--w-img h3 {
   font-size: 2rem;
->>>>>>> 166821c4f6c8f45d15b7578fbdf00e7548fdb8a1
 }
 
 .header {
@@ -2443,6 +2440,26 @@ body {
   margin-top: -400px;
 }
 
+.adult-stipe-3 {
+  height: 890px;
+  background-image: url("../img/adult/stripes-3.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  margin-top: -100px;
+  margin-bottom: -200px;
+}
+
+.adult-stipe-4 {
+  height: 890px;
+  background-image: url("../img/adult/stripes-4.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  margin-top: -100px;
+  margin-bottom: -200px;
+}
+
 .adult-steps {
   padding: 20px 0;
 }
@@ -2521,6 +2538,44 @@ body {
   background: rgba(0, 35, 124, 0.3);
   padding: .25rem 1.5rem;
   color: #000;
+}
+
+.adult-couch .info-section__preview {
+  margin-left: -1rem;
+}
+
+.adult-business ul {
+  font-size: 1.5rem;
+}
+
+.adult-business ul li {
+  color: #00237C;
+  margin-bottom: 4rem;
+}
+
+.adult-business ul li:last-child {
+  margin-bottom: 0;
+}
+
+.adult-business ul li span {
+  text-transform: uppercase;
+  color: #CD142B;
+}
+
+.adult-business ul li::after {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.adult-business ul li:nth-child(2) {
+  color: #CD142B;
+  margin-left: 10rem;
+}
+
+.adult-business ul li:nth-child(2)::after {
+  background: #00237C;
 }
 
 .check-list {
@@ -3652,16 +3707,15 @@ p {
     font-size: 1rem;
   }
 
-<<<<<<< HEAD
   .mw-70 {
     min-width: 100%;
-=======
+  }
+
   .info-section__info.e--w-img {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
->>>>>>> 166821c4f6c8f45d15b7578fbdf00e7548fdb8a1
   }
 
   .header .header__test-link {
@@ -3769,6 +3823,12 @@ p {
 
   .adult__reasons {
     padding-top: 100px;
+  }
+
+  .adult-couch .info-section__preview {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-top: 2rem;
   }
 
   .info-banner p {
@@ -4182,6 +4242,14 @@ p {
             flex-direction: column;
   }
 
+  .adult-business ul li {
+    margin-bottom: 2rem;
+  }
+
+  .adult-business ul li:nth-child(2) {
+    margin-left: 0;
+  }
+
   .half-sections {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -4437,17 +4505,16 @@ p {
     font-size: 1.25rem;
   }
 
-<<<<<<< HEAD
   .info__subtitle {
     font-size: 1rem;
-=======
+  }
+
   .help {
     font-size: 16px;
   }
 
   .help__inner {
     padding: 50px 48px;
->>>>>>> 166821c4f6c8f45d15b7578fbdf00e7548fdb8a1
   }
 
   .footer__sub-title {
@@ -4537,6 +4604,15 @@ p {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     padding-right: 0;
+  }
+
+  .adult-business ul {
+    font-size: 1.25rem;
+  }
+
+  .adult-business ul li {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
   }
 
   .info-banner p {

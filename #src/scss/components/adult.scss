@@ -255,6 +255,26 @@
     margin-top: -400px;
 }
 
+.adult-stipe-3 {
+    height: 890px;
+    background-image: url('../img/adult/stripes-3.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    margin-top: -100px;
+    margin-bottom: -200px;
+}
+
+.adult-stipe-4 {
+    height: 890px;
+    background-image: url('../img/adult/stripes-4.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    margin-top: -100px;
+    margin-bottom: -200px;
+}
+
 .adult-steps {
     padding: 20px 0;
     h4 {
@@ -336,6 +356,67 @@
                 color: #000;
             }
         }
+    }
+}
+
+.adult-couch {
+    .info-section__preview {
+        margin-left: -1rem;
         
+        @include mq('tablet-wide') {
+            align-self: flex-start;
+            margin-top: 2rem;
+        }
+    }
+}
+
+.adult-business {
+    ul {
+        font-size: 1.5rem;
+        @extend %monst-alter-bold;
+        li {
+            color: $def-blue;
+            margin-bottom: 4rem; 
+            &:last-child {
+                margin-bottom: 0;
+            }
+            span {
+                text-transform: uppercase;
+                color: $def-red;
+            }
+            &::after {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &:nth-child(2) {
+                color: $def-red;
+                margin-left: 10rem;
+                &::after {
+                    background: $def-blue;
+                }
+            }
+        }
+    }
+
+    @include mq('tablet') {
+        ul {
+            li {
+                margin-bottom: 2rem;
+                &:nth-child(2) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    @include mq('phone-wide') {
+        ul {
+            font-size: 1.25rem;
+            li {
+                margin-bottom: 1rem;
+                margin-top: 1rem;
+            }
+        }
     }
 }
