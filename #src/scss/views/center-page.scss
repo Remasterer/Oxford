@@ -35,7 +35,7 @@
             }
             &::after{
                 @include pseudo;
-                background: url('img/Center-page/arrow-blue.svg') center center no-repeat;
+                background: url('../../img/Center-page/arrow-blue.svg') center center no-repeat;
                 background-size: contain;
                 height: 100%;
                 width: 100%;
@@ -49,7 +49,7 @@
 .teachers-help {
     padding-top: 145px;
     padding-bottom: 685px;
-    background:url('img/Center-page/section-1-back.svg')  no-repeat;
+    background:url('../../img/Center-page/section-1-back.svg')  no-repeat;
     background-size: cover;
     background-position: center ;
 }
@@ -88,7 +88,7 @@
 
 .logorytmic{
     padding-bottom: 700px;
-    background: url('img/Center-page/section-2-back.svg') no-repeat;
+    background: url('../../img/Center-page/section-2-back.svg') no-repeat;
     background-size: contain;
     background-position: center bottom;
 }
@@ -107,7 +107,7 @@
     .teachers-help {
         padding-top: 75px;
         padding-bottom: 250px;
-        background: url(img/Center-page/section-1-back.svg) no-repeat;
+        background: url(../../img/Center-page/section-1-back.svg) no-repeat;
         background-size: contain;
         background-position: bottom;
     }
@@ -118,7 +118,7 @@
     }
     .logorytmic {
     padding-bottom: 300px;
-    background: url(img/Center-page/section-2-back.svg) no-repeat;
+    background: url(../../img/Center-page/section-2-back.svg) no-repeat;
     background-size: contain;
     background-position: center bottom;
 }

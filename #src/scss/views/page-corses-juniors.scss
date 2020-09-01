@@ -2,7 +2,7 @@
 .juniors-top {
         text-align: center;
         color: $def-blue;
-        
+        background-size: cover;
 		// .juniors-top__inner
 
 		&__inner {
@@ -18,7 +18,13 @@
             letter-spacing: 0.07em;
             color: #00237C;
             margin-bottom: 37px;
-		}
+        }
+        
+        @include mq('tablet-wide'){
+            &__call{
+                font-size: 22px;
+            }
+        }
 }
 .first-grader{
     padding-bottom: 400px;
@@ -78,28 +84,4 @@
         }
     }
 }
-.help {
-    color: $def-white;
-    padding:122px 0 95px 0 ;
-    // .help__inner
 
-    &__inner {
-        margin: 0 auto;
-        max-width: 900px; 
-        background: $def-blue;
-    }
-
-    // .help__add-image
-    &__add-image-box{
-        max-width: 257px;
-    }
-    &__add-image {
-        object-fit: cover;
-    }
-}
-.container {
-}
-.button {
-}
-.e--white-blue {
-}
