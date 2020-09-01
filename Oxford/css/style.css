@@ -41,12 +41,14 @@ h2,
 h3,
 h4,
 h5,
+.info__sub-title,
 .footer,
 .cta p span,
 .our-contacts__location,
 .our-contacts__phones,
 .our-contacts__email,
-.camp__banner p {
+.camp__banner p,
+.juniors-top__call {
   font-family: 'Montserrat Alternates';
   font-weight: 600;
 }
@@ -73,13 +75,14 @@ h1,
 }
 
 .plan__for {
-  font-family: 'Avenir Next';
-  font-weight: 500;
+  font-family: 'Avenir-Regular';
+  font-weight: 400;
 }
 
 .button,
 .dot-list,
-.juniors .preview-junior {
+.juniors .preview-junior,
+.coin__text span {
   font-family: 'Avenir-Bold';
   font-weight: 600;
 }
@@ -358,6 +361,11 @@ h5 {
   border: 1px solid #00237C;
 }
 
+.button.e--white-blue {
+  color: #00237C;
+  background: #FFFFFF;
+}
+
 .sub-title {
   font-size: 2rem;
   line-height: 1.3;
@@ -422,9 +430,6 @@ img {
       -ms-flex-align: end;
           align-items: flex-end;
   font-family: 'Montserrat Alternates';
-}
-
-.title-w-line h3 {
   max-width: 600px;
 }
 
@@ -441,18 +446,15 @@ img {
 }
 
 .title-w-line::after {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+  position: absolute;
+  top: 38px;
+  right: 0;
   content: '';
   display: block;
-  top: 0;
-  left: 0;
   height: 6px;
   width: 130px;
   background: #00237C;
   border-radius: 3px;
-  margin-left: 3rem;
 }
 
 .title-w-line.e--blue {
@@ -461,6 +463,15 @@ img {
 
 .title-w-line.e--blue::after {
   background: #CD142B;
+}
+
+.title-w-line.e--wide {
+  width: 100%;
+  max-width: unset;
+}
+
+.title-w-line.e--wide h3 {
+  max-width: 1000px;
 }
 
 .sub-text {
@@ -473,6 +484,16 @@ img {
   color: #00237C;
   font-size: 20px;
   line-height: 180%;
+}
+
+.advantages__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.advantages__group .advantages + .advantages {
+  margin-left: 100px;
 }
 
 .advantages span {
@@ -492,13 +513,15 @@ img {
   color: #CD142B;
 }
 
-.advantages__actions {
-  margin-top: 40px;
-}
-
 .advantages.e--2row .advantages__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.info.e--w-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .info__title {
@@ -506,8 +529,13 @@ img {
   margin-bottom: 1rem;
 }
 
+.info__sub-title {
+  font-size: 22px;
+}
+
 .info__list {
   padding: 30px 0;
+  line-height: 23px;
 }
 
 .info__text {
@@ -537,6 +565,78 @@ img {
 
 .info-list__item + .info-list__item {
   margin-top: 32px;
+}
+
+.info-list.e--checkmarks .info-list__item::after {
+  content: '\f00c';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  top: 0;
+  left: 0;
+  color: #CD142B;
+  font-size: 20px;
+  background: none;
+}
+
+.info-section {
+  padding-bottom: 5.5rem;
+}
+
+.info-section.e--out {
+  position: relative;
+}
+
+.info-section.e--out .info-section__preview {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+}
+
+.info-section__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 398px;
+}
+
+.info-section__info {
+  padding-right: 100px;
+}
+
+.info-section__preview {
+  min-width: 398px;
+}
+
+.info-section.e--reverse .info-section__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.info-section.e--reverse .info-section__info {
+  padding-right: 0px;
+  padding-left: 100px;
+}
+
+.actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+}
+
+.actions button + button {
+  margin-left: 1rem;
 }
 
 .header {
@@ -584,7 +684,7 @@ img {
   content: "";
   display: block;
   position: absolute;
-  background: url("../../img/Home-page/header-fugure.svg") no-repeat;
+  background: url("../img/Home-page/header-fugure.svg") no-repeat;
   height: 127px;
   width: 263px;
   top: -3px;
@@ -754,7 +854,7 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: url("../../img/Base/footer-logo.svg") center center no-repeat;
+  background: url("img/Base/footer-logo.svg") center center no-repeat;
 }
 
 .footer__title {
@@ -1122,7 +1222,7 @@ img {
 .intro {
   margin-top: 178px;
   overflow: hidden;
-  background: url("../../img/Blog-page/back.png") bottom center no-repeat;
+  background: url("../img/Blog-page/back.png") bottom center no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -1137,7 +1237,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url("../../img/Home-page/home-main-bg.png") bottom center no-repeat;
+  background: url("../img/Home-page/home-main-bg.png") bottom center no-repeat;
   background-size: cover;
   height: 100vh;
   text-align: center;
@@ -1196,7 +1296,7 @@ img {
           justify-content: center;
   width: 400px;
   height: 63px;
-  background: url("../../img/Home-page/arr-down-back.svg") top center no-repeat;
+  background: url("../img/Home-page/arr-down-back.svg") top center no-repeat;
   background-size: cover;
 }
 
@@ -1621,7 +1721,7 @@ img {
 
 .camp__banner {
   padding: 100px 0;
-  background-image: url("../../img/Courses/2-schoolboy/logo-oxford.svg");
+  background-image: url("img/Courses/2-schoolboy/logo-oxford.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -2053,7 +2153,7 @@ img {
   position: absolute;
   bottom: -175px;
   right: -577px;
-  background: url("../../img/Office-page/arrow-red.svg") center center no-repeat;
+  background: url("img/Office-page/arrow-red.svg") center center no-repeat;
   width: 100%;
   height: 100%;
 }
@@ -2126,7 +2226,7 @@ img {
   position: absolute;
   bottom: -180px;
   left: -560px;
-  background: url("../../img/Office-page/arrow-red.svg") center center no-repeat;
+  background: url("img/Office-page/arrow-red.svg") center center no-repeat;
   width: 100%;
   height: 100%;
   -webkit-transform: scaleX(-1);
@@ -2143,7 +2243,7 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: url("../../img/Office-page/back-2.png") 35% 80% no-repeat;
+  background: url("img/Office-page/back-2.png") 35% 80% no-repeat;
   background-size: 8%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -2174,7 +2274,7 @@ img {
   position: absolute;
   bottom: 100px;
   left: -597px;
-  background: url("../../img/Office-page/arrow-blue.svg") center center no-repeat;
+  background: url("img/Office-page/arrow-blue.svg") center center no-repeat;
   width: 100%;
   height: 100%;
 }
@@ -2206,10 +2306,6 @@ img {
 
 .juniors__list {
   margin-top: 35px;
-}
-
-.juniors__actions {
-  margin-top: 52px;
 }
 
 .juniors__advantages {
@@ -2244,7 +2340,7 @@ img {
   content: "";
   display: block;
   position: absolute;
-  background: url("../../img/Center-page/arrow-blue.svg") center center no-repeat;
+  background: url("img/Center-page/arrow-blue.svg") center center no-repeat;
   background-size: contain;
   height: 100%;
   width: 100%;
@@ -2254,11 +2350,10 @@ img {
 
 .teachers-help {
   padding-top: 145px;
-  padding-bottom: 505px;
-  background: url("../../img/Center-page/section-1-back.png") no-repeat;
+  padding-bottom: 685px;
+  background: url("img/Center-page/section-1-back.svg") no-repeat;
   background-size: cover;
-  background-position: 0px 0px;
-  background-size: 85%;
+  background-position: center;
 }
 
 .teachers__inner {
@@ -2284,26 +2379,102 @@ img {
   padding-left: 27px;
 }
 
-.info-section {
-  padding-bottom: 5.5rem;
+.logorytmic {
+  padding-bottom: 700px;
+  background: url("img/Center-page/section-2-back.svg") no-repeat;
+  background-size: contain;
+  background-position: center bottom;
 }
 
-.info-section__inner {
+.juniors-top {
+  text-align: center;
+  color: #00237C;
+}
+
+.juniors-top__inner {
+  padding: 200px 0;
+}
+
+.juniors-top__call {
+  font-size: 30px;
+  line-height: 37px;
+  letter-spacing: 0.07em;
+  color: #00237C;
+  margin-bottom: 37px;
+}
+
+.first-grader {
+  padding-bottom: 400px;
+  background: url(img/Page-Courses-juniors/abstr-1.svg) no-repeat;
+  background-size: contain;
+  background-position: 0px 500px;
+}
+
+.coin {
+  padding-bottom: 500px;
+  background: url("../../img/Page-Courses-juniors/abstr-2.svg") no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+}
+
+.coin__inner {
+  padding: 61px 82px  32px 82px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-width: 398px;
+  border: 6px solid #FF9B21;
+  border-radius: 50px;
 }
 
-.info-section__info {
-  padding-right: 100px;
+.coin__text {
+  font-family: 'Avenir-Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 36px;
+  letter-spacing: 0.07em;
+  max-width: 639px;
+  padding-left: 10px;
 }
 
-.info-section__preview {
-  min-width: 398px;
+.coin__text span {
+  color: #FF9B21;
+  font-weight: bold;
+}
+
+.coin__image-box {
+  max-width: 200px;
+}
+
+.coin__image-box img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.help {
+  color: #FFFFFF;
+  padding: 122px 0 95px 0;
+}
+
+.help__inner {
+  margin: 0 auto;
+  max-width: 900px;
+  background: #00237C;
+}
+
+.help__add-image-box {
+  max-width: 257px;
+}
+
+.help__add-image {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* Slider */
@@ -2683,6 +2854,10 @@ p {
 }
 
 @media only screen and (max-width: 1248px) {
+  .title-w-line h3 {
+    font-size: 32px;
+  }
+
   .header {
     border-bottom: unset;
   }
@@ -2764,6 +2939,10 @@ p {
     font-size: 3.5rem;
   }
 
+  h3 {
+    font-size: 2.1rem;
+  }
+
   h4 {
     line-height: 31px;
   }
@@ -2778,6 +2957,24 @@ p {
 
   .sub-title.e--line::before {
     display: none;
+  }
+
+  .title-w-line::after {
+    position: relative;
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .title-w-line h3 {
+    font-size: 26px;
+  }
+
+  .title-w-line p {
+    font-size: 1.1rem;
+  }
+
+  .info-list li {
+    font-size: 1rem;
   }
 
   .header .header__test-link {
@@ -2940,6 +3137,71 @@ p {
   .office:nth-of-type(even) .office__info {
     padding-left: 0;
     padding-right: 3rem;
+  }
+
+  .juniors__content,
+  .teachers__inner,
+  .info-section__inner,
+  .info-section.e--reverse .info-section__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .info-section.e--out .info-section__preview img,
+  .juniors .preview-junior {
+    opacity: .2;
+  }
+
+  .info-section.e--reverse .info-section__info {
+    padding-left: 0;
+  }
+
+  .teachers-help {
+    padding-top: 75px;
+    padding-bottom: 250px;
+    background: url(img/Center-page/section-1-back.svg) no-repeat;
+    background-size: contain;
+    background-position: bottom;
+  }
+
+  .teachers__image-box {
+    min-width: unset;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .logorytmic {
+    padding-bottom: 300px;
+    background: url(img/Center-page/section-2-back.svg) no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+  }
+
+  .advantages.e--2row .advantages__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+
+  .coin {
+    padding-bottom: 300px;
+  }
+
+  .coin__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .coin__image-box {
+    padding-top: 2rem;
+  }
+
+  .coin__text {
+    font-size: 20px;
   }
 }
 
@@ -3212,6 +3474,40 @@ p {
     line-height: 29px;
   }
 
+  .info-section .info-section__preview {
+    margin-top: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .info-section .info-section__preview img {
+    max-width: 300px;
+  }
+
+  .info-section .info-section__info {
+    padding-right: 0px;
+    padding-left: 0;
+  }
+
+  .actions {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .actions .button + .button {
+    margin-top: 1rem;
+  }
+
+  .actions button + button {
+    margin-left: 0rem;
+  }
+
   .footer__inner {
     background-size: contain;
   }
@@ -3222,6 +3518,33 @@ p {
 
   .post__image-box {
     max-height: unset;
+  }
+
+  .info-section__inner {
+    min-width: unset;
+  }
+
+  .advantages__group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .advantages__group .advantages + .advantages {
+    margin-left: 0px;
+  }
+
+  .advantages.e--2row .advantages__list {
+    grid-template-columns: 1fr;
+  }
+
+  .info-section .info-section__preview img {
+    max-width: 200px;
+  }
+
+  .info-section__preview {
+    min-width: unset;
   }
 }
 

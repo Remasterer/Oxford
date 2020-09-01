@@ -1,14 +1,14 @@
 .intro{
     margin-top: 178px;
     overflow: hidden;
-    background: url('../../img/Blog-page/back.png') bottom center no-repeat;
+    background: url('../img/Blog-page/back.png') bottom center no-repeat;
     background-size: cover;
     position: relative;
     &.e--home-page{
         display: flex;
         align-items: center;
         justify-content: center;
-        background: url('../../img/Home-page/home-main-bg.png') bottom center no-repeat;
+        background: url('../img/Home-page/home-main-bg.png') bottom center no-repeat;
         background-size: cover;
         height: 100vh;
         text-align: center;
@@ -52,7 +52,7 @@
         justify-content: center;
         width: 400px;
         height: 63px;
-        background: url('../../img/Home-page/arr-down-back.svg') top center no-repeat;
+        background: url('../img/Home-page/arr-down-back.svg') top center no-repeat;
         background-size: cover;
         img{
             margin-top: 10px;
