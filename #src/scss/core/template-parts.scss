@@ -231,10 +231,15 @@ img {
         width: 100%;
         line-height: 32px;
     }
+
+    .text {
+        font-weight: normal;
+        font-size: 18px;
+    }
     &::after{
         position: absolute;
         top: 38px;
-        right: 0;
+        right: -60px;
         content: '';
         display: block;
         height: 6px;
@@ -249,8 +254,16 @@ img {
             background: $def-red;
         }
     }
+    &.e--l-none {
+        &::after {
+            display: none;
+        }
+    }
     &.e--wide{
         width: 100%;
+        &:after {
+            right: 0;
+        }
             max-width: unset;
             h3{
                 max-width: 1000px;
@@ -329,6 +342,14 @@ img {
             grid-template-columns: 1fr 1fr;
         }
 
+    }
+
+    &-container {
+        display: flex;
+
+        @include mq('tablet') {
+            flex-direction: column;
+        }
     }
 }
 
@@ -668,4 +689,8 @@ body {
             opacity: .2 ;
         }
     }
+}
+
+.intro-section {
+    padding: 80px 0;
 }
