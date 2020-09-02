@@ -573,10 +573,14 @@ body {
         &__info.e--w-img{
             flex-direction: column;
         }
+
+        .info-section__preview {
+            margin-top: 2rem;
+        }
     }
    @include mq('phablet'){
        .info-section__preview{
-           margin-top: 4rem;
+           margin-top: 2rem;
            display: flex;
            justify-content: center;
        }

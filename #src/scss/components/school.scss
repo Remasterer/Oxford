@@ -108,3 +108,52 @@
          margin-top: 2rem;
      }
 }
+
+.preschool-info {
+
+    
+    &.e--bg-stripe {
+        padding-bottom: 250px;
+        background-image: url('../img/school-middle/stripes-4.svg');
+        background-size: contain;
+        background-position: center bottom -2rem;
+        background-repeat: no-repeat;
+
+        @include mq('tablet-wide') {
+            padding-bottom: 150px;
+            background-size: contain;
+            background-position: center bottom;
+        }
+
+        @include mq('phone-wide') {
+            padding-bottom: 80px;
+        }
+
+    }
+
+    .info__section__info {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            height: 240px;
+            width: 120px;
+            background-image: url('../img/school-middle/dots-1.svg');
+            left: -7rem;
+            top: -5rem;
+        }
+
+        
+       & > p {
+            margin-top: 2rem;
+            max-width: 70%;
+            line-height: 1.5;
+            @include mq('tablet-wide') {
+                max-width: 100%;
+            }
+        }
+    }
+
+}
+
+

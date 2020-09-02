@@ -2677,6 +2677,34 @@ body {
   background-repeat: no-repeat;
 }
 
+.preschool-info.e--bg-stripe {
+  padding-bottom: 250px;
+  background-image: url("../img/school-middle/stripes-4.svg");
+  background-size: contain;
+  background-position: center bottom -2rem;
+  background-repeat: no-repeat;
+}
+
+.preschool-info .info__section__info {
+  position: relative;
+}
+
+.preschool-info .info__section__info::after {
+  content: '';
+  position: absolute;
+  height: 240px;
+  width: 120px;
+  background-image: url("../img/school-middle/dots-1.svg");
+  left: -7rem;
+  top: -5rem;
+}
+
+.preschool-info .info__section__info > p {
+  margin-top: 2rem;
+  max-width: 70%;
+  line-height: 1.5;
+}
+
 .check-list {
   font-size: 18px;
 }
@@ -3836,6 +3864,10 @@ p {
             flex-direction: column;
   }
 
+  .info-section .info-section__preview {
+    margin-top: 2rem;
+  }
+
   .header .header__test-link {
     display: none;
   }
@@ -3969,6 +4001,16 @@ p {
 
   .school-preview {
     margin-top: 2rem;
+  }
+
+  .preschool-info.e--bg-stripe {
+    padding-bottom: 150px;
+    background-size: contain;
+    background-position: center bottom;
+  }
+
+  .preschool-info .info__section__info > p {
+    max-width: 100%;
   }
 
   .info-banner p {
@@ -4553,7 +4595,7 @@ p {
   }
 
   .info-section .info-section__preview {
-    margin-top: 4rem;
+    margin-top: 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4764,6 +4806,10 @@ p {
 
   .school-info.e--stripe {
     padding-bottom: 100px;
+  }
+
+  .preschool-info.e--bg-stripe {
+    padding-bottom: 80px;
   }
 
   .info-banner p {
