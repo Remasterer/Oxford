@@ -565,6 +565,7 @@ img {
             bottom: -85px;
             right: 0;
         }
+        
     }
     &.e--w-img{
         .help__inner {
@@ -575,10 +576,39 @@ img {
         h3{
             font-size: 2rem;       
         }
+        @include mq('desktop-wide'){
+            h3{
+                font-size: 20px;       
+            }
+        }
+        @include mq('tablet'){
+            h3{
+                font-size: 18px;       
+            }
+            .help__inner {
+                flex-direction: column;
+            }
+            .help__image-box{
+                margin-bottom: 2rem;
+                padding-right:  0;
+            }
+            .hep__info{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+        }
     }
     @include mq('phablet'){
         .help__add-image-box{
             opacity: .2 ;
         }
+    }
+}
+.sub-content{
+    p{
+     padding: 2rem 0 ;
+     font-weight: bold;
     }
 }

@@ -18,6 +18,11 @@
         img {
             border-radius: 50%;
         }
+        &.e--r-slid{
+            &:after {
+                right: 0;
+            }
+        }
         &:after {
             content: '';
             background-image: url('../img/Home-page/Quotes_orange.svg');
@@ -49,6 +54,6 @@
         margin: auto;
         margin-top: 1rem;
     }
-
+   
 
 }
