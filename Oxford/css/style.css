@@ -1927,7 +1927,8 @@ body {
   margin-right: 1rem;
 }
 
-.camp__tabs-bar a:hover {
+.camp__tabs-bar a:hover,
+.camp__tabs-bar a.active {
   background-color: #CD142B;
   color: #fff;
 }
