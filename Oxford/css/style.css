@@ -25,8 +25,7 @@
 
 .header,
 .header__bottom .main-navigation li.current-menu-item,
-.team-item__desc span,
-.testimonial-item__img:after {
+.team-item__desc span {
   font-family: 'Montserrat';
   font-weight: 600;
 }
@@ -411,6 +410,7 @@ h5 {
 .sub-description {
   color: #030303;
   font-size: 1.5rem;
+  line-height: 1.3;
 }
 
 a {
@@ -1558,6 +1558,13 @@ body {
 
 .our-team .slick-track {
   padding: 20px 0;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.our-team .slick-slide {
+  height: inherit !important;
 }
 
 .our-team .slick-slide {
@@ -1570,6 +1577,13 @@ body {
   height: 54px;
   border-radius: 50%;
   border: 1px solid #CD142B;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+}
+
+.our-team .slick-arrow:hover {
+  background-color: rgba(205, 20, 43, 0.3);
 }
 
 .our-team .slick-arrow.slick-next,
@@ -1602,6 +1616,50 @@ body {
   content: "\f104";
   font-size: 1.5rem;
   color: #000;
+}
+
+.our-team .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: -50px;
+  position: relative;
+}
+
+.our-team .slick-dots li {
+  border: 1px solid #00237C;
+  width: 1rem;
+  height: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  opacity: .5;
+  -webkit-transition: .3s opacity;
+  -o-transition: .3s opacity;
+  transition: .3s opacity;
+  margin: 0 .75rem;
+}
+
+.our-team .slick-dots li:hover,
+.our-team .slick-dots li.slick-active {
+  opacity: 1;
+}
+
+.our-team .slick-dots li button {
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background-color: #00237C;
 }
 
 .team-item {
@@ -1658,7 +1716,7 @@ body {
 
 .team-item__name {
   max-width: 250px;
-  margin: auto;
+  margin: 0 auto;
   text-align: center;
   margin-top: 1.5rem;
   line-height: 1.2;
@@ -1748,6 +1806,50 @@ body {
   color: #fff;
 }
 
+.testimonials .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: -50px;
+  position: relative;
+}
+
+.testimonials .slick-dots li {
+  border: 1px solid #CD142B;
+  width: 1rem;
+  height: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  opacity: .5;
+  -webkit-transition: .3s opacity;
+  -o-transition: .3s opacity;
+  transition: .3s opacity;
+  margin: 0 .75rem;
+}
+
+.testimonials .slick-dots li:hover,
+.testimonials .slick-dots li.slick-active {
+  opacity: 1;
+}
+
+.testimonials .slick-dots li button {
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background-color: #CD142B;
+}
+
 .testimonial-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1785,12 +1887,34 @@ body {
   height: 80px;
   width: 104px;
   position: absolute;
-  font-size: 50px;
   bottom: -30px;
 }
 
 .testimonial-item__content {
   margin-top: 80px;
+}
+
+.testimonial-item__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1rem;
+}
+
+.testimonial-item__socials a {
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  padding: .25rem;
+  color: rgba(205, 20, 43, 0.3);
+  font-size: 1.25rem;
+}
+
+.testimonial-item__socials a:hover {
+  color: #CD142B;
 }
 
 .testimonial-item__term {
@@ -4940,7 +5064,34 @@ p {
   }
 
   .team-item p {
-    font-size: 1rem;
+    font-size: 14px;
+  }
+
+  .testimonials__slider {
+    padding: 0;
+  }
+
+  .testimonials__titles {
+    margin-bottom: 50px;
+  }
+
+  .testimonial-item__img {
+    max-width: 150px;
+  }
+
+  .testimonial-item__img:after {
+    height: 40px;
+    width: 55px;
+    bottom: -10px;
+    right: -15px;
+  }
+
+  .testimonial-item__content {
+    margin-top: 2rem;
+  }
+
+  .testimonial-item__content p {
+    font-size: 14px;
   }
 
   .camp h3 {

@@ -7,7 +7,6 @@
         outline: none;
     }
 
-
     &__img {
         max-width: 230px;
         border-radius: 50%;
@@ -24,15 +23,29 @@
             background-repeat: no-repeat;
             height: 80px;
             width: 104px;
-            @extend %monst-semi;
             position: absolute;
-            font-size: 50px;
             bottom: -30px;
         }
     }
 
     &__content {
         margin-top: 80px;
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        a {
+            transition: .3s;
+            padding: .25rem;
+            color: $light-red;
+            font-size: 1.25rem;
+
+            &:hover {
+                color: $def-red;
+            }
+        }
     }
 
     &__term {
@@ -50,5 +63,24 @@
         margin-top: 1rem;
     }
 
+    @include mq('phone-wide') {
+        &__img {
+            max-width: 150px;
+
+            &:after {
+                height: 40px;
+                width: 55px;
+                bottom: -10px;
+                right: -15px;
+            }
+        }
+
+        &__content {
+            margin-top: 2rem;
+            p {
+                font-size: 14px;
+            }
+        }
+    }
 
 }

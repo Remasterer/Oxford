@@ -21,6 +21,11 @@
 
     .slick-track {
         padding: 20px 0;
+        display: flex !important;
+    }
+
+    .slick-slide {
+        height: inherit !important;
     }
 
     .slick-slide {
@@ -33,6 +38,11 @@
         height: 54px;
         border-radius: 50%;
         border: 1px solid $def-red;
+        transition: .3s all;
+
+        &:hover {
+            background-color: $light-red;
+        }
     }
     
     .slick-arrow.slick-next, .slick-arrow.slick-prev {
@@ -58,6 +68,37 @@
             font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f104";
             font-size: 1.5rem;
             color: #000;
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        bottom: -50px;
+        position: relative;
+        li {
+            border: 1px solid $def-blue;
+            width: 1rem;
+            height: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            opacity: .5;
+            transition: .3s opacity;
+            margin: 0 .75rem;
+
+            &:hover,
+            &.slick-active {
+                opacity: 1;
+            }
+
+            button {
+                height: 4px;
+                width: 4px;
+                border-radius: 50%;
+                background-color: $def-blue;
+            }
         }
     }
 
