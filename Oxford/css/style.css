@@ -80,7 +80,8 @@ h1,
 .camp__tabs-bar a,
 .camp ul,
 .adult__reason p,
-.adult-table table {
+.adult-table table,
+.popup a {
   font-family: 'Montserrat Alternates';
   font-weight: 500;
 }
@@ -2706,6 +2707,170 @@ body {
   line-height: 1.5;
 }
 
+.popup {
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem;
+}
+
+.popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup.active .popup__form {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.popup h3 {
+  font-size: 4rem;
+  color: #CD142B;
+  max-width: 580px;
+  margin: auto;
+  letter-spacing: 0.07em;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.popup h3.e--sm {
+  font-size: 3rem;
+}
+
+.popup__form {
+  background-color: #fff;
+  max-width: 800px;
+  width: 100%;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+  -webkit-transform: translateY(-300%);
+      -ms-transform: translateY(-300%);
+          transform: translateY(-300%);
+}
+
+.popup__form-top {
+  background-color: #00237C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup__form-bottom {
+  height: 50px;
+  background-color: #00237C;
+}
+
+.popup__form-middle {
+  background-image: url("../img/Base/bg-logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem 100px;
+}
+
+.popup__close {
+  opacity: .5;
+  -webkit-transition: .2s opacity;
+  -o-transition: .2s opacity;
+  transition: .2s opacity;
+  cursor: pointer;
+  padding: 2rem;
+}
+
+.popup__close img {
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+}
+
+.popup__close:hover {
+  opacity: 1;
+}
+
+.popup form p {
+  margin-bottom: 2rem;
+}
+
+.popup form p:last-child {
+  margin-bottom: 0;
+}
+
+.popup form input {
+  font-size: 20px;
+  padding: 1rem 2rem;
+  width: 100%;
+  border-color: #00237C;
+  border-width: 2px;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.popup form input:focus {
+  border: 3px solid #CD142B;
+}
+
+.popup form .button {
+  margin-top: 3rem;
+  width: auto;
+  padding: 1rem 3rem;
+  border: none;
+}
+
+.popup p {
+  font-size: 2rem;
+  text-align: center;
+  color: #CD142B;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+.popup a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #000;
+  margin-top: 2rem;
+}
+
+.popup a img {
+  width: 38px;
+  margin-left: 1rem;
+}
+
+.popup a:hover {
+  color: #CD142B;
+}
+
 .check-list {
   font-size: 18px;
 }
@@ -4014,6 +4179,22 @@ p {
     max-width: 100%;
   }
 
+  .popup h3 {
+    font-size: 3rem;
+  }
+
+  .popup h3.e--sm {
+    font-size: 2.5rem;
+  }
+
+  .popup p {
+    font-size: 1.5rem;
+  }
+
+  .popup__form-middle {
+    padding: 2rem 50px;
+  }
+
   .info-banner p {
     font-size: 1.5rem;
   }
@@ -4440,6 +4621,35 @@ p {
     margin-left: 0;
   }
 
+  .popup h3 {
+    font-size: 2rem;
+  }
+
+  .popup h3.e--sm {
+    font-size: 1.75rem;
+  }
+
+  .popup p {
+    font-size: 1.25rem;
+  }
+
+  .popup form p {
+    margin-bottom: 1rem;
+  }
+
+  .popup form .button {
+    margin-top: 2rem;
+  }
+
+  .popup__close {
+    padding: 1rem;
+  }
+
+  .popup__close img {
+    height: 25px;
+    width: 25px;
+  }
+
   .half-sections {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -4811,6 +5021,30 @@ p {
 
   .preschool-info.e--bg-stripe {
     padding-bottom: 80px;
+  }
+
+  .popup {
+    padding: 1rem;
+  }
+
+  .popup h3 {
+    font-size: 1.5rem;
+  }
+
+  .popup h3.e--sm {
+    font-size: 1.25rem;
+  }
+
+  .popup p {
+    font-size: 1rem;
+  }
+
+  .popup__form-middle {
+    padding: 1rem;
+  }
+
+  .popup form input {
+    font-size: 1rem;
   }
 
   .info-banner p {
