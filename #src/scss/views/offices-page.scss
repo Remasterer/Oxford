@@ -1,19 +1,21 @@
 .offices {
+    
     &__content {
         display: flex;
         flex-direction: column;
     }
 }
 
-
-
-
-
-
 .office {
     display: flex;
     // .office__image-box   
     color: $def-red;
+    // flex-direction: column;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
 
     &__image-wrapper {
         margin-left: -20rem;
@@ -109,6 +111,28 @@
         font-size: 36px;
     }
 
+    &__gallery {
+        display: flex;
+        margin-top: 1rem;
+        a {
+            height: 60px;
+            width: 60px;
+            border: 5px solid $def-red;
+            overflow: hidden;
+            margin-right: 1rem;
+            display: block;
+            &:last-child {
+                margin-right: 0;
+            }
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    
+
     &:nth-of-type(even) {
         flex-direction: row-reverse;
         margin-right: -20rem;
@@ -131,12 +155,24 @@
             margin-left: 0;
             margin-right: 500px/1260px * 100%;
         }
+
+        .office__gallery {
+            position: relative;
+            right: 5rem;
+        }
         @include mq('tablet-wide') {
             .office__image-wrapper.e--ar-right::after {
                 display: none;
             }
             .office__info {
                 margin-right: 0
+            }
+        }
+
+        @include mq('tablet') {
+            .office__gallery {
+                position: relative;
+                right: 0;
             }
         }
         
@@ -184,6 +220,14 @@
             margin-left: 0;
         }
 
+        .office__wrapper {
+            flex-direction: column-reverse;
+        }
+
+        .office__gallery {
+            margin-top: 0;
+            margin-bottom: 2rem;
+        }
         @include mq('desktop') {
             .office__image-wrapper {
                 max-width: 550px;
@@ -191,8 +235,11 @@
         }
 
         @include mq('tablet-wide') {
-            flex-direction: column;
-
+            flex-direction: column-reverse;
+            .office__wrapper {
+                flex-direction: column;
+                align-items: flex-end;
+            }
             .office__image-wrapper.e--ar-right::after {
                 display: none;
             }
@@ -215,6 +262,10 @@
             }
             .office__image-wrapper {
                 padding: 31px 15px;
+            }
+
+            .office__wrapper {
+                flex-direction: column;
             }
         }
     }
@@ -298,3 +349,4 @@
         margin-top: 5rem;
     }
 }
+
