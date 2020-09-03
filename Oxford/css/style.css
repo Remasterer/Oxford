@@ -3184,6 +3184,16 @@ body {
   color: #CD142B;
 }
 
+.office__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .office__image-wrapper {
   margin-left: -20rem;
   max-width: 700px;
@@ -3346,6 +3356,32 @@ body {
 
 .office + .office {
   margin-top: 10rem;
+}
+
+.office__gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.office__gallery-img {
+  height: 60px;
+  width: 60px;
+  border: 5px solid #CD142B;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.office__gallery-img:last-child {
+  margin-right: 0;
+}
+
+.office__gallery-img img {
+  max-height: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .office + .office {

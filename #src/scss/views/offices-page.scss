@@ -1,19 +1,21 @@
 .offices {
+    
     &__content {
         display: flex;
         flex-direction: column;
     }
 }
 
-
-
-
-
-
 .office {
     display: flex;
     // .office__image-box   
     color: $def-red;
+    // flex-direction: column;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
 
     &__image-wrapper {
         margin-left: -20rem;
@@ -108,6 +110,7 @@
         font-weight: bold;
         font-size: 36px;
     }
+    
 
     &:nth-of-type(even) {
         flex-direction: row-reverse;
@@ -223,6 +226,26 @@
         margin-top: 10rem;
     }
 
+    &__gallery {
+        display: flex;
+        margin-top: 1rem;
+        &-img {
+            height: 60px;
+            width: 60px;
+            border: 5px solid $def-red;
+            overflow: hidden;
+            margin-right: 1rem;
+            &:last-child {
+                margin-right: 0;
+            }
+            img {
+                max-height: 100%;
+                max-width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
     @include mq('tablet-wide') {
         justify-content: space-between;
         .office__image-wrapper.e--ar-right::after {
@@ -298,3 +321,4 @@
         margin-top: 5rem;
     }
 }
+
