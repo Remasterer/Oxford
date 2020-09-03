@@ -100,7 +100,7 @@ h5{
         outline: none;
     }
 
-    &.e--transparent {
+    &.e--light {
         &-red {
             background-color: transparent;
             border: 2px solid $def-red;
@@ -121,6 +121,10 @@ h5{
     &.e--white{
         background:#fff;
         color: $def-red;
+        &:hover {
+            color: #fff;
+            background-color: $def-red;
+        }
     }
     &.e--red{
         color:#fff;
@@ -269,6 +273,13 @@ img {
             h3{
                 max-width: 1000px;
             }
+    }
+    &.e--t-title{
+        padding-right: 155px;
+        width: fit-content;
+        &::after{
+            top: 20px;
+        }
     }
     @include mq('tablet-wide'){
         &::after{
@@ -678,6 +689,7 @@ body {
             bottom: -85px;
             right: 0;
         }
+        
     }
     &.e--w-img{
         .help__inner {
@@ -688,6 +700,29 @@ body {
         h3{
             font-size: 2rem;       
         }
+        @include mq('desktop-wide'){
+            h3{
+                font-size: 20px;       
+            }
+        }
+        @include mq('tablet'){
+            h3{
+                font-size: 18px;       
+            }
+            .help__inner {
+                flex-direction: column;
+            }
+            .help__image-box{
+                margin-bottom: 2rem;
+                padding-right:  0;
+            }
+            .hep__info{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+        }
     }
     @include mq('phablet'){
         .help__add-image-box{
@@ -695,7 +730,12 @@ body {
         }
     }
 }
-
+.sub-content{
+    p{
+     padding: 2rem 0 ;
+     font-weight: bold;
+    }
+}
 .intro-section {
     padding: 80px 0;
 }
