@@ -2058,6 +2058,10 @@ body {
   color: #fff;
 }
 
+.camp__tabs-content {
+  padding-top: 3rem !important;
+}
+
 .camp__banner {
   padding: 100px 0;
   background-image: url("img/Courses/2-schoolboy/logo-oxford.svg");
@@ -2280,6 +2284,10 @@ body {
 }
 
 .brovar-tab__feature.e--2 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   margin-top: -5%;
 }
 
@@ -4631,9 +4639,9 @@ p {
 
   .brovar-tab__feature.e--2 {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .brovar-tab__feature.e--2 .brovar-tab__feature-text {
