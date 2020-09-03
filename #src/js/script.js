@@ -4,3 +4,4 @@
 @@include('testimonials-slider.js');
 @@include('camp-slider.js');
 @@include('js-tabs.js');
+@@include('popup.js');
