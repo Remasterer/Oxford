@@ -1,0 +1,256 @@
+
+.work-steps {
+		&__list {
+            margin-top: 60px;
+            counter-reset: section;           
+            list-style-type: none;
+		}
+}
+
+.list-work-step {
+
+		// .list-work-step__item
+        &__item + &__item {
+            margin-top: 3rem;
+        }
+		&__item {
+            display: flex;
+            align-items: center;
+            position: relative;
+            &__info{
+                order: 3;
+                padding-left: 22px;
+            }
+            &::before{
+                order: 2;
+                font-size: 120px;
+                line-height: 72px;
+                letter-spacing: 0.07em;
+                color: $def-blue;
+                counter-increment: section;       
+                content: counters(section,".") " "; 
+                @include mq('phone'){
+                    margin-bottom: 2rem;
+                }
+            }
+            &__image-box{
+                max-width: 460px    ;
+                img{
+                    object-fit: cover;
+                }
+                @include mq('tablet'){
+                    position: absolute;
+                    opacity: .2;
+                    max-width: 220px;
+                }
+            }
+            span{
+                @extend %monst-alter-bold;
+                color: $def-red;
+                font-size: 30px;
+                @include mq('tablet'){
+                    margin-top: 20px;
+                }
+            }
+            @include mq('tablet'){
+                align-items: unset;
+            }
+            @include mq('phone'){
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        &__item:nth-of-type(even){
+            align-items: center;
+            &::before{
+                color: $def-red;
+            }
+        }
+
+		// .list-work-step__title
+
+		&__title {
+            line-height: 30px;
+            margin-top: 5px;
+            max-width: 670px;
+            margin-bottom: 31px;
+            @extend %monst-alter-bold;
+            @include mq('tablet'){
+                display: flex;
+                flex-direction: column;
+                line-height: 20px;
+            }
+            
+		}
+
+
+		&__text {
+            max-width: 1100px;
+		}
+}
+
+.translations-form {
+    @extend %avenir-norm;
+    padding-top: 100px;
+    padding-bottom: 75px;
+    &__title{
+        margin-bottom: 4.25rem;
+    }
+}
+
+.contact-form-translations {
+
+    // .contact-form-translations__group
+
+    &__group + &__group {
+        margin-top: 32px;
+    }
+    &__group{
+        display: flex;
+        font-size: 20px;
+        
+        @include mq('tablet-wide'){
+                font-size: 1rem;
+        }
+        @include mq('phablet'){
+            flex-direction: column;
+        }
+
+    }
+    // .contact-form-translations__input
+    &__input +  &__input{
+        margin-left: 87px;
+        @include mq('phablet'){
+            margin-top: 2rem;
+            margin-left: 0px;
+        }
+        
+        
+    }
+    &__input  {
+        max-width: 426px;
+        width: 33%;
+        &.contact-form-translations__file{
+            max-width: 300px;
+        }
+        @include mq('tablet-wide'){
+            width: 44%; 
+        }
+        @include mq('phablet'){
+            width: 80%; 
+        }
+    }
+    &__input , textarea  {
+        
+        background: #FAFAFA;
+        padding: 14px 17px;
+        border: 3px solid #CD142B;
+    }
+    textarea {
+        width: 100%;
+    }
+    // .contact-form-translations__file
+
+    &__file {
+        position: relative;
+        input{
+            opacity: 0 ;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        background: url('../../img/Page-translations/file.svg')  no-repeat;
+        background-position: 90% center;
+    }
+    &__input-container{
+        width: 33%;
+        position: relative;
+        &::after{
+            @include pseudo;
+            width: 20px;
+            height: 20px;
+            background: url(../../img/Page-translations/select-arrows.svg) center center no-repeat;
+            background-size: contain;
+            right: 0;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        @include mq('tablet-wide'){
+            width: 44%; 
+        }
+        @include mq('phablet'){
+            width: 80%; 
+        }
+    }
+    &__select{
+        height: 100%;
+        width: 100%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        &::-ms-expand {
+            display: none;
+        }
+        @include mq('tablet-wide'){
+            width: 100%; 
+        }
+        @include mq('phablet'){
+            width: 100% !important; 
+        }
+        
+    }
+    .radio__container{
+        display: flex;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        span:first-of-type{
+            padding-right: 10px;
+        }
+        @include mq('phablet'){
+            margin-top: 2rem;
+            padding-left: 0px; 
+        }
+    }
+    .radio__container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      .checkmark {
+        display: grid;
+        place-items: center;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        border: 2px solid #CD142B;
+      }
+
+  .checkmark:after {
+      border-radius: 50%;
+    content: "";
+    display: none;
+    background:$def-blue;
+  }
+  
+  /* Show the checkmark when checked */
+  .radio__container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .radio__container .checkmark:after {
+    width: 8px;
+    height: 8px;
+  }
+}
+

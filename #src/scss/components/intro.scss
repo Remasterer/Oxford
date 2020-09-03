@@ -61,7 +61,14 @@
 
     }
     .breadcrumbs{
+        display: flex;
+        align-items: center;
         margin-bottom: 85px;
+        span{
+            @extend %monst-alter-regular;
+            padding: 0 9px  0 13px ;
+            height: 20px;
+        }
     }
     &__description{
         margin-top: 27px;

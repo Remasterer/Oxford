@@ -47,7 +47,7 @@ a{
 	text-decoration:none;
 	color: inherit;
 }
-button{
+button,input{
 	background:transparent;
 	border:none;
 	color: inherit;
@@ -60,3 +60,6 @@ main {
 	position: relative;
 	min-height: 100%;
 }
+:focus {
+    outline: none;
+}	

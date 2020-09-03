@@ -46,7 +46,7 @@
 
     // .header__brand
 
-    &__brand {
+    .custom-logo-link {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -55,12 +55,27 @@
     }
     // header functional
     &__functional{
+        display: flex;
         margin-right:1.25rem;
+    }
+    .list-unstyled{
+        select{
+            background:transparent;
+            border: none;
+            color:$def-white;
+            text-transform: uppercase;
+            option{
+                color: black;
+            }
+        }
+        
+
     }
     // .header__bottom
 
     &__bottom {
         background:$def-blue;
+        transition: all .3s ease 0s ;
         .main-navigation{
             font-size:13px;
             ul{
@@ -68,16 +83,28 @@
                 justify-content: space-between  ;
             }
             li{
+                position: relative;
+                
+                &::after{
+                    @include pseudo;
+                    bottom: -1px;
+                    transform: translateX(-50%);
+                    left: 50%;
+                    width: 0%;
+                    background:$def-red;
+                    height:4px;
+                    transition: all .3s;
+                }
                 &.current-menu-item{
-                    position: relative;
                     @extend %monst-semi;
                     &::after{
-                        @include pseudo;
-                        bottom: -1px;
-                        left: 0;
                         width: 100%;
-                        background:$def-red;
-                        height:4px;
+                    }
+                    
+                }
+                &:hover{
+                    &::after{
+                        width: 100%;
                     }
                 }
             }
@@ -99,6 +126,16 @@
         i{
             display: none;
         }
+    }
+    &.scrolling{
+       
+        .header__bottom{
+            transform: translateY(-100%);
+            
+        }
+    }
+    &.in-scroll{
+        border-bottom:  unset;
     }
     @include mq('desktop','min'){
         .menu__btn{
