@@ -51,7 +51,6 @@
         &:hover  {
             &:before {
                 color: #fff !important;
-
             }
         }
     }
@@ -71,6 +70,37 @@
         } 
     }
 
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        bottom: -50px;
+        position: relative;
+        li {
+            border: 1px solid $def-red;
+            width: 1rem;
+            height: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            opacity: .5;
+            transition: .3s opacity;
+            margin: 0 .75rem;
+
+            &:hover,
+            &.slick-active {
+                opacity: 1;
+            }
+
+            button {
+                height: 4px;
+                width: 4px;
+                border-radius: 50%;
+                background-color: $def-red;
+            }
+        }
+    }
+
     @include mq('tablet') {
         &__slider {
             padding: 0 40px;
@@ -78,6 +108,16 @@
         .slick-slide {
             margin-right: 1rem;
             margin-left: 1rem;
+        }
+    }
+
+    @include mq('phone-wide') {
+        &__slider {
+            padding: 0;
+        }
+
+        &__titles {
+            margin-bottom: 50px;
         }
     }
 }
