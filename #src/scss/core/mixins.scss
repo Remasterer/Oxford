@@ -62,3 +62,7 @@ $breakpoints: (
         }
     }
 }
+@mixin mediaImage($width,$height) {
+    width: $width ;
+    height: 100%;
+}

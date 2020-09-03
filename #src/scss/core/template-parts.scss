@@ -100,7 +100,7 @@ h5{
         outline: none;
     }
 
-    &.e--transparent {
+    &.e--light {
         &-red {
             background-color: transparent;
             border: 2px solid $def-red;
@@ -121,6 +121,10 @@ h5{
     &.e--white{
         background:#fff;
         color: $def-red;
+        &:hover {
+            color: #fff;
+            background-color: $def-red;
+        }
     }
     &.e--red{
         color:#fff;
@@ -255,6 +259,13 @@ img {
             h3{
                 max-width: 1000px;
             }
+    }
+    &.e--t-title{
+        padding-right: 155px;
+        width: fit-content;
+        &::after{
+            top: 20px;
+        }
     }
     @include mq('tablet-wide'){
         &::after{

@@ -1,5 +1,23 @@
 "use strict";
 
+var prevScrollpos = window.pageYOffset;
+
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset;
+
+  if (prevScrollpos > currentScrollPos) {
+    $('.header').removeClass('scrolling');
+  } else {
+    $('.header').addClass('scrolling');
+  }
+
+  if ($(window).scrollTop() > 0) {
+    $('.header').addClass('in-scroll');
+  }
+
+  prevScrollpos = currentScrollPos;
+};
+
 (function () {
   var originalPositions = [];
   var daElements = document.querySelectorAll('[data-da]');
@@ -165,7 +183,7 @@ function scrollToAnchor(event) {
   event.preventDefault();
   var aim = $("section[data-name='" + $(this).attr('href') + "']");
   $('html,body').animate({
-    scrollTop: aim.offset().top - $('.header').height()
+    scrollTop: aim.offset().top - $('.header__top').height()
   }, 'slow');
 }
 
