@@ -44,6 +44,7 @@
         }
 
         &.e--2 {
+            flex-direction: row-reverse;
             margin-top: -5%;
             .brovar-tab__feature-text {
                 width: 50%;
@@ -137,7 +138,7 @@
             }
 
             &.e--2 {
-                flex-direction: column-reverse;
+                flex-direction: column;
                 .brovar-tab__feature-text {
                     width: 100%;
                     margin-left: 0;
