@@ -252,6 +252,12 @@ img {
         background: $def-blue;
         border-radius: 3px;
     }
+
+    &.right-0 {
+        &:after {
+            right: 0px;
+        }
+    }
    
     &.e--blue{
         color:$def-blue;
