@@ -49,4 +49,20 @@
             flex-basis: 100%;
         }
     }
+
+    @include mq('phone-wide') {
+        &__item {
+            flex-basis: 100%;
+            padding: 1.5rem 0;
+
+            &-title {
+                margin-bottom: 1rem;
+            }
+
+            &-img {
+                margin-bottom: 1rem;
+                max-width: 100px;
+            }
+        }
+    }
 }
