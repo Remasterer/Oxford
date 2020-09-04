@@ -44,14 +44,32 @@
     // .gallery__actions
 
     &__actions {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: fit-content;
-        grid-gap: 21px 51px;
+        
+        display: flex;
+        flex-wrap: wrap;
         margin-bottom: 32px;
-        @include mq('tablet'){
-            grid-template-columns: 1fr;
-            
+        justify-content: center;
+        & > div {
+            margin: .5rem;
+            flex-basis: 45%;
+            display: block;
+            text-align: center;
+
+            a {
+                display: block;
+
+                &:hover {
+                    background-color: $def-blue;
+                    color: #fff;
+                }
+            }
+
+            &.active {
+                a {
+                    background-color: $def-blue;
+                    color: #fff;
+                }
+            }
         }
     }
 
@@ -91,6 +109,28 @@
             }
         }
     }
+
+    @include mq('tablet-small') {
+        &__actions {
+            & > div {
+               .button {
+                padding: .5rem 2rem;
+               } 
+            }
+        }
+    }
+
+    @include mq('phone-wide') {
+        &__actions {
+            & > div {
+                flex-basis: 40%;
+               .button {
+                padding: .5rem .25rem;
+                font-size: 12px;
+               } 
+            }
+        }
+    }
 }
 .grid{
     display: grid;
@@ -100,9 +140,17 @@
     grid-auto-flow: dense;
     padding-bottom: 1.5rem;
     &-item{
+        overflow: hidden;
+        &:hover {
+            img {
+                transform: scale(1.15);
+                filter: sepia(.3);
+            }
+        }
         img{
             height: 100%;
             object-fit: cover;
+            transition: .3s;
         }
         @include mq('tablet','min'){
             &.spn-rw-2{
