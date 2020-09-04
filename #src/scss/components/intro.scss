@@ -1,6 +1,5 @@
 .intro{
     margin-top: 178px;
-    overflow: hidden;
     background: url('../img/Blog-page/back.png') bottom center no-repeat;
     background-size: cover;
     position: relative;
@@ -57,8 +56,17 @@
         img{
             margin-top: 10px;
             max-width: 38px;
+            transition: all .3s;
         }
-
+        &:hover{
+            img{
+                position: relative;
+                transform: translateY(20px);
+            }
+        }
+        @include mq('phone'){
+            width: 320px;
+        }
     }
     .breadcrumbs{
         display: flex;
@@ -78,6 +86,9 @@
         color: #B5B5B5;
         @extend %monst-alter-regular;
         padding-bottom: 201px;
+        @include mq('phone'){
+            font-size: 1.5rem;
+        }
     }
     @include mq('desktop'){
         margin-top: 85px;
