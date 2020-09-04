@@ -13,10 +13,12 @@
     .slick-track {
         padding: 20px 0;
     }
-
+    .slick-list{
+        // padding: 0 32% !important;
+    }
     .slick-slide {
-        margin-right: 2rem;
-        margin-left: 2rem;
+            margin-right: -10rem;
+            margin-left: -10rem;
     }
     
     .slick-arrow {

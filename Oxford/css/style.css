@@ -90,6 +90,7 @@ h1,
   font-weight: 500;
 }
 
+.footer .copywrite-footer,
 .plan__for,
 .translations-form {
   font-family: 'Avenir-Regular';
@@ -1200,6 +1201,48 @@ body {
   opacity: 1;
 }
 
+.footer .copywrite-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #FFFFFF;
+  position: relative;
+}
+
+.footer .copywrite-footer__inner {
+  padding-top: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.footer .copywrite-footer__inner span {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.footer .copywrite-footer__inner a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+}
+
+.footer .copywrite-footer__inner a img {
+  max-width: 14px;
+  margin-left: 12px;
+}
+
 .footer-form {
   width: 100%;
 }
@@ -1428,6 +1471,15 @@ body {
 .gallery__pagination img {
   margin-left: 20px;
   max-width: 32px;
+  -webkit-transition: all .3 ease .0s;
+  -o-transition: all .3 ease .0s;
+  transition: all .3 ease .0s;
+}
+
+.gallery__pagination span {
+  -webkit-transition: all .3s ease .0s;
+  -o-transition: all .3s ease .0s;
+  transition: all .3s ease .0s;
 }
 
 .grid {
@@ -1882,8 +1934,8 @@ body {
 }
 
 .testimonials .slick-slide {
-  margin-right: 2rem;
-  margin-left: 2rem;
+  margin-right: -10rem;
+  margin-left: -10rem;
 }
 
 .testimonials .slick-arrow {
@@ -1994,40 +2046,67 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  padding-top: 1rem;
+  -webkit-transform: translateX(7.93651%);
+      -ms-transform: translateX(7.93651%);
+          transform: translateX(7.93651%);
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  -o-transition: transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
 }
 
 .testimonial-item:focus {
   outline: none;
 }
 
+.testimonial-item__container {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .testimonial-item__img {
-  max-width: 230px;
+  margin-top: 18px;
+  max-width: 150px;
   border-radius: 50%;
   margin: auto;
   position: relative;
-  border: 10px solid #CD142B;
+  opacity: .65;
+  -webkit-transition: all .4s ease 0s;
+  -o-transition: all .4s ease 0s;
+  transition: all .4s ease 0s;
 }
 
 .testimonial-item__img img {
+  max-width: 150px;
   border-radius: 50%;
 }
 
-.testimonial-item__img.e--r-slid:after {
-  right: 0;
+.testimonial-item__img .testimonial-item__content {
+  opacity: 1;
+  visibility: visible;
 }
 
-.testimonial-item__img:after {
-  content: '';
-  background-image: url("../img/Home-page/Quotes_orange.svg");
-  background-repeat: no-repeat;
-  height: 80px;
-  width: 104px;
-  position: absolute;
-  bottom: -30px;
+.testimonial-item.slick-slide:not(.slick-active) + .testimonial-item.slick-active {
+  -webkit-transform: translateX(220px);
+      -ms-transform: translateX(220px);
+          transform: translateX(220px);
+}
+
+.slick-current + .testimonial-item.slick-active {
+  -webkit-transform: translateX(-220px);
+      -ms-transform: translateX(-220px);
+          transform: translateX(-220px);
 }
 
 .testimonial-item__content {
   margin-top: 80px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .8s ease 0s;
+  -o-transition: all .8s ease 0s;
+  transition: all .8s ease 0s;
 }
 
 .testimonial-item__socials {
@@ -2065,6 +2144,56 @@ body {
   text-align: center;
   margin: auto;
   margin-top: 1rem;
+}
+
+.testimonial-item.slick-current {
+  z-index: 1000000000;
+  position: relative;
+  -webkit-transform: translateX(0px);
+      -ms-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.testimonial-item.slick-current .testimonial-item__container {
+  width: 100%;
+}
+
+.testimonial-item.slick-current .testimonial-item__img {
+  -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+          transform: scale(1.5);
+  border-radius: 50%;
+  margin: auto;
+  position: relative;
+  border: 10px solid #CD142B;
+  opacity: 1;
+  z-index: 10000;
+}
+
+.testimonial-item.slick-current .testimonial-item__img img {
+  border-radius: 50%;
+}
+
+.testimonial-item.slick-current .testimonial-item__img.e--r-slid:after {
+  right: 0;
+}
+
+.testimonial-item.slick-current .testimonial-item__img:after {
+  content: '';
+  background-image: url("../img/Home-page/Quotes_orange.svg");
+  background-repeat: no-repeat;
+  height: 80px;
+  width: 104px;
+  position: absolute;
+  bottom: -30px;
+  -webkit-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+.testimonial-item.slick-current .testimonial-item__content {
+  opacity: 1;
+  visibility: visible;
 }
 
 .our-contacts {
@@ -4515,6 +4644,12 @@ p {
 }
 
 @media only screen and (min-width: 769px) {
+  .gallery__pagination:hover span {
+    -webkit-transform: translateX(-20px);
+        -ms-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+
   .grid-item.spn-rw-2 {
     grid-row: span 2;
   }
@@ -4700,6 +4835,20 @@ p {
     bottom: -139px;
     right: 0;
     max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 1245px) {
+  .testimonial-item.slick-slide:not(.slick-active) + .testimonial-item.slick-active {
+    -webkit-transform: translateX(17.46032%);
+        -ms-transform: translateX(17.46032%);
+            transform: translateX(17.46032%);
+  }
+
+  .slick-current + .testimonial-item.slick-active {
+    -webkit-transform: translateX(-17.46032%);
+        -ms-transform: translateX(-17.46032%);
+            transform: translateX(-17.46032%);
   }
 }
 
@@ -5265,6 +5414,38 @@ p {
   .testimonials .slick-slide {
     margin-right: 1rem;
     margin-left: 1rem;
+  }
+
+  .testimonial-item__img.e--r-slid:after {
+    right: 0;
+  }
+
+  .testimonial-item__img:after {
+    content: '';
+    background-image: url("../img/Home-page/Quotes_orange.svg");
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 104px;
+    position: absolute;
+    bottom: -30px;
+  }
+
+  .testimonial-item.slick-slide:not(.slick-active) + .testimonial-item.slick-active {
+    -webkit-transform: unset;
+        -ms-transform: unset;
+            transform: unset;
+  }
+
+  .slick-current + .testimonial-item.slick-active {
+    -webkit-transform: unset;
+        -ms-transform: unset;
+            transform: unset;
+  }
+
+  .testimonial-item.slick-current .testimonial-item__img {
+    -webkit-transform: unset;
+        -ms-transform: unset;
+            transform: unset;
   }
 
   .our-contacts__content {
@@ -5914,10 +6095,6 @@ p {
 
   .testimonials__titles {
     margin-bottom: 50px;
-  }
-
-  .testimonial-item__img {
-    max-width: 150px;
   }
 
   .testimonial-item__img:after {
