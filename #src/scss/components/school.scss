@@ -1,20 +1,25 @@
-.school {
+.big-abstr{
+    position: absolute;
+    height: 2200px;
+    width: 100%;
+    top: 9%;
+    left: 0;
+    background: url(../../img/big-abstr.svg) no-repeat;
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
-    padding-bottom: 300px;
-    position: relative;
-    &:after {
-        content: '';
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        bottom: 0;
-        left: -0;
-        z-index: -1;
-        background: url(../../img/school-middle/stripes-1.svg) center 15% / 1500px no-repeat;
+    @include mq('tablet-wide'){
+        top: 14%;
     }
-    
+    @include mq('tablet'){
+        display: none;
+    }
+}
+.school {
+
+    padding-bottom: 400px;
+    @include mq('tablet'){
+        padding-bottom: 50px;
+    }
     .info-section__inner {
         align-items: flex-start;
         @include mq('tablet-wide') {
