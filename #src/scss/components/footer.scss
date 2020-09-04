@@ -1,6 +1,7 @@
 .footer {
     color:$def-white;
-    padding:44px;
+   padding-top: 44px;
+   padding-bottom: 7px;
     background:$def-red;
     @extend %monst-alter-bold;
     text-align: center;
@@ -38,10 +39,42 @@
 
     &__socials {
         display: flex;
+        padding-bottom: 40px;
         .footer__socials-item + .footer__socials-item{
             margin-left: 13px;
         }
     }
+
+        // .footer__copywrite
+
+    .copywrite-footer {
+        display: flex;
+        border-top: 1px solid $def-white;
+        position: relative;
+        @extend %avenir-norm;
+        // .copywrite-footer__inner
+        &__inner {
+            padding-top: 6px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            span{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            a{
+                display: flex;
+                align-items: center;
+                margin-left: auto;
+                img{
+                    max-width: 14px;
+                    margin-left: 12px;
+                }
+            }
+        }
+    }
+
     @include mq('phablet'){
         &__inner {
             background-size: contain;
@@ -86,3 +119,4 @@
         }
     }
 }
+
