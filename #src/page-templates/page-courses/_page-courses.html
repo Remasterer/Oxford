@@ -1,0 +1,44 @@
+<div class="js-tabs">
+    <section class="adult" data-name="first-section">
+        <div class="container">
+           <div class="titles">
+               <h2>Наши курсы</h2>
+               <p class="sub-description">Выберите подходящий вам курс</p>               
+            </div>
+            <div class="js-tabs__bar">
+                <div class="courses__tabs-bar js-tabs__bar">
+                    <div class="courses__tabs-tab js-tabs__tab">
+                        <a href="#preschool">Дошкольникам</a>
+                    </div>
+                    <div class="courses__tabs-tab js-tabs__tab">
+                        <a href="#school">Школьникам</a>
+                        <div class="courses__tabs-subtabs js-tabs__subtabs">
+                            <a href="#junior-school">Младшим школьникам</a>
+                            <a href="#middle-school">Ученикам 5-9 классов</a>
+                            <a href="#high-school">Ученикам 10-11 классов</a>
+                        </div>
+                    </div>
+                    <div class="courses__tabs-tab js-tabs__tab">
+                        <a href="#adults">Взрослым</a>
+                    </div>
+                    <div class="courses__tabs-tab js-tabs__tab">
+                        <a href="#coorp">Корпоративное обучение</a>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
+    <div class="js-tabs__content" id="preschool">
+        @@include('content/_content-preschool.html')
+    </div>
+    <div class="js-tabs__content" id="school">
+        @@include('content/_content-school.html')
+    </div>
+    <div class="js-tabs__content" id="coorp">
+        @@include('content/_content-coorp.html')
+    </div>
+    <div class="js-tabs__content" id="adults">
+        @@include('content/_contnet-adults.html')
+    </div>
+    
+</div>
