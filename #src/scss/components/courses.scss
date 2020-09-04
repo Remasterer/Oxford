@@ -1,0 +1,89 @@
+.courses {
+    &__tabs {
+        &-bar {
+            display: flex;
+            justify-content: center;
+            a {
+                padding: .75rem 2rem;
+                @extend %monst-alter-light;
+                color: $def-blue;
+                margin: 0 .25rem;
+                border-radius: 30px;
+                transition: .3s;
+                text-align: center;
+                display: block;
+                &:hover {
+                    background-color: $def-blue;
+                    color: #fff;
+                }
+            }
+
+            .courses__tabs-tab.active {
+               & > a {
+                    background-color: $def-blue;
+                    color: #fff;
+                }
+            }
+        }
+
+        &-subtabs {
+            position: absolute;
+            width: 100%;
+            margin-top: 2rem;
+            justify-content: center;
+            left: 50%;
+            transform: translateX(-50%);
+            a {
+                color: $def-blue;
+                @extend %monst-alter-light;
+
+                &:hover,
+                &.active {
+                    background-color: transparent; 
+                    color: $def-red;
+                }
+            }
+        }
+
+        @include mq('tablet-wide') {
+            &-bar {
+                a {
+                    padding: .75rem 1rem;
+                }
+            }
+        }
+
+        @include mq('tablet') {
+            &-bar {
+                flex-wrap: wrap;
+                a {
+                    padding: .75rem 1rem;
+                }
+            }
+
+            &-tab {
+                flex-basis: 50%;
+                margin-top: .5rem;
+            }
+            &-subtabs {
+                margin-top: 5rem;
+            }
+        }
+
+        @include mq('phone-wide') {
+                &-bar {
+                    a {
+                        font-size: 12px;
+                        padding: .5rem .5rem;
+                    }
+                }
+
+                &-subtabs {
+                    margin-top: 5rem;
+                    flex-wrap: wrap;
+                }
+        }
+
+        
+    }
+}

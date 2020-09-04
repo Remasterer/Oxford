@@ -83,7 +83,9 @@ h1,
 .camp ul,
 .adult__reason p,
 .adult-table table,
-.popup a {
+.popup a,
+.courses__tabs-bar a,
+.courses__tabs-subtabs a {
   font-family: 'Montserrat Alternates';
   font-weight: 500;
 }
@@ -3140,6 +3142,60 @@ body {
   color: #CD142B;
 }
 
+.courses__tabs-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.courses__tabs-bar a {
+  padding: .75rem 2rem;
+  color: #00237C;
+  margin: 0 .25rem;
+  border-radius: 30px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  text-align: center;
+  display: block;
+}
+
+.courses__tabs-bar a:hover {
+  background-color: #00237C;
+  color: #fff;
+}
+
+.courses__tabs-bar .courses__tabs-tab.active > a {
+  background-color: #00237C;
+  color: #fff;
+}
+
+.courses__tabs-subtabs {
+  position: absolute;
+  width: 100%;
+  margin-top: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.courses__tabs-subtabs a {
+  color: #00237C;
+}
+
+.courses__tabs-subtabs a:hover,
+.courses__tabs-subtabs a.active {
+  background-color: transparent;
+  color: #CD142B;
+}
+
 .check-list {
   font-size: 18px;
 }
@@ -3250,6 +3306,24 @@ body {
 }
 
 .js-tabs__content.active {
+  display: block;
+}
+
+.js-tabs__subtabs {
+  display: none;
+}
+
+.js-tabs__tab.active .js-tabs__subtabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.js-tabs__subcontent {
+  display: none;
+}
+
+.js-tabs__subcontent.active {
   display: block;
 }
 
@@ -4862,6 +4936,10 @@ p {
     padding: 2rem 50px;
   }
 
+  .courses__tabs-bar a {
+    padding: .75rem 1rem;
+  }
+
   .info-banner p {
     font-size: 1.5rem;
   }
@@ -5422,6 +5500,25 @@ p {
     width: 25px;
   }
 
+  .courses__tabs-bar {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .courses__tabs-bar a {
+    padding: .75rem 1rem;
+  }
+
+  .courses__tabs-tab {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin-top: .5rem;
+  }
+
+  .courses__tabs-subtabs {
+    margin-top: 5rem;
+  }
+
   .half-sections {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -5940,6 +6037,17 @@ p {
 
   .popup form input {
     font-size: 1rem;
+  }
+
+  .courses__tabs-bar a {
+    font-size: 12px;
+    padding: .5rem .5rem;
+  }
+
+  .courses__tabs-subtabs {
+    margin-top: 5rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 
   .info-banner p {
