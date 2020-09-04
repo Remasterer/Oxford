@@ -1602,6 +1602,7 @@ body {
   background: url("../img/Blog-page/back.png") bottom center no-repeat;
   background-size: cover;
   position: relative;
+  min-height: 634px;
 }
 
 .intro.e--home-page {
@@ -1633,6 +1634,26 @@ body {
 
 .intro.e--home-page__content {
   padding-top: 0;
+}
+
+.intro.e--single-page {
+  background: url("../../img/main-section.png") bottom center no-repeat;
+  background-size: cover;
+}
+
+.intro.e--improve {
+  background: url("../../img/improve.png") bottom center no-repeat;
+  background-size: cover;
+}
+
+.intro.e--zno {
+  background: url("../../img/zno.png") bottom center no-repeat;
+  background-size: cover;
+}
+
+.intro.e--translations {
+  background: url("../../img/translations.png") bottom center no-repeat;
+  background-size: cover;
 }
 
 .intro .container {
