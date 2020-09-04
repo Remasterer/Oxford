@@ -6,4 +6,23 @@
             display: block;
         }
     }
+
+    &__subtabs {
+        display: none;
+    }
+
+    &__tab {
+        &.active {
+            .js-tabs__subtabs {
+                display: flex;
+            }
+        }
+    }
+
+    &__subcontent {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
 }

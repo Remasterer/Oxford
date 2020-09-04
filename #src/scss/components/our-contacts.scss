@@ -54,12 +54,20 @@
         align-items: center;
         @extend %monst-alter-bold;
         margin-top: 3rem;
+        transition: .3s all;
+        a {
+            &:hover {
+                color: $def-red;
+            }
+        }
         i {
             font-size: 2.5rem;
             margin-right: 2rem;
             color: $def-red;
         }
     }
+
+
 
     @include mq('tablet-wide') {
         &__video {
@@ -92,7 +100,7 @@
                 margin-right: 0;
                 margin-bottom: .5rem;
             }
-            p {
+            a {
                 font-size: 14px;
             }
         }
