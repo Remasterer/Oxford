@@ -1155,6 +1155,7 @@ body {
 .footer {
   color: #FFFFFF;
   padding: 3rem;
+  padding-bottom: 0;
   background: #CD142B;
   text-align: center;
 }
@@ -1212,25 +1213,17 @@ body {
   display: flex;
   border-top: 1px solid #FFFFFF;
   position: relative;
+  margin-top: 1rem;
 }
 
 .footer .copywrite-footer__inner {
-  padding-top: 6px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding: 1rem 0;
   position: relative;
 }
 
-.footer .copywrite-footer__inner span {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+.footer .copywrite-footer__inner p {
+  text-align: center;
+  font-size: 14px;
 }
 
 .footer .copywrite-footer__inner a {
@@ -1241,6 +1234,18 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-left: auto;
+  font-size: 12px;
+  opacity: .85;
+  position: absolute;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  right: 0;
+}
+
+.footer .copywrite-footer__inner a:hover {
+  opacity: 1;
 }
 
 .footer .copywrite-footer__inner a img {
@@ -5017,6 +5022,31 @@ p {
     padding: .5rem 1.5rem;
   }
 
+  .footer .copywrite-footer__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .footer .copywrite-footer__inner a {
+    position: static;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    margin: auto;
+    margin-top: .5rem;
+  }
+
   .footer-form .footer-form__row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -6167,6 +6197,7 @@ p {
 
   .footer {
     padding: 3rem 1rem;
+    padding-bottom: 0;
   }
 
   .footer__sub-title {

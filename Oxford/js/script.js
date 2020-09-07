@@ -22,7 +22,7 @@ window.onscroll = function () {
   }
 };
 
-$('.copywrite-footer__inner').append(" <a href=\"http://comebackagency.com/\">Created by Come Back Agency <img src=\"http://comebackagency.com/logo.svg\" alt=\"\"></a>");
+$('.copywrite-footer__inner').append(" <a href=\"http://comebackagency.com/\"><span> Created by Come Back Agency </span> <img src=\"http://comebackagency.com/logo.svg\" alt=\"\"></a>");
 
 (function () {
   var originalPositions = [];

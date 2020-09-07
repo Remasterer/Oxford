@@ -1,6 +1,7 @@
 .footer {
     color:$def-white;
     padding: 3rem;
+    padding-bottom: 0;
     background:$def-red;
     @extend %monst-alter-bold;
     text-align: center;
@@ -50,24 +51,48 @@
         border-top: 1px solid $def-white;
         position: relative;
         @extend %avenir-norm;
+        margin-top: 1rem;
         // .copywrite-footer__inner
         &__inner {
-            padding-top: 6px;
-            display: flex;
-            justify-content: center;
+            padding: 1rem 0;
             position: relative;
-            span{
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
+            p {
+                text-align: center;
+                font-size: 14px;
             }
             a{
                 display: flex;
                 align-items: center;
                 margin-left: auto;
+                font-size: 12px;
+                opacity: .85;
+                position: absolute;
+                bottom: 50%;
+                transform: translateY(50%);
+                right: 0;
+                &:hover {
+                    opacity: 1;
+                }
                 img{
                     max-width: 14px;
                     margin-left: 12px;
+                }
+            }
+        }
+    }
+
+    @include mq('tablet-wide') {
+        .copywrite-footer {
+            &__inner {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                a {
+                    position: static;
+                    transform: translateX(0);
+                    margin: auto;
+                    margin-top: .5rem;
                 }
             }
         }
@@ -80,6 +105,7 @@
     }
     @include mq('phone-wide'){
         padding: 3rem 1rem;
+        padding-bottom: 0;
         &__sub-title {
             max-width: 654px;
             margin-bottom: 1rem;
@@ -122,5 +148,6 @@
             margin-top: 2rem;
         }
     }
+
 }
 
