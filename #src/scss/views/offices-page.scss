@@ -198,6 +198,7 @@
             margin-bottom: -20rem;
             border-radius: 334px;
             max-height: unset;
+            margin-left: 0;
 
             img {
                 min-height: 1090px;
@@ -227,12 +228,17 @@
         }
 
         .office__wrapper {
-            flex-direction: column-reverse;
+            flex-direction: row-reverse;
         }
 
         .office__gallery {
             margin-top: 0;
             margin-bottom: 2rem;
+            flex-direction: column;
+            align-self: flex-end;
+            a {
+                margin: .5rem 1rem; 
+            }
         }
         @include mq('desktop') {
             .office__image-wrapper {
@@ -243,15 +249,13 @@
         @include mq('tablet-wide') {
             flex-direction: column-reverse;
             .office__wrapper {
-                flex-direction: column;
-                align-items: flex-end;
+                flex-direction: row-reverse;
             }
             .office__image-wrapper.e--ar-right::after {
                 display: none;
             }
 
             .office__image-wrapper {
-                order: 2;
                 margin-top: 2rem;
                 margin-left: 0;
                 align-self: flex-end;
@@ -263,6 +267,7 @@
         }
 
         @include mq('tablet'){
+            
             .office__image-wrapper img {
                 min-height: 700px;
             }
@@ -271,7 +276,12 @@
             }
 
             .office__wrapper {
-                flex-direction: column;
+                flex-direction: column-reverse;
+            }
+
+            .office__gallery {
+                flex-direction: row;
+                margin-bottom: 0;
             }
         }
     }
@@ -323,7 +333,7 @@
         }
     }
     @include mq('tablet'){
-        flex-direction: column-reverse    ;
+        flex-direction: column-reverse;
         &:nth-of-type(even) {
             flex-direction: column-reverse ;
             align-items: flex-end;
