@@ -3,6 +3,7 @@
     background: url('../img/Blog-page/back.png') bottom center no-repeat;
     background-size: cover;
     position: relative;
+    min-height: 634px;
     &.e--home-page{
         display: flex;
         align-items: center;
@@ -21,6 +22,22 @@
         &__content{
             padding-top: 0;
         }
+    }
+    &.e--single-page{
+        background: url('../../img/main-section.png') bottom center no-repeat;
+        background-size: cover;
+    }
+    &.e--improve{
+        background: url('../../img/improve.png') bottom center no-repeat;
+        background-size: cover;
+    }
+    &.e--zno{
+        background: url('../../img/zno.png') bottom center no-repeat;
+        background-size: cover;
+    }
+    &.e--translations{
+        background: url('../../img/translations.png') bottom center no-repeat;
+        background-size: cover;
     }
     .container{
         z-index: 1;
