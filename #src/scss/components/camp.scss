@@ -7,12 +7,19 @@
 
     &__tabs {
         display: flex;
-        flex-direction: column  ;
+        flex-direction: column;
 
         &-bar {
             display: flex;
             justify-content: center;
             margin-bottom: 3rem;
+
+            & > div.active {
+                a {
+                    background-color: $def-red;
+                    color: #fff;
+                }
+            }
             a {
                 display: inline-block;
                 padding: .75rem 3rem;
@@ -35,7 +42,10 @@
         }
 
         &-content {
-            padding-top: 3rem !important;
+            // margin-top: 0 !important;
+            &:active {
+                // margin-top: 3rem !important;
+            }
         }
     }
 
@@ -90,7 +100,20 @@
 
     &-slider{
         &__section {
-            padding: 60px 0;
+            padding-top: 60px;
+            padding-bottom: 110px;
+
+            h4 {
+                line-height: 1;
+            }
+
+            @include mq('tablet-wide') {
+                padding-bottom: 90px;
+            }
+
+            @include mq('phone-wide') {
+                padding-bottom: 75px;
+            }
         } 
 
         &__slider {

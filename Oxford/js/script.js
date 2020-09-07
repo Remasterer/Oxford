@@ -276,6 +276,7 @@ $(document).ready(function () {
         $link = $('a', $this);
     $link.on('click', function (e) {
       e.preventDefault();
+      console.log('1');
 
       if ($this.children().length > 1) {
         var $subtubs = $('.js-tabs__subtabs', $this),
