@@ -17,7 +17,8 @@ $(document).ready(function() {
           var $this = $(this),
               $link = $('a', $this) 
           $link.on('click', function(e) {
-            e.preventDefault();
+              e.preventDefault();
+              console.log('1')
 
             if ($this.children().length > 1) {
                var $subtubs = $('.js-tabs__subtabs', $this),
@@ -35,13 +36,13 @@ $(document).ready(function() {
                     })
 
             }
-                $tab.removeClass($activeClass)
-                $this.addClass($activeClass);
-                var href = $link.attr('href');
-                $content.removeClass($activeClass)
-                $tabs.find(href).addClass($activeClass)
+            $tab.removeClass($activeClass)
+            $this.addClass($activeClass);
+            var href = $link.attr('href');
+            $content.removeClass($activeClass)
+            $tabs.find(href).addClass($activeClass)
+            
 
-        
 
           })
       })

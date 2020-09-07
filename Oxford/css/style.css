@@ -2389,6 +2389,11 @@ body {
   margin-bottom: 3rem;
 }
 
+.camp__tabs-bar > div.active a {
+  background-color: #CD142B;
+  color: #fff;
+}
+
 .camp__tabs-bar a {
   display: inline-block;
   padding: .75rem 3rem;
@@ -2407,10 +2412,6 @@ body {
 .camp__tabs-bar a.active {
   background-color: #CD142B;
   color: #fff;
-}
-
-.camp__tabs-content {
-  padding-top: 3rem !important;
 }
 
 .camp__banner {
@@ -2465,7 +2466,12 @@ body {
 }
 
 .camp-slider__section {
-  padding: 60px 0;
+  padding-top: 60px;
+  padding-bottom: 110px;
+}
+
+.camp-slider__section h4 {
+  line-height: 1;
 }
 
 .camp-slider__slider {
@@ -3510,11 +3516,12 @@ body {
 }
 
 .js-tabs__content {
-  display: none;
+  height: 0;
+  overflow: hidden;
 }
 
 .js-tabs__content.active {
-  display: block;
+  height: auto;
 }
 
 .js-tabs__subtabs {
@@ -5092,6 +5099,10 @@ p {
         flex-basis: 50%;
   }
 
+  .camp-slider__section {
+    padding-bottom: 90px;
+  }
+
   .britan-tab__section.e--bg-1:after {
     content: '';
     position: absolute;
@@ -6293,6 +6304,10 @@ p {
 
   .testimonial-item__content p {
     font-size: 14px;
+  }
+
+  .camp-slider__section {
+    padding-bottom: 75px;
   }
 
   .camp h3 {
