@@ -39,6 +39,8 @@
         background: url('../../img/translations.png') bottom center no-repeat;
         background-size: cover;
     }
+
+
     .container{
         z-index: 1;
         position: relative;
@@ -46,6 +48,10 @@
     &__content{
         padding-top: 59px;
         color: #fff;
+
+        button {
+            margin-top: 2rem;
+        }
     }
     &::before{
         z-index: 0;

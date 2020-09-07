@@ -187,6 +187,12 @@
         flex-direction: row-reverse;
         color: $def-blue;
 
+        .office__gallery {
+            a {
+                border: 5px solid $def-blue;
+            }
+        }
+
         .office__image-wrapper {
             background: $def-blue;
             margin-bottom: -20rem;

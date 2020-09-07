@@ -1715,6 +1715,10 @@ body {
   color: #fff;
 }
 
+.intro__content button {
+  margin-top: 2rem;
+}
+
 .intro::before {
   z-index: 0;
   content: '';
@@ -3759,6 +3763,10 @@ body {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   color: #00237C;
+}
+
+.office:last-of-type .office__gallery a {
+  border: 5px solid #00237C;
 }
 
 .office:last-of-type .office__image-wrapper {
