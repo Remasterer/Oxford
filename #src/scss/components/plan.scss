@@ -52,6 +52,27 @@
     @include mq('tablet') {
         &:nth-child(odd) {
             flex-direction: column-reverse;
+            .half-section.e--left {
+                margin-left: 0;
+            }
+
+            .half-section.e--right {
+                margin-right: 0;
+            }
+        }
+
+
+    }
+
+    @include mq('phone-wide') {
+        &__buttons {
+            margin-top: 2rem;
+            .button{
+                margin-top: 1rem;
+                &:first-child {
+                    margin-right: 0;
+                }  
+            } 
         }
     }
     
