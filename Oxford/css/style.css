@@ -1438,10 +1438,12 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 32px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 32px;
 }
 
 .gallery__actions > div {
@@ -1450,10 +1452,13 @@ body {
       flex-basis: 45%;
   display: block;
   text-align: center;
+  max-width: 260px;
+  font-size: 1.5rem;
 }
 
 .gallery__actions > div a {
   display: block;
+  padding: .5rem 1rem;
 }
 
 .gallery__actions > div a:hover {
@@ -5455,6 +5460,14 @@ p {
             flex-direction: column-reverse;
   }
 
+  .plan:nth-child(odd) .half-section.e--left {
+    margin-left: 0;
+  }
+
+  .plan:nth-child(odd) .half-section.e--right {
+    margin-right: 0;
+  }
+
   .cta__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -5957,7 +5970,7 @@ p {
   }
 
   .gallery__actions > div .button {
-    padding: .5rem 2rem;
+    padding: .5rem 1rem;
   }
 }
 
@@ -6011,6 +6024,10 @@ p {
 
   .footer__inner {
     background-size: contain;
+  }
+
+  .gallery__actions > div a {
+    font-size: 1rem;
   }
 
   .blog__content {
@@ -6164,6 +6181,18 @@ p {
   .gallery__actions > div .button {
     padding: .5rem .25rem;
     font-size: 12px;
+  }
+
+  .plan__buttons {
+    margin-top: 2rem;
+  }
+
+  .plan__buttons .button {
+    margin-top: 1rem;
+  }
+
+  .plan__buttons .button:first-child {
+    margin-right: 0;
   }
 
   .cta p {
