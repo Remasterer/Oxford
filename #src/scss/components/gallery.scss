@@ -47,16 +47,21 @@
         
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: 32px;
         justify-content: center;
+        max-width: 600px;
+        margin: auto;
+        margin-bottom: 32px;
         & > div {
             margin: .5rem;
             flex-basis: 45%;
             display: block;
             text-align: center;
+            max-width: 260px;
+            font-size: 1.5rem;
 
             a {
                 display: block;
+                padding: .5rem 1rem;
 
                 &:hover {
                     background-color: $def-blue;
@@ -114,8 +119,18 @@
         &__actions {
             & > div {
                .button {
-                padding: .5rem 2rem;
+                padding: .5rem 1rem;
                } 
+            }
+        }
+    }
+
+    @include mq('phablet') {
+        &__actions {
+            & > div {
+                a {
+                    font-size: 1rem;
+                }
             }
         }
     }
