@@ -23,6 +23,10 @@ window.onscroll = function () {
 };
 
 $('.copywrite-footer__inner').append(" <a href=\"http://comebackagency.com/\"><span> Created by Come Back Agency </span> <img src=\"http://comebackagency.com/logo.svg\" alt=\"\"></a>");
+$('.search-icon').click(function (event) {
+  $(this).hide();
+  $('.probox').addClass('active');
+});
 
 (function () {
   var originalPositions = [];
@@ -215,30 +219,22 @@ $('.testimonials__slider').slick({
   centerMode: true,
   focusOnSelect: true,
   centerPadding: 0,
+  draggable: false,
+  swipe: false,
   responsive: [{
     breakpoint: 768,
     settings: {
       arrows: false,
+      swipe: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       centerPadding: 0
     }
   }]
-}); // $('.testimonials__slider').on('beforeChange', function(e, slick, currentSlide, nextSlide) {
-//     const slideCount = $(".testimonials__slider").slick("getSlick").slideCount - 1
-//     const nextSlideIsFirst = currentSlide === slideCount
-//     const nextSlideIsLast  = nextSlide === slideCount
-//     const $activeSlide = $('.testimonial-item.slick-active')
-//     if (nextSlideIsFirst) {
-//       alert('12')
-//     }
-//     if (nextSlideIsLast) {
-//         $(`.testimonials__slider`).addClass('lol'));
-//   })
-//   // Remove your custom active class active slide finished
-//   $('.testimonials__slider').on('afterChange', function(e, slick, currentSlide, nextSlide) {
-//     $('.slick-clone-current').removeClass('slick-clone-current');
-//   });
+}); // // Remove your custom active class active slide finished
+// $('.testimonials__slider').on('afterChange', function(e, slick, currentSlide, nextSlide) {
+//   $('.slick-clone-current').removeClass('slick-clone-current');
+// });
 
 $('.camp-slider__slider').slick({
   dots: false,

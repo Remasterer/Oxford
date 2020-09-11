@@ -21,7 +21,7 @@
         margin: auto;
         position: relative;
         opacity: .65;
-        transition: all .4s ease 0s ;
+        transition: opacity .4s ease 0s , transform   .4s ease 0s;
         img {
             max-width:150px;
             border-radius: 50%;

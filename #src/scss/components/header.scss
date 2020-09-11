@@ -56,6 +56,7 @@
     // header functional
     &__functional{
         display: flex;
+        align-items: center;
         margin-right:1.25rem;
     }
     .list-unstyled{
@@ -194,12 +195,6 @@
         &__call{
             padding: .5rem 1.5rem;
         }
-        
-    }
-    @include mq('tablet-small'){
-        &__call {
-            padding: .5rem 1rem;
-        }
         &__call{
             display: flex;
             justify-content: center;
@@ -214,6 +209,13 @@
                 display: block;
             }
         }
+        
+    }
+    @include mq('tablet-small'){
+        &__call {
+            padding: .5rem 1rem;
+        }
+        
         &__functional{
            display: flex;
            justify-content: space-around;
@@ -284,3 +286,40 @@
   #menu__toggle:checked ~ .header__bottom{
     transform: translateY(0%)
   }
+
+
+//   Serch bar 
+
+
+.probox{
+	opacity: 0;
+    visibility: hidden;
+    width: 0 !important;
+}
+
+.probox.active{
+	opacity: 1;
+    visibility: visible;
+    width: 230px !important;
+}
+.probox .promagnifier .innericon svg {
+    fill: #00237C !important;
+}
+ .probox{
+	 background:#fff !important;
+	box-shadow:none !important;
+	max-width: 200px;
+}
+ .probox .promagnifier{
+	box-shadow:none !important;
+	border:none !important;
+}
+
+.search-icon{
+	margin-top: 10px ;
+}
+.search-icon svg{
+	width:23px;
+	fill:#fff;
+	height:25px;
+}

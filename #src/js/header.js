@@ -16,3 +16,7 @@ window.onscroll = function() {
   }
 }
 $('.copywrite-footer__inner').append(` <a href="http://comebackagency.com/"><span> Created by Come Back Agency </span> <img src="http://comebackagency.com/logo.svg" alt=""></a>`)
+$('.search-icon').click(function(event){
+	$(this).hide();
+	$('.probox').addClass('active');
+})
