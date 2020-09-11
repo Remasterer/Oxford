@@ -357,17 +357,34 @@ $(document).ready(function () {
             firstTags = $(firstSabtabs[0]).find('.gallery__tabs-hashtags');
         firstSabtabs.removeClass('active');
         $(firstSabtabs[0]).addClass('active');
+        var firstTag = $(firstSabtabs[0]).find('.gallery__tabs-hashtags a:first-child');
         firstTags.removeClass('active');
-        firstTag = $(firstSabtabs[0]).find('.gallery__tabs-hashtags a:first-child');
+        console.log(firstTag);
         firstTag.addClass('active');
         $content.removeClass('active');
         $tabs.find($(firstTag.attr('href'))).addClass('active');
       }
     });
   });
-  var subtab = $('.gallery__tabs-subtabs li');
-  subtab.on('click', function () {
-    subtab.removeClass('active');
-    $(this).addClass('active');
-  });
+  $sabtab.each(function () {
+    var $this = $(this),
+        link = $('a.button.e--light-red', $this);
+    link.on('click', function (e) {
+      if (e.target == this) {
+        $sabtab.removeClass('active');
+        $this.addClass('active');
+        var tags = $('.gallery__tabs-hashtags', $this);
+        $hashtags.removeClass('active');
+        tags.addClass('active');
+        var first_tag = $('a:first-child', tags);
+        first_tag.addClass('active');
+        $content.removeClass('active');
+        $tabs.find($(first_tag.attr('href'))).addClass('active');
+      }
+    });
+  }); // var subtab = $('.gallery__tabs-subtabs li');
+  // subtab.on('click', function(){
+  //   subtab.removeClass('active');
+  //   $(this).addClass('active')
+  // })
 });
