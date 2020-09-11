@@ -59,7 +59,7 @@
             max-width: 260px;
             font-size: 1.5rem;
 
-            a {
+            & > a {
                 display: block;
                 padding: .5rem 1rem;
 
@@ -70,13 +70,15 @@
             }
 
             &.active {
-                a {
+               & > a {
                     background-color: $def-blue;
                     color: #fff;
                 }
             }
         }
     }
+
+
 
     // .gallery__content
     &__hashtags{
@@ -196,5 +198,67 @@
     @include mq('tablet'){
         grid-template-columns: 1fr;
         grid-template-rows: unset;
+    }
+}
+
+
+.gallery {
+
+    &__actions {
+        padding-bottom: 100px;
+    }
+    &__tabs {
+        &-subtabs {
+            // position: absolute
+            display: flex;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            justify-content: center;
+            margin-top: 1rem;
+            li {
+                &:first-child {
+                    margin-right: 1rem;
+                }
+                a {
+                    
+                }
+
+            }
+        }
+
+       
+
+        &-hashtags {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            justify-content: center;
+            margin-top: 2rem;
+            
+            display: none;
+
+            &.active {
+                display:flex;
+            }
+
+            a {
+                font-size: 1rem;
+                &:first-child {
+                    margin-right: 1rem;
+                }
+
+                color: $def-blue;
+
+                &:hover,
+                &.active {
+                    color: $def-red;
+                }
+            }
+        }
+
+        ul  {
+            display: none !important;
+        }
     }
 }

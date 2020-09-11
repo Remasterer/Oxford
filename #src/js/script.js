@@ -7,3 +7,4 @@
 @@include('js-tabs.js');
 @@include('review-slider.js');
 @@include('popup.js');
+@@include('gallery-tabs.js');

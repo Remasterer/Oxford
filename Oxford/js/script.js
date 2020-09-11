@@ -23,6 +23,10 @@ window.onscroll = function () {
 };
 
 $('.copywrite-footer__inner').append(" <a href=\"http://comebackagency.com/\"><span> Created by Come Back Agency </span> <img src=\"http://comebackagency.com/logo.svg\" alt=\"\"></a>");
+$('.search-icon').click(function (event) {
+  $(this).hide();
+  $('.probox').addClass('active');
+});
 
 (function () {
   var originalPositions = [];
@@ -215,30 +219,22 @@ $('.testimonials__slider').slick({
   centerMode: true,
   focusOnSelect: true,
   centerPadding: 0,
+  draggable: false,
+  swipe: false,
   responsive: [{
     breakpoint: 768,
     settings: {
       arrows: false,
+      swipe: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       centerPadding: 0
     }
   }]
-}); // $('.testimonials__slider').on('beforeChange', function(e, slick, currentSlide, nextSlide) {
-//     const slideCount = $(".testimonials__slider").slick("getSlick").slideCount - 1
-//     const nextSlideIsFirst = currentSlide === slideCount
-//     const nextSlideIsLast  = nextSlide === slideCount
-//     const $activeSlide = $('.testimonial-item.slick-active')
-//     if (nextSlideIsFirst) {
-//       alert('12')
-//     }
-//     if (nextSlideIsLast) {
-//         $(`.testimonials__slider`).addClass('lol'));
-//   })
-//   // Remove your custom active class active slide finished
-//   $('.testimonials__slider').on('afterChange', function(e, slick, currentSlide, nextSlide) {
-//     $('.slick-clone-current').removeClass('slick-clone-current');
-//   });
+}); // // Remove your custom active class active slide finished
+// $('.testimonials__slider').on('afterChange', function(e, slick, currentSlide, nextSlide) {
+//   $('.slick-clone-current').removeClass('slick-clone-current');
+// });
 
 $('.camp-slider__slider').slick({
   dots: false,
@@ -320,3 +316,71 @@ $close.on('click', function () {
 
 $('.phone').mask('(000) 000-0000');
 ;
+$(document).ready(function () {
+  var $tabs = $('.js-gallery-tabs'),
+      $bar = $('.js-gallery-tabs__bar', $tabs),
+      $tab = $('.js-gallery-tabs__tab', $bar),
+      $sabtabs = $('.js-gallery-tabs__subtabs', $tab),
+      $sabtab = $('.js-gallery-tabs__subtab', $sabtabs),
+      $hashtags = $('.gallery__tabs-hashtags', $sabtabs),
+      $hashtag = $('a', $hashtags),
+      $content = $('.js-gallery-tabs__content', $tabs),
+      $activeClass = 'active';
+  $hashtag.on('click', function (e) {
+    e.preventDefault();
+    var cont = $($(this).attr('href'));
+    cont.addClass('active');
+    $hashtag.removeClass('active');
+    $(this).addClass('active');
+    $content.removeClass('active');
+    $tab.find($($(this).attr('href')).addClass('active'));
+  });
+  $($tab[0]).addClass('active');
+  $($sabtabs[0]).addClass('active');
+  var firstsubtab = $($('.js-gallery-tabs__subtab', $($sabtabs[0]))[0]);
+  firstsubtab.addClass('active');
+  $('.gallery__tabs-hashtags', firstsubtab).addClass('active').find('a:first-child').addClass('active');
+  var firsthref = $('.gallery__tabs-hashtags', firstsubtab).find('a:first-child').attr('href');
+  $tabs.find($(firsthref)).addClass('active');
+  $tab.each(function () {
+    var $this = $(this),
+        link = $('a.button.e--light-blue', $this);
+    link.on('click', function (e) {
+      if (e.target == this) {
+        $tab.removeClass('active');
+        $this.addClass('active');
+        var firstSabtabs = $('.gallery__tabs-subtabs li', $this),
+            firstTags = $(firstSabtabs[0]).find('.gallery__tabs-hashtags');
+        firstSabtabs.removeClass('active');
+        $(firstSabtabs[0]).addClass('active');
+        var firstTag = $(firstSabtabs[0]).find('.gallery__tabs-hashtags a:first-child');
+        firstTags.removeClass('active');
+        console.log(firstTag);
+        firstTag.addClass('active');
+        $content.removeClass('active');
+        $tabs.find($(firstTag.attr('href'))).addClass('active');
+      }
+    });
+  });
+  $sabtab.each(function () {
+    var $this = $(this),
+        link = $('a.button.e--light-red', $this);
+    link.on('click', function (e) {
+      if (e.target == this) {
+        $sabtab.removeClass('active');
+        $this.addClass('active');
+        var tags = $('.gallery__tabs-hashtags', $this);
+        $hashtags.removeClass('active');
+        tags.addClass('active');
+        var first_tag = $('a:first-child', tags);
+        first_tag.addClass('active');
+        $content.removeClass('active');
+        $tabs.find($(first_tag.attr('href'))).addClass('active');
+      }
+    });
+  }); // var subtab = $('.gallery__tabs-subtabs li');
+  // subtab.on('click', function(){
+  //   subtab.removeClass('active');
+  //   $(this).addClass('active')
+  // })
+});
