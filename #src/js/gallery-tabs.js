@@ -23,32 +23,48 @@ $(document).ready(function() {
               $tab.find($($(this).attr('href')).addClass('active'))
           })
 
+          
+
           $($tab[0]).addClass('active')
           $($sabtabs[0]).addClass('active');
           var firstsubtab =  $($('.js-gallery-tabs__subtab',$($sabtabs[0]) )[0])
           firstsubtab.addClass('active')
           $('.gallery__tabs-hashtags',firstsubtab ).addClass('active').find('a:first-child').addClass('active')
           var firsthref = $('.gallery__tabs-hashtags',firstsubtab ).find('a:first-child').attr('href')
-          $tabs.find($(firsthref)).addClass('active')          
+          $tabs.find($(firsthref)).addClass('active')
+
+          
        
 
       $tab.each(function() {
-          var $this = $(this);
+          var $this = $(this),
+          link = $('a.button.e--light-blue', $this);
+          link.on('click', function(e) {
 
-          $this.on('click', function() {
-              $tab.removeClass('active')
-              $this.addClass('active')
+              if(e.target == this) {
+                $tab.removeClass('active')
+                $this.addClass('active')
+                var firstSabtabs = $('.gallery__tabs-subtabs li', $this),
+                    firstTags = $(firstSabtabs[0]).find('.gallery__tabs-hashtags');
+                    
 
-              var subtab = $('.gallery__tabs-subtabs li', $this);
-
-              console.log(subtab)
-
-            subtab.on('click', function(){
-                subtab.removeClass('active')
-                $(this).addClass('active')
-            })
+                    firstSabtabs.removeClass('active')
+                    $(firstSabtabs[0]).addClass('active')
+                    firstTags.removeClass('active')
+                    firstTag = $(firstSabtabs[0]).find('.gallery__tabs-hashtags a:first-child')
+                firstTag.addClass('active')
+                $content.removeClass('active')
+                $tabs.find($(firstTag.attr('href'))).addClass('active')
+              }
           }) 
+      })
 
+
+      var subtab = $('.gallery__tabs-subtabs li');
+
+      subtab.on('click', function(){
+        subtab.removeClass('active');
+        $(this).addClass('active')
       })
   
   })
