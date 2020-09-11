@@ -3641,6 +3641,10 @@ body {
   display: block;
 }
 
+.js-gallery-tabs {
+  width: 100%;
+}
+
 .js-gallery-tabs__content {
   height: 0;
   overflow: hidden;
