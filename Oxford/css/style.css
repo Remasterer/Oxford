@@ -2420,6 +2420,37 @@ body {
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
   margin-right: 1rem;
+  height: 380px;
+  position: relative;
+}
+
+.our-contacts__video:hover::before {
+  opacity: 1;
+}
+
+.our-contacts__video video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.our-contacts__video::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../img/Base/play-btn.svg");
+  background-repeat: no-repeat;
+  z-index: 0;
+  background-position: center;
+  cursor: pointer;
+  opacity: .5;
+  -webkit-transition: .3s opacity;
+  -o-transition: .3s opacity;
+  transition: .3s opacity;
 }
 
 .our-contacts__map {
