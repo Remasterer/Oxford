@@ -5348,6 +5348,10 @@ p {
     position: static;
   }
 
+  .cta p {
+    font-size: 2rem;
+  }
+
   .our-team__slider {
     padding: 0 60px;
   }
@@ -5813,6 +5817,14 @@ p {
   .cta__img {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+
+  .cta__img {
+    max-width: 300px;
+  }
+
+  .cta p {
+    font-size: 1.75rem;
   }
 
   .testimonials__slider {
@@ -6655,6 +6667,10 @@ p {
 
   .plan__buttons .button:first-child {
     margin-right: 0;
+  }
+
+  .cta__img {
+    max-width: 250px;
   }
 
   .cta p {
