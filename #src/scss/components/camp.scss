@@ -166,6 +166,12 @@
         }
     } 
 
+    @include mq('tablet-wide') {
+        ul {
+            font-size: 1.25rem;
+        }
+    }
+
     @include mq('tablet') {
         ul {
             max-width: 100%;
