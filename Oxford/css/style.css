@@ -2845,7 +2845,7 @@ body {
   height: 200px;
   width: 420px;
   right: 0;
-  top: 20rem;
+  top: 18rem;
   background: url(../img/zno/professor.svg) right top/contain no-repeat;
 }
 
@@ -5420,7 +5420,16 @@ p {
   }
 
   .zno-features.e--bg-1:after {
-    top: 23rem;
+    top: 16rem;
+    height: 150px;
+  }
+
+  .zno-features .check-list ul {
+    font-size: 1.25rem;
+  }
+
+  .zno-features .check-list ul li {
+    margin-bottom: 3rem;
   }
 
   .adult__ielts-img {
@@ -5995,6 +6004,10 @@ p {
     opacity: .2;
   }
 
+  .zno-features__students-img {
+    margin-right: 0;
+  }
+
   .zno-features .check-list ul li {
     margin-bottom: 1rem;
     font-size: 1.25rem;
@@ -6024,6 +6037,10 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .zno-plans__title {
+    margin-bottom: 1rem;
   }
 
   .adult__reasons {

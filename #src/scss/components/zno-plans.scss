@@ -41,6 +41,10 @@
         &__plans {
             flex-direction: column;
         }
+
+        &__title {
+            margin-bottom: 1rem;
+        }
     }
 
     @include mq('phone-wide') {
