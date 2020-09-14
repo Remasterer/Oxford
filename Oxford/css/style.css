@@ -1057,14 +1057,6 @@ body {
   width: 100%;
 }
 
-.header__bottom .main-navigation li:hover {
-  color: #CD142B;
-}
-
-.header__bottom .main-navigation li:hover::after {
-  width: 100%;
-}
-
 .header__bottom .main-navigation a {
   display: block;
 }
@@ -1215,7 +1207,7 @@ body {
 
 .footer {
   color: #FFFFFF;
-  padding: 3rem;
+  padding: 3rem 0;
   padding-bottom: 0;
   background: #CD142B;
   text-align: center;
@@ -1770,7 +1762,6 @@ body {
 
 .intro {
   margin-top: 178px;
-  background: url("../img/Blog-page/back.png") bottom center no-repeat;
   background-size: cover;
   position: relative;
   min-height: 634px;
@@ -1786,7 +1777,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url("../img/Home-page/home-main-bg.png") bottom center no-repeat;
   background-size: cover;
   height: 100vh;
   text-align: center;
@@ -1842,7 +1832,7 @@ body {
 }
 
 .intro::before {
-  z-index: 0;
+  z-index: 1;
   content: '';
   display: block;
   position: absolute;
@@ -1910,6 +1900,14 @@ body {
   letter-spacing: 0.07em;
   color: #B5B5B5;
   padding-bottom: 201px;
+}
+
+#previewVideo {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .our-team {
@@ -3752,11 +3750,6 @@ body {
   display: block;
 }
 
-.swiper-container {
-  width: 600px;
-  height: 300px;
-}
-
 .blog__content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -4882,10 +4875,6 @@ body {
   opacity: 0.75;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-size: 16px;
   letter-spacing: 0.07em;
@@ -4971,6 +4960,10 @@ p {
 }
 
 @media only screen and (min-width: 769px) {
+  .header__bottom .main-navigation li:hover::after {
+    width: 100%;
+  }
+
   .gallery__pagination:hover span {
     -webkit-transform: translateX(-20px);
         -ms-transform: translateX(-20px);
@@ -6378,6 +6371,15 @@ p {
     max-height: unset;
   }
 
+  .teachers__image-box {
+    min-width: unset;
+    max-width: 200px;
+  }
+
+  .logorytmic {
+    background: unset;
+  }
+
   .info-section__inner {
     min-width: unset;
   }
@@ -6416,6 +6418,11 @@ p {
 
   .coin {
     padding-bottom: 100px;
+    background: none;
+  }
+
+  .speaking-club {
+    padding-bottom: 50px;
     background: none;
   }
 
@@ -6617,7 +6624,7 @@ p {
   }
 
   .camp-slider__section {
-    padding-bottom: 75px;
+    padding-bottom: 120px;
   }
 
   .camp h3 {
@@ -6765,7 +6772,7 @@ p {
   }
 
   .intro__description {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .juniors-top__inner {

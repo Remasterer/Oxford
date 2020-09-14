@@ -6,4 +6,8 @@
     @include mq('tablet-wide'){
         padding-bottom: 300px;
     }
+    @include mq('phablet'){
+        padding-bottom: 50px;
+        background: none;
+    }
 }
