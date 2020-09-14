@@ -660,6 +660,18 @@ img {
   color: #CD142B;
 }
 
+.info__preview {
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.info__preview img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
 .info-list__item {
   position: relative;
   padding-left: 44px;
@@ -3899,7 +3911,7 @@ body {
      object-fit: cover;
 }
 
-.office:nth-of-type(even) {
+.office:nth-of-type(even):not(:last-child) {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
@@ -3907,11 +3919,11 @@ body {
   margin-right: -20rem;
 }
 
-.office:nth-of-type(even) .office__image-wrapper.e--ar-right {
+.office:nth-of-type(even):not(:last-child) .office__image-wrapper.e--ar-right {
   position: relative;
 }
 
-.office:nth-of-type(even) .office__image-wrapper.e--ar-right::after {
+.office:nth-of-type(even):not(:last-child) .office__image-wrapper.e--ar-right::after {
   content: "";
   display: block;
   position: absolute;
@@ -3925,12 +3937,12 @@ body {
   transform: scaleX(-1);
 }
 
-.office:nth-of-type(even) .office__info {
+.office:nth-of-type(even):not(:last-child) .office__info {
   margin-left: 0;
   margin-right: 39.68254%;
 }
 
-.office:nth-of-type(even) .office__gallery {
+.office:nth-of-type(even):not(:last-child) .office__gallery {
   position: relative;
   right: 5rem;
 }
@@ -4155,10 +4167,10 @@ body {
 }
 
 .first-grader {
-  padding-bottom: 400px;
-  background: url(img/Page-Courses-juniors/abstr-1.svg) no-repeat;
+  padding-bottom: 300px;
+  background: url("../../img/Page-Courses-juniors/abstr-1.svg") no-repeat;
   background-size: contain;
-  background-position: 0px 500px;
+  background-position: bottom;
 }
 
 .coin {
@@ -4835,6 +4847,10 @@ body {
   opacity: 0.75;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 16px;
   letter-spacing: 0.07em;
@@ -5426,11 +5442,11 @@ p {
     font-size: 20px;
   }
 
-  .office:nth-of-type(even) .office__image-wrapper.e--ar-right::after {
+  .office:nth-of-type(even):not(:last-child) .office__image-wrapper.e--ar-right::after {
     display: none;
   }
 
-  .office:nth-of-type(even) .office__info {
+  .office:nth-of-type(even):not(:last-child) .office__info {
     margin-right: 0;
   }
 
@@ -5567,6 +5583,10 @@ p {
 
   .juniors-top__call {
     font-size: 22px;
+  }
+
+  .first-grader {
+    padding-bottom: 150px;
   }
 
   .coin {
@@ -6055,7 +6075,7 @@ p {
     grid-template-columns: 1fr 1fr;
   }
 
-  .office:nth-of-type(even) .office__gallery {
+  .office:nth-of-type(even):not(:last-child) .office__gallery {
     position: relative;
     right: 0;
   }
@@ -6226,8 +6246,12 @@ p {
     font-size: 1.8rem;
   }
 
+  .info-section {
+    padding-bottom: 2.5rem;
+  }
+
   .info-section .info-section__preview {
-    margin-top: 2rem;
+    margin-top: 1rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -6272,6 +6296,41 @@ p {
     font-size: 1rem;
   }
 
+  .adult {
+    padding-top: 50px;
+  }
+
+  .adult-stipe-1 {
+    height: unset;
+    background: unset;
+    margin-top: unset;
+    padding-bottom: 50px;
+  }
+
+  .adult-stipe-2 {
+    height: unset;
+    background: unset;
+    margin-top: unset;
+    padding-bottom: 50px;
+  }
+
+  .adult-stipe-3 {
+    height: unset;
+    background: unset;
+    margin-top: unset;
+    padding-bottom: 50px;
+    margin-bottom: unset;
+  }
+
+  .adult-stipe-4 {
+    height: unset;
+    background: unset;
+    margin-top: unset;
+    padding-bottom: 50px;
+    margin-top: unset;
+    margin-bottom: unset;
+  }
+
   .js-gallery-tabs__subtab {
     min-width: 150px;
   }
@@ -6311,8 +6370,18 @@ p {
     min-width: unset;
   }
 
+  .first-grader {
+    background: none;
+    padding-bottom: 100px;
+  }
+
   .coin__inner {
     padding: 20px 30px;
+  }
+
+  .coin {
+    padding-bottom: 100px;
+    background: none;
   }
 
   .slider-review .slick-prev {
@@ -6387,6 +6456,7 @@ p {
   }
 
   .help {
+    padding: 50px 0;
     font-size: 16px;
   }
 
@@ -6572,6 +6642,10 @@ p {
     font-size: 1.25rem;
   }
 
+  .adult-reasons {
+    padding-bottom: 20px;
+  }
+
   .adult__groups-item {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -6620,7 +6694,7 @@ p {
   }
 
   .courses__tabs-bar a {
-    font-size: 12px;
+    font-size: 14px;
     padding: .5rem .5rem;
   }
 
@@ -6628,6 +6702,10 @@ p {
     margin-top: 5rem;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+
+  .info-banner {
+    padding: 50px 0;
   }
 
   .info-banner p {
@@ -6641,15 +6719,21 @@ p {
 
 @media only screen and (max-width: 400px) {
   .intro .arr-dwn {
-    width: 320px;
+    max-width: 320px;
+    width: 100%;
+    bottom: -15px;
   }
 
   .intro__description {
     font-size: 1.5rem;
   }
 
+  .juniors-top__inner {
+    padding: 100px 0;
+  }
+
   .coin__inner {
-    padding: 10px 15px;
+    padding: 20px 15px;
   }
 
   .list-work-step__item::before {
