@@ -780,6 +780,13 @@ body {
   min-width: 398px;
 }
 
+.info-section__preview img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .info-section.e--reverse .info-section__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3196,7 +3203,7 @@ body {
   position: absolute;
   height: 2200px;
   width: 100%;
-  top: 11%;
+  top: -2%;
   left: 0;
   background: url(../../img/big-abstr.svg) no-repeat;
   background-size: cover;
@@ -4337,6 +4344,10 @@ body {
   opacity: 1;
 }
 
+.js-tabs__content.active {
+  position: relative;
+}
+
 .work-steps__list {
   margin-top: 60px;
   counter-reset: section;
@@ -5182,7 +5193,8 @@ p {
   }
 
   .info-section .info-section__preview {
-    margin-top: 2rem;
+    min-width: unset;
+    max-width: 250px;
   }
 
   .header .header__test-link {
@@ -5351,7 +5363,7 @@ p {
   }
 
   .big-abstr {
-    top: 14%;
+    top: 6%;
   }
 
   .school .info-section__inner {
@@ -5527,7 +5539,7 @@ p {
   }
 
   .teachers-help {
-    padding-top: 75px;
+    padding-top: 0px;
     padding-bottom: 250px;
     background: url(../../img/Center-page/section-1-back.svg) no-repeat;
     background-size: contain;
@@ -6225,7 +6237,7 @@ p {
   }
 
   .info-section .info-section__preview img {
-    max-width: 300px;
+    max-width: 200px;
   }
 
   .info-section .info-section__info {
@@ -6297,6 +6309,10 @@ p {
 
   .info-section__preview {
     min-width: unset;
+  }
+
+  .coin__inner {
+    padding: 20px 30px;
   }
 
   .slider-review .slick-prev {
@@ -6630,6 +6646,10 @@ p {
 
   .intro__description {
     font-size: 1.5rem;
+  }
+
+  .coin__inner {
+    padding: 10px 15px;
   }
 
   .list-work-step__item::before {

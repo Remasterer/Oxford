@@ -46,6 +46,12 @@
         align-items: center;
         border:6px solid #FF9B21;
         border-radius: 50px;
+        @include mq('phablet'){
+            padding: 20px 30px;
+        }
+        @include mq('phone'){
+            padding: 10px 15px;
+        }
     }
 
     // .coin__text
