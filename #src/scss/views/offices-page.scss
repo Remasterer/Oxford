@@ -179,7 +179,7 @@
     }
     
 
-    &:nth-of-type(even) {
+    &:nth-of-type(even):not(:last-child) {
         flex-direction: row-reverse;
         margin-right: -20rem;
         .office__image-wrapper.e--ar-right {

@@ -24,6 +24,7 @@
     }
 
     @include mq('phone-wide') {
+       padding: 50px 0;
         p {
             font-size: 1.25rem;
         }

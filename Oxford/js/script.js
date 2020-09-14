@@ -27,6 +27,10 @@ $('.search-icon').click(function (event) {
   $(this).hide();
   $('.probox').addClass('active');
 });
+$('.innericon').click(function () {
+  $('.search-icon').show();
+  $('.probox').removeClass('active');
+});
 
 (function () {
   var originalPositions = [];

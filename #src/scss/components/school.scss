@@ -2,13 +2,13 @@
     position: absolute;
     height: 2200px;
     width: 100%;
-    top: 11%;
+    top: -2%;
     left: 0;
     background: url(../../img/big-abstr.svg) no-repeat;
     background-size: cover;
     background-position: center;
     @include mq('tablet-wide'){
-        top: 14%;
+        top: 6%;
     }
     @include mq('tablet'){
         display: none;
