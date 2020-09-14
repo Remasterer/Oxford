@@ -149,5 +149,15 @@
         }
     }
 
+    @include mq('phone-wide'){
+        
+        &__input{
+            margin-top: 1.5rem;
+            font-size: 1rem;
+        }
+
+
+    }
+
 }
 

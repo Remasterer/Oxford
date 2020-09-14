@@ -6651,6 +6651,11 @@ p {
     margin-top: 2rem;
   }
 
+  .footer-form__input {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+  }
+
   .our-plus__item {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
