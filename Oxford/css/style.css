@@ -2753,7 +2753,6 @@ body {
 }
 
 .brovar-tab h4 {
-  margin-top: 80px;
   color: #00237C;
   font-size: 40px;
 }
@@ -2765,7 +2764,11 @@ body {
 
 .brovar-tab p {
   font-size: 1.5rem;
-  line-height: 1.3;
+  line-height: 1.5;
+}
+
+.brovar-tab__program {
+  margin-top: 80px;
 }
 
 .brovar-tab__feature {
@@ -5375,6 +5378,10 @@ p {
     padding-bottom: 90px;
   }
 
+  .camp ul {
+    font-size: 1.25rem;
+  }
+
   .britan-tab__section.e--bg-1:after {
     content: '';
     position: absolute;
@@ -5391,6 +5398,10 @@ p {
     background-size: 50%;
   }
 
+  .britan-tab .check-list ul li {
+    margin-bottom: 3rem;
+  }
+
   .brovar-tab__feature-img .arrow {
     display: none;
   }
@@ -5402,6 +5413,10 @@ p {
   .brovar-tab__feature.e--3 .brovar-tab__feature-text {
     margin-left: 0;
     margin-right: 2rem;
+  }
+
+  .brovar-tab p {
+    font-size: 1.25rem;
   }
 
   .zno-features.e--bg-1:after {
@@ -5936,6 +5951,10 @@ p {
 
   .britan-tab .check-list ul {
     width: 100%;
+  }
+
+  .britan-tab .check-list ul li {
+    margin-bottom: 2rem;
   }
 
   .brovar-tab__feature {
@@ -6752,7 +6771,7 @@ p {
   }
 
   .britan-tab .check-list ul li {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .brovar-tab {
