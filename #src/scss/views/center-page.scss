@@ -119,6 +119,12 @@
             margin-top: 100px;
             padding-left: 27px;
         }
+        @include mq('phablet'){
+            &__image-box {
+                min-width: unset;
+                max-width: 200px;
+            }
+        }
 }
 
 .logorytmic{
@@ -126,6 +132,9 @@
     background: url('../../img/Center-page/section-2-back.svg') no-repeat;
     background-size: contain;
     background-position:  bottom;
+    @include mq('phablet'){
+        background: unset;
+    }
 }
 
 
