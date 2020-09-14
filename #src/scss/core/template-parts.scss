@@ -327,6 +327,12 @@ img {
             right: -20px;
         }
     }
+
+    @include mq('phone-wide') {
+        h3 {
+            font-size: 1.5rem;
+        }
+    }
 }
 
 .sub-text{
@@ -502,7 +508,11 @@ img {
         }
     }
     &__item + &__item{
-        margin-top: 32px;
+        margin-top: 2rem;
+
+        @include mq('phone-wide') {
+            margin-top: 1rem;
+        }
     }
     &.e--checkmarks{
         .info-list__item{

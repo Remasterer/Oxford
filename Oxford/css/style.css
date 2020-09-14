@@ -695,7 +695,7 @@ img {
 }
 
 .info-list__item + .info-list__item {
-  margin-top: 32px;
+  margin-top: 2rem;
 }
 
 .info-list.e--checkmarks .info-list__item::after {
@@ -5650,7 +5650,7 @@ p {
   }
 
   .coin__text {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .entry-content .entry-content__info {
@@ -6567,8 +6567,16 @@ p {
     font-size: 1.25rem;
   }
 
+  .title-w-line h3 {
+    font-size: 1.5rem;
+  }
+
   .info__subtitle {
     font-size: 1rem;
+  }
+
+  .info-list__item + .info-list__item {
+    margin-top: 1rem;
   }
 
   .help {
@@ -6845,6 +6853,10 @@ p {
   .office:last-of-type .office__image-box video {
     height: 500px;
     width: 200px;
+  }
+
+  .coin {
+    font-size: 1rem;
   }
 
   .list-work-step__item::before {
