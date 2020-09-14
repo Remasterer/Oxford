@@ -99,12 +99,16 @@
             padding-top: 2rem;
         }
         &__text {
-            font-size: 20px;
+            font-size: 18px;
         }
     }
     @include mq('phablet'){
         padding-bottom: 100px;
         background: none;
+    }
+
+    @include mq('phone-wide') {
+        font-size: 1rem;
     }
 }
 
