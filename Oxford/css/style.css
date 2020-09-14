@@ -3801,6 +3801,7 @@ body {
   -o-object-position: center;
      object-position: center;
   border-radius: 195px;
+  height: 200px;
 }
 
 .office__wrapper {
@@ -3945,42 +3946,6 @@ body {
      object-fit: cover;
 }
 
-.office:nth-of-type(even):not(:last-child) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  margin-right: -20rem;
-}
-
-.office:nth-of-type(even):not(:last-child) .office__image-wrapper.e--ar-right {
-  position: relative;
-}
-
-.office:nth-of-type(even):not(:last-child) .office__image-wrapper.e--ar-right::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -180px;
-  left: -560px;
-  background: url("img/Office-page/arrow-red.svg") center center no-repeat;
-  width: 100%;
-  height: 100%;
-  -webkit-transform: scaleX(-1);
-  -ms-transform: scaleX(-1);
-  transform: scaleX(-1);
-}
-
-.office:nth-of-type(even):not(:last-child) .office__info {
-  margin-left: 0;
-  margin-right: 39.68254%;
-}
-
-.office:nth-of-type(even):not(:last-child) .office__gallery {
-  position: relative;
-  right: 5rem;
-}
-
 .office:last-of-type {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -3996,6 +3961,7 @@ body {
 
 .office:last-of-type video {
   border-radius: 350px;
+  height: 800px;
 }
 
 .office:last-of-type .office__gallery a {
@@ -5154,8 +5120,13 @@ p {
     background-position: right 5rem center;
   }
 
-  .office:last-of-type video::before:before {
-    background-position: center;
+  .office:last-of-type .office__image-box video {
+    height: 650px;
+    width: auto;
+  }
+
+  .office:last-of-type .office__image-box::before {
+    background-position: top 6rem center;
   }
 
   .office:last-of-type .office__image-wrapper {
@@ -5486,14 +5457,6 @@ p {
 
   .post__title {
     font-size: 20px;
-  }
-
-  .office:nth-of-type(even):not(:last-child) .office__image-wrapper.e--ar-right::after {
-    display: none;
-  }
-
-  .office:nth-of-type(even):not(:last-child) .office__info {
-    margin-right: 0;
   }
 
   .office:last-of-type {
@@ -6119,11 +6082,6 @@ p {
 
   .blog__content {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .office:nth-of-type(even):not(:last-child) .office__gallery {
-    position: relative;
-    right: 0;
   }
 
   .office:last-of-type .office__image-wrapper img {
@@ -6760,6 +6718,11 @@ p {
 
   .js-gallery-tabs__subtab {
     min-width: 110px;
+  }
+
+  .office:last-of-type .office__image-box video {
+    height: 500px;
+    width: 200px;
   }
 }
 
