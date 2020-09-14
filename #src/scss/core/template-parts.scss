@@ -465,6 +465,15 @@ img {
             font-size: 1rem;
         }
     }
+    &__preview{
+        max-width: 250px;
+        margin: 0 auto;
+        img{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
 }
 .info-list {
 
@@ -610,12 +619,13 @@ body {
 
         .info-section__preview {
             min-width: unset;
-            max-width: 250px;
+            max-width: 250px;   
         }
     }
    @include mq('phablet'){
+       padding-bottom: 2.5rem;
        .info-section__preview{
-           margin-top: 2rem;
+           margin-top: 1rem;
            display: flex;
            justify-content: center;
        }
@@ -695,6 +705,7 @@ body {
         }
     }
     @include mq('phone-wide'){
+        padding:50px 0  ;
         font-size: 16px;
         &__inner{
             padding: 50px 48px;

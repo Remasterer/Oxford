@@ -25,12 +25,25 @@
                 font-size: 22px;
             }
         }
+        @include mq('phone'){
+            &__inner {
+                padding:100px 0 ;   
+            }
+        }
 }
 .first-grader{
-    padding-bottom: 400px;
-    background: url(img/Page-Courses-juniors/abstr-1.svg) no-repeat;
+    padding-bottom: 300px;
+    background: url('../../img/Page-Courses-juniors/abstr-1.svg') no-repeat;
     background-size: contain;
-    background-position: 0px 500px;
+    background-position: bottom;
+    @include mq('tablet-wide'){
+        padding-bottom: 150px;
+    }
+    @include mq('phablet'){
+        background: none;
+        padding-bottom: 100px;
+    }
+    
 }
 .coin {
     padding-bottom: 500px;
@@ -50,7 +63,7 @@
             padding: 20px 30px;
         }
         @include mq('phone'){
-            padding: 10px 15px;
+            padding: 20px 15px;
         }
     }
 
@@ -88,6 +101,10 @@
         &__text {
             font-size: 20px;
         }
+    }
+    @include mq('phablet'){
+        padding-bottom: 100px;
+        background: none;
     }
 }
 
