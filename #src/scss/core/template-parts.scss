@@ -587,6 +587,11 @@ body {
     }
     &__preview{
         min-width: 398px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
     &.e--reverse{
         .info-section__inner{
@@ -604,7 +609,8 @@ body {
         }
 
         .info-section__preview {
-            margin-top: 2rem;
+            min-width: unset;
+            max-width: 250px;
         }
     }
    @include mq('phablet'){
@@ -614,7 +620,7 @@ body {
            justify-content: center;
        }
        .info-section__preview img{
-           max-width: 300px;
+           max-width: 200px;
        }
         .info-section__info {
         padding-right: 0px; 
