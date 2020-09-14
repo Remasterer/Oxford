@@ -140,7 +140,7 @@
     @include mq('phone-wide') {
         &__actions {
             & > div {
-                flex-basis: 40%;
+                flex-basis: 44%;
                .button {
                 padding: .5rem .25rem;
                 font-size: 12px;
@@ -206,6 +206,10 @@
 
     &__actions {
         padding-bottom: 100px;
+        
+        @include mq('phone-wide') {
+            padding-bottom: 120px;
+        }
     }
     &__tabs {
         &-subtabs {
@@ -219,9 +223,6 @@
             li {
                 &:first-child {
                     margin-right: 1rem;
-                }
-                a {
-                    
                 }
 
             }
@@ -253,6 +254,29 @@
                 &:hover,
                 &.active {
                     color: $def-red;
+                }
+            }
+        }
+
+        @include mq('tablet-small') {
+            &-hashtags {
+                a {
+                    font-size: 14px;
+
+                }
+            }
+        }
+
+        @include mq('phone-wide') {
+            &-hashtags {
+                flex-direction: column;
+                margin-top: 1rem;
+                a {
+
+                    &:first-child {
+                        margin-right: 0;
+                        margin-bottom: .5rem;
+                    }
                 }
             }
         }

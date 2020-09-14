@@ -3648,6 +3648,10 @@ body {
   display: block;
 }
 
+.js-gallery-tabs {
+  width: 100%;
+}
+
 .js-gallery-tabs__content {
   height: 0;
   overflow: hidden;
@@ -3668,7 +3672,12 @@ body {
   display: flex;
 }
 
+.js-gallery-tabs__subtab {
+  min-width: 200px;
+}
+
 .js-gallery-tabs__subtab > a {
+  display: block;
   background: #fff;
   color: #CD142B;
   border: 2px solid #CD142B;
@@ -6201,6 +6210,10 @@ p {
   .gallery__actions > div .button {
     padding: .5rem 1rem;
   }
+
+  .gallery__tabs-hashtags a {
+    font-size: 14px;
+  }
 }
 
 @media only screen and (max-width: 560px) {
@@ -6257,6 +6270,10 @@ p {
 
   .gallery__actions > div a {
     font-size: 1rem;
+  }
+
+  .js-gallery-tabs__subtab {
+    min-width: 150px;
   }
 
   .blog__content {
@@ -6408,13 +6425,30 @@ p {
   }
 
   .gallery__actions > div {
-    -ms-flex-preferred-size: 40%;
-        flex-basis: 40%;
+    -ms-flex-preferred-size: 44%;
+        flex-basis: 44%;
   }
 
   .gallery__actions > div .button {
     padding: .5rem .25rem;
     font-size: 12px;
+  }
+
+  .gallery__actions {
+    padding-bottom: 120px;
+  }
+
+  .gallery__tabs-hashtags {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .gallery__tabs-hashtags a:first-child {
+    margin-right: 0;
+    margin-bottom: .5rem;
   }
 
   .plan__buttons {
@@ -6598,6 +6632,10 @@ p {
 
   .info-banner p {
     font-size: 1.25rem;
+  }
+
+  .js-gallery-tabs__subtab {
+    min-width: 110px;
   }
 }
 
