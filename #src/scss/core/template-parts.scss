@@ -122,6 +122,11 @@ h5{
             background-color: transparent;
             border: 2px solid $def-blue;
             color: $def-blue;
+
+            &:hover {
+                color: #fff;
+                background-color: $def-blue;
+            }
         }
     }
 
@@ -316,6 +321,10 @@ img {
         }
         p{
             font-size: 1.1rem;
+        }
+
+        &:after {
+            right: -20px;
         }
     }
 }

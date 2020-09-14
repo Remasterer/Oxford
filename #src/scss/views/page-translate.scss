@@ -15,11 +15,17 @@
         }
 		&__item {
             display: flex;
-            align-items: center;
             position: relative;
             &__info{
                 order: 3;
                 padding-left: 22px;
+                
+            }
+
+            @include mq('phone') {
+                &__info {
+                    padding-left: 0;
+                }
             }
             &::before{
                 order: 2;
@@ -29,8 +35,16 @@
                 color: $def-blue;
                 counter-increment: section;       
                 content: counters(section,".") " "; 
+                 @include mq('tablet') {
+                     font-size: 80px;
+                 }
+                 
+                 @include mq('phone-wide') {
+                    font-size: 4rem;
+                } 
+                
                 @include mq('phone'){
-                    margin-bottom: 2rem;
+                    margin-bottom: 1rem;
                 }
             }
             &__image-box{
@@ -48,8 +62,13 @@
                 @extend %monst-alter-bold;
                 color: $def-red;
                 font-size: 30px;
+
+                @include mq('tablet-wide'){
+                    font-size: 1.55rem;
+                    display: block;
+                }
                 @include mq('tablet'){
-                    margin-top: 20px;
+                    margin-top: 1rem;
                 }
             }
             @include mq('tablet'){
@@ -65,27 +84,53 @@
             &::before{
                 color: $def-red;
             }
+
+            @include mq('tablet') {
+                align-items: flex-start;
+            }
+
+            @include mq('phone') {
+                align-items: center;
+            }
         }
 
 		// .list-work-step__title
 
 		&__title {
-            line-height: 30px;
+            line-height: 1.2    ;
             margin-top: 5px;
-            max-width: 670px;
-            margin-bottom: 31px;
+            max-width: 700px;
             @extend %monst-alter-bold;
+            font-size: 28px;
+
+            @include mq('tablet-wide') {
+                font-size: 1.5rem;
+                margin-bottom: 0;
+                span {
+                    font-size: 1.55rem;
+                    margin-top: 1rem;
+                    display: block;
+                }
+            }
             @include mq('tablet'){
                 display: flex;
                 flex-direction: column;
-                line-height: 20px;
+                line-height: 1.2;
             }
             
+            @include mq('phone-wide') {
+                font-size: 1.25rem;
+                span {
+                    font-size: 1.35rem;
+                }
+            }
 		}
 
 
 		&__text {
             max-width: 1100px;
+            line-height: 1.2;
+            margin-top: 2rem;
 		}
 }
 
@@ -96,6 +141,11 @@
     &__title{
         margin-bottom: 4.25rem;
     }
+
+    @include mq('phone-wide') {
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
 }
 
 .contact-form-translations {
@@ -104,6 +154,10 @@
 
     &__group + &__group {
         margin-top: 32px;
+
+        @include mq('phablet') {
+            margin-top: 1rem;
+        }
     }
     &__group{
         display: flex;
@@ -116,12 +170,29 @@
             flex-direction: column;
         }
 
+        &.radios {
+            @include mq('phablet') {
+                &.radios {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                   & > span {
+                        margin-bottom: 1rem;
+                        flex-basis: 100%;
+                    }
+
+                    .radio__container {
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+
     }
     // .contact-form-translations__input
     &__input +  &__input{
         margin-left: 87px;
         @include mq('phablet'){
-            margin-top: 2rem;
+            margin-top: 1rem;
             margin-left: 0px;
         }
         
@@ -138,6 +209,10 @@
         }
         @include mq('phablet'){
             width: 80%; 
+        }
+
+        @include mq('phone-wide') {
+            width: 100%;
         }
     }
     &__input , textarea  {
@@ -183,6 +258,10 @@
         @include mq('phablet'){
             width: 80%; 
         }
+
+        @include mq('phone-wide'){
+            width: 100%; 
+        }
     }
     &__select{
         height: 100%;
@@ -200,6 +279,8 @@
         }
         
     }
+
+
     .radio__container{
         display: flex;
         position: relative;
@@ -215,8 +296,13 @@
             padding-right: 10px;
         }
         @include mq('phablet'){
-            margin-top: 2rem;
+            margin-bottom: 2rem;
             padding-left: 0px; 
+            margin-top: 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
     .radio__container input {
