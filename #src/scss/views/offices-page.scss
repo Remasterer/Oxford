@@ -391,7 +391,7 @@
 .office + .office {
     margin-top: 10rem;
     @include mq('tablet'){
-        margin-top: 5rem;
+        margin-top: 1rem;
     }
 }
 
