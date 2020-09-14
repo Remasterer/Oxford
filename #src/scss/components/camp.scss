@@ -14,7 +14,15 @@
             justify-content: center;
             margin-bottom: 3rem;
 
+            & > div {
+                margin-right: 1rem;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
             & > div.active {
+                
                 a {
                     background-color: $def-red;
                     color: #fff;
@@ -28,10 +36,6 @@
                 transition: .3s all;
                 color: $def-red;
     
-                &:first-child {
-                    margin-right: 1rem;
-                }
-    
                 &:hover,
                 &.active {
                     background-color: $def-red;
@@ -39,6 +43,7 @@
                 }
             }
 
+           
         }
 
         &-content {
@@ -165,6 +170,14 @@
         ul {
             max-width: 100%;
         }
+
+        &__tabs {
+            &-bar {
+                a {
+                    padding: .75rem 2rem;
+                }
+            }
+        }
     }
 
     @include mq('phone-wide') {
@@ -184,8 +197,12 @@
         }
 
         &__tabs-bar {
+            & > div {
+                margin-right: .25rem;
+            } 
             a {
                 padding: .5rem 1rem;
+                font-size: 14px;
             }
         }
 

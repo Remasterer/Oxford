@@ -107,6 +107,11 @@
         &__slider {
             padding: 0 40px;
         }
+
+        &__titles {
+            margin-bottom: 3rem;
+        }
+
         .slick-slide {
             margin-right: 1rem;
             margin-left: 1rem;
@@ -119,7 +124,7 @@
         }
 
         &__titles {
-            margin-bottom: 50px;
+            margin-bottom: 2rem;
         }
     }
 }
