@@ -4,9 +4,19 @@
         display: flex;
         flex-direction: column;
     }
+
 }
 
 .office {
+    video {
+        max-height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 195px;
+    }
+
+
     display: flex;
     // .office__image-box   
     color: $def-red;
@@ -51,6 +61,42 @@
         padding: 20px;
         border-radius: 195.5px;
         border: 4px dashed #fff;
+        position: relative;
+        overflow: hidden;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../../img/Base/play-btn.svg');
+            background-repeat: no-repeat;
+            z-index: 0;
+            background-position: center;
+            cursor: pointer;
+            opacity: .5;
+            transition: .3s opacity;
+
+           
+        }
+
+
+
+
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
+        }
+
+
+        @include mq('desktop') {
+            &:before {
+                background-position: right 5rem center;
+            }
+        }
     }
 
     // .office__image
@@ -160,6 +206,12 @@
             position: relative;
             right: 5rem;
         }
+
+        @include mq('desktop') {
+
+        }
+
+
         @include mq('tablet-wide') {
             .office__image-wrapper.e--ar-right::after {
                 display: none;
@@ -187,6 +239,18 @@
         flex-direction: row-reverse;
         color: $def-blue;
 
+        video {
+            
+            border-radius: 350px;
+
+            &::before {
+                @include mq('desktop') {
+                    &:before {
+                        background-position: center;
+                    }
+                }
+            }
+        }
         .office__gallery {
             a {
                 border: 5px solid $def-blue;
@@ -221,6 +285,8 @@
 
         .office__image-box {
             border-radius: 334px;
+            
+            
         }
 
         .office__info {
