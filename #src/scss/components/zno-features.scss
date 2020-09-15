@@ -7,7 +7,7 @@
             height: 200px;
             width:  420px;
             right: 0;
-            top: 20rem;
+            top: 18rem;
             background: url(../img/zno/professor.svg) right top /contain no-repeat;
         }
     }
@@ -61,7 +61,15 @@
  @include mq('tablet-wide') {
     &.e--bg-1 {
         &:after {
-            top: 23rem
+            top: 16rem;
+            height: 150px;
+        }
+    }
+
+    .check-list ul {
+        font-size: 1.25rem;
+        li {
+            margin-bottom: 3rem;
         }
     }
  }
@@ -70,6 +78,12 @@
     &.e--bg-1 {
         &:after {
             opacity: .2;
+        }
+    }
+
+    &__students {
+        &-img {
+            margin-right: 0;
         }
     }
 

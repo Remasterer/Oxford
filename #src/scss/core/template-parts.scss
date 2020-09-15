@@ -122,6 +122,11 @@ h5{
             background-color: transparent;
             border: 2px solid $def-blue;
             color: $def-blue;
+
+            &:hover {
+                color: #fff;
+                background-color: $def-blue;
+            }
         }
     }
 
@@ -317,6 +322,16 @@ img {
         p{
             font-size: 1.1rem;
         }
+
+        &:after {
+            right: -20px;
+        }
+    }
+
+    @include mq('phone-wide') {
+        h3 {
+            font-size: 1.5rem;
+        }
     }
 }
 
@@ -493,7 +508,11 @@ img {
         }
     }
     &__item + &__item{
-        margin-top: 32px;
+        margin-top: 2rem;
+
+        @include mq('phone-wide') {
+            margin-top: 1rem;
+        }
     }
     &.e--checkmarks{
         .info-list__item{

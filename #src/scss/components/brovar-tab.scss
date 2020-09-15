@@ -2,7 +2,6 @@
     padding: 0 1rem;
 
     h4 {
-        margin-top: 80px;
         color: $def-blue;
         line-height: 1.1;
         font-size: 40px;
@@ -17,10 +16,12 @@
 
     p {
         font-size: 1.5rem;
-        line-height: 1.3;
+        line-height: 1.5;
     }
 
-    
+    &__program {
+        margin-top: 80px;
+    }
 
     &__feature {
         margin-top: 1.5rem;
@@ -125,6 +126,10 @@
                 }
             }
         }
+
+        p {
+            font-size: 1.25rem;
+        }
     }
 
     @include mq('tablet') {
@@ -162,6 +167,11 @@
         padding: 0;
         h5 {
             font-size: 1.25rem;
+        }
+
+        h4 {
+            font-size: 1.75rem;
+            margin-top: 0;
         }
 
         p {

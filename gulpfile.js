@@ -17,10 +17,14 @@ let path = {
     js: source_folder + "/js/script.js",
     libsJs: source_folder + "/js/libs/**/*.js",
 <<<<<<< HEAD
+<<<<<<< HEAD
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp,MOV,mp4}",
 =======
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp,mp4,MOV}",
 >>>>>>> 212c98ced9af254c84cfb741d07a4d78998e721a
+=======
+    img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp,mp4,MOV}",
+>>>>>>> 013abf930893d83b0704a710cc92322452e2eb93
     fonts: source_folder + "/fonts/*.{ttf,otf,woff,woff2}",
   },
   watch: {

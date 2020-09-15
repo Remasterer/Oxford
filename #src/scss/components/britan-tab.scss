@@ -16,7 +16,7 @@
                 width: calc((1280px/2));
                 right: 0;
                 bottom: 0;
-                background: url(../img/camp/banner.svg) 15rem bottom no-repeat;
+                background: url(../img/camp/banner.svg) 14rem bottom no-repeat;
                 background-size: 80%;
             }
         }   
@@ -78,6 +78,15 @@
                 }
             }
         }
+
+        .check-list {
+            ul {
+                // margin-right: 0;
+                li {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
     }
 
     @include mq('tablet') {
@@ -112,12 +121,16 @@
 
         .check-list ul {
             width: 100%;
+
+            li {
+                margin-bottom: 2rem;
+            }
         }
     }
 
     @include mq('phone-wide') {
         .check-list ul li {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
     }
 }
