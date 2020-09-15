@@ -1,9 +1,14 @@
 .brovar-tab {
     padding: 0 1rem;
+
     h4 {
         margin-top: 80px;
         color: $def-blue;
+        line-height: 1.1;
         font-size: 40px;
+        @include mq('tablet'){
+            font-size: 35px;
+        }
     }
     h5 {
         font-size: 30px;

@@ -10,11 +10,13 @@
     &__content {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 147px 21px ;
+        grid-gap: 150px 21px ;
         padding-top: 70px;
+        padding-bottom: 85px;
     }
     @include mq('tablet'){
         &__content {
+            grid-gap: 50px 21px ;
             grid-template-columns: 1fr 1fr ;
         }
     }
@@ -24,7 +26,7 @@
         }
     }
     @include mq('phablet','min'){
-        &.e--blog-page .post:first-of-type{
+        .post:first-of-type{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -134,4 +136,21 @@
             max-height: unset;
         }
     }
+}
+.navigation{
+    display: flex;
+    justify-content: center;
+    padding: 0px 0 35px 0;
+}
+.page-numbers{
+	font-size: 24px;
+	border-radius:50%;
+	padding: .5rem .8rem;
+		font-family: 'Montserrat Alternates';
+    font-weight: 500;
+
+}
+.page-numbers.current{
+	 background: #CD142B;
+	color: #fff;
 }
