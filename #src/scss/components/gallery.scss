@@ -36,8 +36,10 @@
                 background: $def-blue;
                 height: 6px;
                 border-radius: 3px;
+                @include mq('tablet'){
+                    display: none;
+                }
             }
-
         }
     }
 

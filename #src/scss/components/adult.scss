@@ -72,6 +72,15 @@
     &-reasons {
         position: relative;
         padding-bottom: 120px;
+        @include mq('tablet'){
+            p{
+                margin-top: 50px;
+            }
+            
+        }
+        @include mq('phablet'){
+            padding-top: 70px;
+        }
         @include mq('phone-wide'){
             padding-bottom: 20px;
         }
@@ -106,6 +115,9 @@
             &-img {
                 max-width: 350px;
                 margin: auto;
+                @include mq('tablet'){
+                    max-width: 200px;
+                }
             }
         }
         &-item {
@@ -253,7 +265,7 @@
         height: unset;
         background: unset;
         margin-top: unset;
-        padding-bottom: 50px;
+        padding-bottom: 0px;
     }
 }
 

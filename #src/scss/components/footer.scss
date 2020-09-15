@@ -104,7 +104,6 @@
         }
     }
     @include mq('phone-wide'){
-        padding: 3rem 1rem;
         padding-bottom: 0;
         &__sub-title {
             max-width: 654px;
